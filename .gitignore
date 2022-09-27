@@ -1,3 +1,12 @@
+
+# dont include parcel cache into the final theme.zip file
+.parcel-cache
+.DS_Store
+
+# make sure no .env file is present in the theme.zip file - AEM adds this file when downloading the theme
+.env
+
+
 # Logs
 logs
 *.log
