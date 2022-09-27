@@ -1,0 +1,58 @@
+/* ===============Text Input================== */
+.cmp-adaptiveform-textinput {
+  color: $primary-color;
+  font-size: $font-size;
+  margin-top: $field-top-m;
+  position: relative;
+}
+.cmp-adaptiveform-textinput__widget {
+  margin-top: $label-top-m;
+  width: calc(100% - 16px);
+  height: $field-height;
+  border-radius: 0.25rem;
+  border: 1px solid $primary-color;
+  font-size: $font-size;
+  color: $primary-color;
+  padding-left: $field-padding-l;
+}
+.cmp-adaptiveform-textinput__label {
+
+}
+.cmp-adaptiveform-textinput__longdescription {
+  color: $description-color;
+  background-color: $disabled-color;
+  font-size: $error-size;
+  padding: 0.125rem 0.5rem;
+  margin-top: $error-top-m;
+}
+.cmp-adaptiveform-textinput__shortdescription {
+  font-size: $error-size;
+  margin-top: $error-top-m;
+}
+.cmp-adaptiveform-textinput__questionmark{
+  position: absolute;
+}
+.cmp-adaptiveform-textinput__errormessage{
+  color: $error-color;
+  font-size: $error-size;
+  margin-top: $error-top-m;
+}
+.cmp-adaptiveform-textinput[data-cmp-valid=false]{
+  border-left-width: 4px;
+  border-style: solid;
+  border-color: $error-color;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  background: $error-bg-color;
+  padding: 5px;
+}
+.cmp-adaptiveform-textinput[data-cmp-valid=true]{
+  border-bottom-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-left-width: 4px;
+  border-style: solid;
+  border-color: $success-color;
+  padding: 5px 0 0 5px;
+}

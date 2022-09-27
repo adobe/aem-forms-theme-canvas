@@ -1,0 +1,74 @@
+/* ===============File Input================== */
+.cmp-adaptiveform-fileinput {
+  color: $primary-color;
+  font-size: $font-size;
+  margin-top: $field-top-m;
+  position: relative;
+}
+
+.cmp-adaptiveform-fileinput__widget {
+  margin-top: 5px;
+  width: calc(100% - 16px);
+
+}
+.cmp-adaptiveform-fileinput__widget::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.cmp-adaptiveform-fileinput__widget::before {
+  content: 'Attach';
+  display: inline-block;
+  outline: none;
+
+  border: 2px solid $primary-color;
+  background: $white;
+  color: $primary-color;
+  border-radius: 1.5rem;
+  font-size: $font-size;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.cmp-adaptiveform-fileinput__label {
+
+}
+
+.cmp-adaptiveform-fileinput__longdescription {
+  color: $description-color;
+  background-color: $disabled-color;
+  font-size: $error-size;
+  padding: 0.125rem 0.5rem;
+  margin-top: $error-top-m;
+}
+
+.cmp-adaptiveform-fileinput__shortdescription {
+  font-size: $error-size;
+  margin-top: $error-top-m;
+}
+
+.cmp-adaptiveform-fileinput__questionmark {
+  position: absolute;
+}
+.cmp-adaptiveform-fileinput__errormessage{
+  color: $error-color;
+  font-size: $error-size;
+  margin-top: $error-top-m;
+}
+.cmp-adaptiveform-fileinput[data-cmp-valid=false]{
+  border-left-width: 4px;
+  border-style: solid;
+  border-color: $error-color;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  background: $error-bg-color;
+  padding: 5px;
+}
+.cmp-adaptiveform-fileinput[data-cmp-valid=true]{
+  border-bottom-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-left-width: 4px;
+  border-style: solid;
+  border-color: $success-color;
+  padding: 5px 0 0 5px;
+}

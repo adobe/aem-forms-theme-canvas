@@ -1,0 +1,11 @@
+/* ===============Footer================== */
+.cmp-adaptiveform-footer{
+  color: $description-color;
+  background-color: $disabled-color;
+  font-size: $error-size;
+  margin-top: $field-top-m;
+  text-align: center;
+}
+.cmp-adaptiveform-footer__text{
+  padding: .5rem 0;
+}

@@ -1,0 +1,59 @@
+/* ===============Radio Button================== */
+.cmp-adaptiveform-radiobutton{
+  color: $primary-color;
+  font-size: $font-size;
+  margin-top: $field-top-m;
+  position: relative;
+}
+.cmp-adaptiveform-radiobutton__label {
+  margin-bottom: $label-top-m;
+  display: block;
+}
+.cmp-adaptiveform-radiobutton__longdescription {
+  color: $description-color;
+  background-color: $disabled-color;
+  font-size: $error-size;
+  padding: 0.125rem 0.5rem;
+  margin-top: $error-top-m;
+}
+.cmp-adaptiveform-radiobutton__shortdescription {
+  font-size: $error-size;
+  margin-top: $error-top-m;
+}
+.cmp-adaptiveform-radiobutton__questionmark{
+  position: absolute;
+}
+.cmp-adaptiveform-radiobutton__errormessage{
+  color: $error-color;
+  font-size: $error-size;
+  margin-top: $error-top-m;
+}
+.cmp-adaptiveform-radiobutton__option.HORIZONTAL{
+  margin-right: 10px;
+  color: $secondary-color;
+  display: inline-flex;
+}
+.cmp-adaptiveform-radiobutton__option.VERTICAL{
+  margin-top: 10px;
+  color: $secondary-color;
+  display: flex;
+}
+.cmp-adaptiveform-radiobutton[data-cmp-valid=false]{
+  border-left-width: 4px;
+  border-style: solid;
+  border-color: $error-color;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  background: $error-bg-color;
+  padding: 5px;
+}
+.cmp-adaptiveform-radiobutton[data-cmp-valid=true]{
+  border-bottom-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-left-width: 4px;
+  border-style: solid;
+  border-color: $success-color;
+  padding: 5px 0 0 5px;
+}

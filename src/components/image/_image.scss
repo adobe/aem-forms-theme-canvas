@@ -1,10 +1,9 @@
-.cmp-image {
-  margin-top: 2.25em;
+/* ===============Imaget================== */
+.cmp-image{
+  margin-top: $field-top-m;
 }
-.cmp-image__link {
-}
-.cmp-image__image {
-  display: block;
-}
-.cmp-image__title {
+.cmp-image__image{
+  height: auto;
+  max-width: 100%;
+  width: inherit;
 }
