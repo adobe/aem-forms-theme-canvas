@@ -12,6 +12,9 @@ $error-bg-color:rgba(235,60,54,0.05);
 $success-color: #23b482;
 $disabled-color: #e6e6e6;
 $description-color: #969696;
+$border-color: #ccc;
+$panel-bg-color: #efefef;
+
 $font-size: 1rem;
 $error-size: .875rem;
 $field-top-m: 20px;
@@ -19,3 +22,7 @@ $label-top-m: 10px;
 $field-height: 40px;
 $field-padding-l: 10px;
 $error-top-m: 10px;
+
+//== Grid
+
+$max_col: 12;

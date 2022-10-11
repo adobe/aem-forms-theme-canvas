@@ -1,0 +1,68 @@
+.cmp-accordion{
+  margin-top: $field-top-m;
+  position: relative;
+}
+.cmp-accordion__item{
+  border: 2px solid $border-color;
+}
+.cmp-accordion__header{
+
+}
+.cmp-accordion__button{
+  font-size:$error-size;
+  color:$description-color;
+  cursor: pointer;
+  border: none;
+  padding: 1rem;
+}
+.cmp-accordion__button:hover{
+  color:$primary-color;
+}
+.cmp-accordion__button.cmp-accordion__button--expanded{
+
+}
+.cmp-accordion__title{
+
+}
+.cmp-accordion__title:before{
+  border: 3px solid $description-color;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  content: '';
+  margin-right: 1rem;
+}
+.cmp-accordion__button.cmp-accordion__button--expanded .cmp-accordion__title:before{
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.cmp-accordion__icon{
+
+}
+.cmp-accordion__panel{
+  padding: 1rem 3.5rem;
+  background: $panel-bg-color;
+}
+.cmp-accordion__panel.cmp-accordion__panel--expanded{
+  
+}
+.cmp-accordion__panel.cmp-accordion__panel--hidden{
+  
+}
+.cmp-accordion__longdescription {
+  color: $description-color;
+  background-color: $disabled-color;
+  font-size: $error-size;
+  padding: 0.125rem 0.5rem;
+  margin-top: $error-top-m;
+  margin-bottom: 5px;
+}
+.cmp-accordion__shortdescription {
+  font-size: $error-size;
+  margin-top: $error-top-m;
+}
+.cmp-accordion__questionmark{
+  position: absolute;
+}

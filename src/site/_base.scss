@@ -5,3 +5,14 @@ html, body {
   font-size: $font-size;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
 }
+
+.aem-Grid {
+  @include generate-grid(default, $max_col);
+}
+
+// Phone breakpoint
+@media (max-width: 768px) {
+  .aem-Grid {
+    @include generate-grid(phone, $max_col);
+  }
+}

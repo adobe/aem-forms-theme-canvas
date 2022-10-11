@@ -1,0 +1,47 @@
+.cmp-tabs{
+  color: $primary-color;
+  font-size: $font-size;
+  margin-top: $field-top-m;
+  position: relative;
+}
+.cmp-tabs__label{
+
+}
+.cmp-tabs__tablist{
+  border-bottom: 1px solid $disabled-color;
+}
+.cmp-tabs__tab{
+  padding: 0.5rem 0 1rem 0;
+  color: $description-color;
+  margin-right: 3rem;
+}
+.cmp-tabs__tab.cmp-tabs__tab--active{
+  border-bottom: 2px solid $primary-color;
+  color: $primary-color;
+}
+.cmp-tabs__tab.cmp-tabs__tab--active:hover{
+  border-bottom: 2px solid $primary-color;
+}
+.cmp-tabs__tab:hover{
+  border-bottom: 2px solid $description-color;
+}
+.cmp-tabs__tabpanel{
+
+}
+.cmp-tabs__tabpanel.cmp-tabs__tabpanel--active{
+  
+}
+.cmp-tabs__longdescription {
+  color: $description-color;
+  background-color: $disabled-color;
+  font-size: $error-size;
+  padding: 0.125rem 0.5rem;
+  margin-top: $error-top-m;
+}
+.cmp-tabs__shortdescription {
+  font-size: $error-size;
+  margin-top: $error-top-m;
+}
+.cmp-tabs__questionmark{
+  position: absolute;
+}
