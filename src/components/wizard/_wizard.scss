@@ -1,0 +1,39 @@
+.cmp-adaptiveform-wizard{
+  color: $primary-color;
+  font-size: $font-size;
+  margin-top: $field-top-m;
+  position: relative;
+  background: $wizard-bg-color;
+  padding-bottom: 1rem;
+  border-color: $disabled-color;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-style: solid;
+}
+.cmp-adaptiveform-wizard .cmp-adaptiveform-wizard__tab{
+  border-bottom: 2px solid $disabled-color;
+  color: $description-color;
+  padding: 0.5rem 0 1rem 0;
+  margin-right: .75rem;
+}
+.cmp-adaptiveform-wizard .cmp-adaptiveform-wizard__tab--active{
+  border-bottom: 2px solid $primary-color;
+  color: $primary-color;
+}
+.cmp-adaptiveform-wizard__wizardpanel{
+  margin-top: 30px;
+  width: 75%;
+  padding-left: 4%;
+}
+.cmp-adaptiveform-wizard__previousNav{
+  position: absolute;
+  right: 13%;
+  top: 75px;
+}
+.cmp-adaptiveform-wizard__nextNav{
+  position: absolute;
+  right: 4%;
+  top: 75px;
+}
