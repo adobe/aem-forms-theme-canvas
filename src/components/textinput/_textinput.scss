@@ -1,7 +1,7 @@
 /* ===============Text Input================== */
 .cmp-adaptiveform-textinput {
-  color: $primary-color;
-  font-size: $font-size;
+  color: $dark-gray;
+  font-size: $font-md;
   margin-top: $field-top-m;
   position: relative;
 }
@@ -10,41 +10,41 @@
   width: calc(100% - 16px);
   height: $field-height;
   border-radius: 0.25rem;
-  border: 1px solid $primary-color;
-  font-size: $font-size;
-  color: $primary-color;
+  border: 1px solid $dark-gray;
+  font-size: $font-md;
+  color: $dark-gray;
   padding-left: $field-padding-l;
 }
 .cmp-adaptiveform-textinput__label {
 
 }
 .cmp-adaptiveform-textinput__longdescription {
-  color: $description-color;
-  background-color: $disabled-color;
-  font-size: $error-size;
+  color: $light-gray;
+  background-color: $very-light-gray;
+  font-size: $font-sm;
   padding: 0.125rem 0.5rem;
   margin-top: $error-top-m;
 }
 .cmp-adaptiveform-textinput__shortdescription {
-  font-size: $error-size;
+  font-size: $font-sm;
   margin-top: $error-top-m;
 }
 .cmp-adaptiveform-textinput__questionmark{
   position: absolute;
 }
 .cmp-adaptiveform-textinput__errormessage{
-  color: $error-color;
-  font-size: $error-size;
+  color: $error;
+  font-size: $font-sm;
   margin-top: $error-top-m;
 }
 .cmp-adaptiveform-textinput[data-cmp-valid=false]{
   border-left-width: 4px;
   border-style: solid;
-  border-color: $error-color;
+  border-color: $error;
   border-right-width: 0;
   border-top-width: 0;
   border-bottom-width: 0;
-  background: $error-bg-color;
+  background: $light-error;
   padding: 5px;
 }
 .cmp-adaptiveform-textinput[data-cmp-valid=true]{
@@ -53,6 +53,6 @@
   border-top-width: 0;
   border-left-width: 4px;
   border-style: solid;
-  border-color: $success-color;
+  border-color: $success;
   padding: 5px 0 0 5px;
 }

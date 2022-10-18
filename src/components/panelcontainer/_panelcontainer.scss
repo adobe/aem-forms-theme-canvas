@@ -1,9 +1,9 @@
 /* ===============Panel Container================== */
 .cmp-container{
-  color: $primary-color;
-  font-size: $font-size;
+  color: $dark-gray;
+  font-size: $font-md;
   margin-top: $field-top-m;
 }
 .cmp-container__label{
-  font-size: $panel-font-size
+  font-size: $font-lg
 }

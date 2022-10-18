@@ -4,22 +4,28 @@
 $font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-title: 'Source Serif Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$primary-color: #666;
-$secondary-color: #888;
+// ====== font size======
+$dark-gray: #666;
+$gray: #888;
+$light-gray: #969696;
+$very-light-gray: #e6e6e6;
 $white: #fff;
-$error-color: #eb3c36;
-$error-bg-color:rgba(235,60,54,0.05);
-$success-color: #23b482;
-$disabled-color: #e6e6e6;
-$description-color: #969696;
-$border-color: #ccc;
+$error: #eb3c36;
+$light-error: #eb3b27;
+$success: #23b482;
+$silver: #ccc;
 $panel-bg-color: #efefef;
 $wizard-bg-color: #fafafa;
 
-$font-size: 1rem;
-$panel-font-size: 1.25rem;
-$error-size: .875rem;
-$field-top-m: 20px;
+// ====== font size======
+$font-xlg: 1.5rem;
+$font-lg: 1.25rem;
+$font-md: 1rem;
+$font-sm: .875rem;
+$font-xsm: .75rem;
+
+// ====== space ======
+$field-top-m: 30px;
 $label-top-m: 10px;
 $field-height: 40px;
 $field-padding-l: 10px;
