@@ -5,9 +5,6 @@
 .cmp-accordion__item{
   border: 2px solid $silver;
 }
-.cmp-accordion__header{
-
-}
 .cmp-accordion__button{
   font-size:$font-sm;
   color:$light-gray;
@@ -17,12 +14,6 @@
 }
 .cmp-accordion__button:hover{
   color:$dark-gray;
-}
-.cmp-accordion__button.cmp-accordion__button--expanded{
-
-}
-.cmp-accordion__title{
-
 }
 .cmp-accordion__title:before{
   border: 3px solid $light-gray;
@@ -38,18 +29,9 @@
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
-.cmp-accordion__icon{
-
-}
 .cmp-accordion__panel{
   padding: 1rem 3.5rem;
   background: $panel-bg-color;
-}
-.cmp-accordion__panel.cmp-accordion__panel--expanded{
-  
-}
-.cmp-accordion__panel.cmp-accordion__panel--hidden{
-  
 }
 .cmp-accordion__longdescription {
   color: $light-gray;

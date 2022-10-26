@@ -4,9 +4,6 @@
   margin-top: $field-top-m;
   position: relative;
 }
-.cmp-tabs__label{
-
-}
 .cmp-tabs__tablist{
   border-bottom: 1px solid $very-light-gray;
 }
@@ -24,12 +21,6 @@
 }
 .cmp-tabs__tab:hover{
   border-bottom: 2px solid $light-gray;
-}
-.cmp-tabs__tabpanel{
-
-}
-.cmp-tabs__tabpanel.cmp-tabs__tabpanel--active{
-  
 }
 .cmp-tabs__longdescription {
   color: $light-gray;
