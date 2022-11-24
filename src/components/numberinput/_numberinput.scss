@@ -28,6 +28,14 @@
 }
 .cmp-adaptiveform-numberinput__questionmark {
   position: absolute;
+  display:inline-block;
+  top:8px;
+  right:8px;
+  width:1rem;
+  height:1rem;
+  border-radius: 9px;
+  background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
+  cursor : pointer;
 }
 .cmp-adaptiveform-numberinput__errormessage{
   color: $error;

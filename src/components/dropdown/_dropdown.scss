@@ -28,6 +28,14 @@
 }
 .cmp-adaptiveform-dropdown__questionmark{
   position: absolute;
+  display:inline-block;
+  top:8px;
+  right:8px;
+  width:1rem;
+  height:1rem;
+  border-radius: 9px;
+  background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
+  cursor : pointer;
 }
 .cmp-adaptiveform-dropdown__errormessage{
   color: $error;
@@ -52,4 +60,7 @@
   border-style: solid;
   border-color: $success;
   padding: 5px 0 0 5px;
+}
+.cmp-adaptiveform-dropdown__widget[multiple='multiple'] {
+  height: 80px;
 }

@@ -31,8 +31,9 @@
   border-radius: 1.5rem;
   border: 2px solid;
   padding: 0.625rem 1rem;
-  line-height: unset;
   font-size: $font-sm;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .cmp-adaptiveform-fileinput__longdescription {
@@ -50,6 +51,14 @@
 
 .cmp-adaptiveform-fileinput__questionmark {
   position: absolute;
+  display:inline-block;
+  top:8px;
+  right:8px;
+  width:1rem;
+  height:1rem;
+  border-radius: 9px;
+  background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
+  cursor : pointer;
 }
 .cmp-adaptiveform-fileinput__errormessage{
   color: $error;
@@ -74,4 +83,28 @@
   border-style: solid;
   border-color: $success;
   padding: 5px 0 0 5px;
+}
+
+.cmp-adaptiveform-fileinput__filelist {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+.cmp-adaptiveform-fileinput__fileitem {
+  display: block;
+  padding: 10px;
+  border-top: 1px solid $light-gray;
+}
+.cmp-adaptiveform-fileinput__filename {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.cmp-adaptiveform-fileinput__filedelete {
+  float: right;
+  font-size: $font-lg;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: 0 1px 0 $white;
+  opacity: .2;
+  cursor: pointer;
 }

@@ -18,3 +18,27 @@
   background: $gray;
   color: $very-light-gray;
 }
+
+.cmp-button__longdescription {
+  color: $light-gray;
+  background-color: $very-light-gray;
+  font-size: $font-sm;
+  padding: 0.125rem 0.5rem;
+  margin-top: $error-top-m;
+  margin-bottom: 5px;
+}
+.cmp-button__shortdescription {
+  font-size: $font-sm;
+  margin-top: $error-top-m;
+}
+.cmp-button__questionmark{
+  position: absolute;
+  display:inline-block;
+  top:8px;
+  right:8px;
+  width:1rem;
+  height:1rem;
+  border-radius: 9px;
+  background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
+  cursor : pointer;
+}
