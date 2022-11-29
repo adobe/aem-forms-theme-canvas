@@ -1,25 +1,27 @@
 /* ===============Button================== */
-.cmp-button {
-  border: 2px solid $dark-gray;
-  background: $white;
-  color: $dark-gray;
-  border-radius: 1.5rem;
-  font-size: $font-md;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+.cmp-adaptiveform-button{
   margin-top: $field-top-m;
   position: relative;
 }
-.cmp-button:hover {
+.cmp-adaptiveform-button__widget {
+  border: 2px solid $dark-gray;
+  background: $white;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: $dark-gray;
+  font-size: $font-md;
+}
+.cmp-adaptiveform-button__widget:hover {
   background: $dark-gray;
   color: $white;
 }
-.cmp-button[data-cmp-enabled]:not([data-cmp-enabled=true]) {
+.cmp-adaptiveform-button__widget[data-cmp-enabled]:not([data-cmp-enabled=true]) {
   background: $gray;
   color: $very-light-gray;
 }
 
-.cmp-button__longdescription {
+.cmp-adaptiveform-button__longdescription {
   color: $light-gray;
   background-color: $very-light-gray;
   font-size: $font-sm;
@@ -27,11 +29,11 @@
   margin-top: $error-top-m;
   margin-bottom: 5px;
 }
-.cmp-button__shortdescription {
+.cmp-adaptiveform-button__shortdescription {
   font-size: $font-sm;
   margin-top: $error-top-m;
 }
-.cmp-button__questionmark{
+.cmp-adaptiveform-button__questionmark{
   position: absolute;
   display:inline-block;
   top:8px;
