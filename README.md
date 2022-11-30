@@ -11,20 +11,44 @@ This theme can be modified to customize the visual appearance of Adaptive Form.
 * `src/components`: Files that are specific to components.
 * `src/resources`: Associated files, like icons, logos, fonts.
 
-## Build
 
-1. Initialize the project with following command executed at the theme root:
+## Complete development workflow
+
+In order to make best use of theme-builder you have to run the live preview which provides proxy and browser sync functionalities. On top of that you need to make sure that you have additional watcher for your source files that triggers your theme build process which produces changes in the `dist` folder of your theme. This way after making change in your source file you will get your proxy page refreshed via browser sync.
+
+
+### Build
+
+Initialize the project with following command executed at the theme root:
 
 ```
 npm install
 ```
 
-2. Complete the `.env` file with credentials for the local proxy server to access the site created on Cloud Service.
+### Environment Variables
 
-3. Run the local proxy server while working to preview your changes with the content from the production environment.
+Theme Builder scripts are based on the environment variables you provide. These variables are used to properly provide live preview and deploy functionality of the AEM Site Theme Builder. 
+
+Here is the list of required variables:
+
+```
+AEM_URL=<URL of the AEM as a Cloud Service instance>
+AEM_SITE=<name of the AEM site>
+AEM_PROXY_PORT=<localhost proxy server port>
+```
+Here is the list of optional variables:
+
+```
+AEM_ADAPTIVE_FORM=<name of the AEM Form>
+```
+Recommended way to define site variables is to use / create `.env` file within your theme project repository.
+
+### Launch
+
+Run the local proxy server while working to preview your changes with the content from the production environment.
 
 ```
 npm run live
 ```
 
-4. Once your work completed, check your changes into GitHub, and execute the deployment action on GitHub.
+ Once your work completed, check your changes into GitHub, and execute the deployment pipeline in Cloud Manager.
