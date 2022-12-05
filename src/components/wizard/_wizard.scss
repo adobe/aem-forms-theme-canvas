@@ -1,12 +1,13 @@
 .cmp-adaptiveform-wizard{
   color: $dark-gray;
   font-size: $font-md;
-  margin-top: $field-top-m;
+  margin: $field-margin;
   position: relative;
   background: $wizard-bg-color;
   padding-bottom: 2rem;
   border: 1px solid $very-light-gray;
   padding-left: 10px;
+  margin-right: $field-right-margin;
 }
 .cmp-adaptiveform-wizard__widget{
   position: relative;
@@ -70,12 +71,12 @@
   background-color: $very-light-gray;
   font-size: $font-sm;
   padding: 0.125rem 0.5rem;
-  margin-top: $error-top-m;
+  margin-top: $error-top-margin;
   margin-left: -10px;
 }
 .cmp-adaptiveform-wizard__shortdescription {
   font-size: $font-sm;
-  margin-top: $error-top-m;
+  margin-top: $error-top-margin;
 }
 .cmp-adaptiveform-wizard__questionmark {
   position: absolute;

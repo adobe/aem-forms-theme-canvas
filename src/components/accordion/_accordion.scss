@@ -1,6 +1,7 @@
 .cmp-accordion{
-  margin-top: $field-top-m;
+  margin: $field-margin;
   position: relative;
+  margin-right: $field-right-margin;
 }
 .cmp-accordion__item{
   border: 2px solid $silver;
@@ -38,12 +39,12 @@
   background-color: $very-light-gray;
   font-size: $font-sm;
   padding: 0.125rem 0.5rem;
-  margin-top: $error-top-m;
+  margin-top: $error-top-margin;
   margin-bottom: 5px;
 }
 .cmp-accordion__shortdescription {
   font-size: $font-sm;
-  margin-top: $error-top-m;
+  margin-top: $error-top-margin;
 }
 .cmp-accordion__questionmark{
   position: absolute;

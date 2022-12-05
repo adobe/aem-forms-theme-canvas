@@ -2,35 +2,38 @@
 .cmp-adaptiveform-datepicker {
   color: $dark-gray;
   font-size: $font-md;
-  margin-top: $field-top-m;
+  margin: $field-margin;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .cmp-adaptiveform-datepicker__widget {
-  margin-top: $label-top-m;
-  width: calc(100% - 16px);
+  margin-top: 14px;
   height: $field-height;
   border-radius: 0.25rem;
   border: 1px solid $dark-gray;
-  font-size: $font-sm;
+  font-size: $font-md;
   color: $dark-gray;
-  padding-left: $field-padding-l;
+  padding-left: $field-padding-left;
+  margin-right: $field-right-margin;
 }
 .cmp-adaptiveform-datepicker__longdescription {
   color: $light-gray;
   background-color: $very-light-gray;
   font-size: $font-sm;
   padding: 0.125rem 0.5rem;
-  margin-top: $error-top-m;
+  margin-top: $error-top-margin;
+  margin-right: $field-right-margin;
 }
 .cmp-adaptiveform-datepicker__shortdescription {
   font-size: $font-sm;
-  margin-top: $error-top-m;
+  margin-top: $error-top-margin;
 }
 .cmp-adaptiveform-datepicker__questionmark {
   position: absolute;
   display:inline-block;
   top:8px;
-  right:8px;
+  right:28px;
   width:1rem;
   height:1rem;
   border-radius: 9px;
@@ -40,24 +43,16 @@
 .cmp-adaptiveform-datepicker__errormessage{
   color: $error;
   font-size: $font-sm;
-  margin-top: $error-top-m;
+  margin-top: $error-top-margin;
 }
 .cmp-adaptiveform-datepicker[data-cmp-valid=false]{
-  border-left-width: 4px;
-  border-style: solid;
-  border-color: $error;
-  border-right-width: 0;
-  border-top-width: 0;
-  border-bottom-width: 0;
   background: $light-error;
-  padding: 5px;
+  border: 0 solid $error;
+  border-left-width: 4px;
+  padding-left: 5px;
 }
 .cmp-adaptiveform-datepicker[data-cmp-valid=true]{
-  border-bottom-width: 0;
-  border-right-width: 0;
-  border-top-width: 0;
+  border: 0 solid $success;
   border-left-width: 4px;
-  border-style: solid;
-  border-color: $success;
-  padding: 5px 0 0 5px;
+  padding-left: 5px;
 }

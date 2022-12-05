@@ -1,7 +1,8 @@
 /* ===============Button================== */
 .cmp-adaptiveform-button{
-  margin-top: $field-top-m;
+  margin: $field-margin;
   position: relative;
+  margin-right: $field-right-margin;
 }
 .cmp-adaptiveform-button__widget {
   border: 2px solid $dark-gray;
@@ -26,12 +27,12 @@
   background-color: $very-light-gray;
   font-size: $font-sm;
   padding: 0.125rem 0.5rem;
-  margin-top: $error-top-m;
+  margin-top: $error-top-margin;
   margin-bottom: 5px;
 }
 .cmp-adaptiveform-button__shortdescription {
   font-size: $font-sm;
-  margin-top: $error-top-m;
+  margin-top: $error-top-margin;
 }
 .cmp-adaptiveform-button__questionmark{
   position: absolute;

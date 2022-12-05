@@ -1,8 +1,9 @@
 .cmp-tabs{
   color: $dark-gray;
   font-size: $font-md;
-  margin-top: $field-top-m;
+  margin: $field-margin;
   position: relative;
+  margin-right: $field-right-margin;
 }
 .cmp-tabs__tablist{
   border-bottom: 1px solid $very-light-gray;
@@ -27,11 +28,11 @@
   background-color: $very-light-gray;
   font-size: $font-sm;
   padding: 0.125rem 0.5rem;
-  margin-top: $error-top-m;
+  margin-top: $error-top-margin;
 }
 .cmp-tabs__shortdescription {
   font-size: $font-sm;
-  margin-top: $error-top-m;
+  margin-top: $error-top-margin;
 }
 .cmp-tabs__questionmark{
   position: absolute;

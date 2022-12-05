@@ -2,8 +2,9 @@
 .cmp-container{
   color: $dark-gray;
   font-size: $font-md;
-  margin-top: $field-top-m;
+  margin: $field-margin;
   position: relative;
+  margin-right: $field-right-margin;
 }
 .cmp-container__label{
   font-size: $font-lg
@@ -13,11 +14,11 @@
   background-color: $very-light-gray;
   font-size: $font-sm;
   padding: 0.125rem 0.5rem;
-  margin-top: $error-top-m;
+  margin-top: $error-top-margin;
 }
 .cmp-container__shortdescription {
   font-size: $font-sm;
-  margin-top: $error-top-m;
+  margin-top: $error-top-margin;
 }
 .cmp-container__questionmark {
   position: absolute;

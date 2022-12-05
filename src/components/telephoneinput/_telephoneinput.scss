@@ -1,5 +1,5 @@
-/* ===============Drop Down================== */
-.cmp-adaptiveform-dropdown {
+/* ===============Telephone Input================== */
+.cmp-adaptiveform-telephoneinput {
   color: $dark-gray;
   font-size: $font-md;
   margin: $field-margin;
@@ -7,16 +7,17 @@
   display: flex;
   flex-direction: column;
 }
-.cmp-adaptiveform-dropdown__widget {
+.cmp-adaptiveform-telephoneinput__widget {
   margin-top: $label-top-margin;
   height: $field-height;
   border-radius: 0.25rem;
   border: 1px solid $dark-gray;
   font-size: $font-md;
   color: $dark-gray;
+  padding-left: $field-padding-left;
   margin-right: $field-right-margin;
 }
-.cmp-adaptiveform-dropdown__longdescription {
+.cmp-adaptiveform-telephoneinput__longdescription {
   color: $light-gray;
   background-color: $very-light-gray;
   font-size: $font-sm;
@@ -24,11 +25,11 @@
   margin-top: $error-top-margin;
   margin-right: $field-right-margin;
 }
-.cmp-adaptiveform-dropdown__shortdescription {
+.cmp-adaptiveform-telephoneinput__shortdescription {
   font-size: $font-sm;
   margin-top: $error-top-margin;
 }
-.cmp-adaptiveform-dropdown__questionmark{
+.cmp-adaptiveform-telephoneinput__questionmark{
   position: absolute;
   display:inline-block;
   top:8px;
@@ -39,22 +40,19 @@
   background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
   cursor : pointer;
 }
-.cmp-adaptiveform-dropdown__errormessage{
+.cmp-adaptiveform-telephoneinput__errormessage{
   color: $error;
   font-size: $font-sm;
   margin-top: $error-top-margin;
 }
-.cmp-adaptiveform-dropdown[data-cmp-valid=false]{
+.cmp-adaptiveform-telephoneinput[data-cmp-valid=false]{
   background: $light-error;
   border: 0 solid $error;
   border-left-width: 4px;
   padding-left: 5px;
 }
-.cmp-adaptiveform-dropdown[data-cmp-valid=true]{
+.cmp-adaptiveform-telephoneinput[data-cmp-valid=true]{
   border: 0 solid $success;
   border-left-width: 4px;
   padding-left: 5px;
-}
-.cmp-adaptiveform-dropdown__widget[multiple='multiple'] {
-  height: 80px;
 }
