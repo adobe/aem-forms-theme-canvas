@@ -1,4 +1,4 @@
-# af2-canvas-theme
+# AEM Forms Canvas Theme
 
 This is the standard Canvas theme for Adobe Experience Manager (AEM) Forms.
 
@@ -59,4 +59,4 @@ Contributions are welcomed! Read the [Contributing Guide](.github/CONTRIBUTING.m
 
 ## Licensing
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE.md) for more information.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for more information.
