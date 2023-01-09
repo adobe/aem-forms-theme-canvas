@@ -1,0 +1,38 @@
+/* ===============Container================== */
+.cmp-adaptiveform-container__wrapper{
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+@media(max-width:767px){
+  .cmp-adaptiveform-container__wrapper{
+    padding: 10px 20px 10px 10px;
+  }
+}
+@media(min-width:768px){
+  .cmp-adaptiveform-container__wrapper{
+    width:720px
+  }
+}
+@media(min-width:992px){
+  .cmp-adaptiveform-container__wrapper{
+    width:940px
+  }
+}
+@media(min-width:1200px){
+  .cmp-adaptiveform-container__wrapper{
+    width:1140px
+  }
+}
+.cmp-adaptiveform-container--loading {
+  background: rgb(255, 255, 255) url(./resources/images/busy-state.gif) no-repeat fixed center;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  cursor: wait;
+  z-index: 100000;
+}
