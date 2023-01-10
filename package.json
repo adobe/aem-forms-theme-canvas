@@ -1,6 +1,6 @@
 {
     "name": "aem-forms-canvas-theme-updated",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Standard AEM Forms Canvas theme",
     "license": "MIT License, Copyright 2022 Adobe Systems Incorporated",
     "scripts": {
