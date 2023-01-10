@@ -1,6 +1,6 @@
 {
     "name": "aem-forms-canvas-theme-updated",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Standard AEM Forms Canvas theme",
     "license": "MIT License, Copyright 2022 Adobe Systems Incorporated",
     "scripts": {
@@ -8,7 +8,7 @@
         "watch": "parcel watch src/theme.ts",
         "proxy": "aem-site-theme-builder live",
         "live": "npm-run-all -p watch proxy",
-        "create-zip": "cd dist/ && zip ../theme/theme.zip ./* -r",
+        "create-zip": "cd dist/ && zip ./theme.zip ./* -r",
         "deploy-zip": "node scripts/deploy-zip.mjs"
     },
     "devDependencies": {
