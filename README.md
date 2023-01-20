@@ -27,7 +27,7 @@ npm install
 
 ### Environment Variables
 
-Theme Builder scripts are based on the environment variables you provide. These variables are used to properly provide live preview and deploy functionality of the AEM Site Theme Builder. 
+Theme Builder scripts are based on the environment variables you provide. These variables are used to properly provide live preview and deploy functionality of the AEM Site Theme Builder.
 
 Here is the list of required variables:
 
@@ -51,7 +51,18 @@ Run the local proxy server while working to preview your changes with the conten
 npm run live
 ```
 
- Once your work completed, check your changes into GitHub, and execute the deployment pipeline in Cloud Manager.
+Once your work completed, check your changes into GitHub, and execute the deployment pipeline in Cloud Manager.
+
+### Deploy theme to artifactory
+
+Builds the canvas theme bumps version and deploys the dist directory that contains theme.zip to artifactory.
+
+Below version types can be used in deploy-zip.mjs:<br />
+version types: [ major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]
+
+```
+npm run deploy-zip
+```
 
 ## Contributing
 
