@@ -4,11 +4,15 @@
 $font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-title: 'Source Serif Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-// ====== font size======
-$dark-gray: rgb(177, 22, 22);
+// ====== colors======
+$dark-gray: rgb(22, 22, 22);
 $gray: #888;
 $light-gray: #969696;
+
+
 $very-light-gray: #e6e6e6;
+
+$bg-gray: #f5f5f5;
 $white: #fff;
 $error: #eb3c36;
 $light-error: rgba(235,60,54,0.05);
@@ -17,18 +21,13 @@ $silver: #ccc;
 $panel-bg-color: #efefef;
 $wizard-bg-color: #fafafa;
 
-// ====== font size======
-$font-xlg: 1.5rem;
-$font-lg: 1.25rem;
-$font-md: 1rem;
-$font-sm: .875rem;
-$font-xsm: .75rem;
+
 
 // ====== space ======
 $field-margin: .25rem 0;
 $label-top-margin: 10px;
-$field-height: 40px;
-$field-padding-left: 10px;
+$field-height: 64px;
+$field-padding-left: 12px;
 $error-top-margin: 10px;
 $field-right-margin: 20px;
 $radio-checkbox-gap: 20px;

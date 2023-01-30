@@ -1,58 +1,8 @@
 /* ===============Number Input================== */
-.cmp-adaptiveform-numberinput{
-  color: $dark-gray;
-  font-size: $font-md;
-  margin: $field-margin;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-.cmp-adaptiveform-numberinput__widget{
-  margin-top: $label-top-margin;
-  height: $field-height;
-  border-radius: 0.25rem;
-  border: 1px solid $dark-gray;
-  font-size: $font-md;
-  color: $dark-gray;
-  padding-left: $field-padding-left;
-  margin-right: $field-right-margin;
-}
-.cmp-adaptiveform-numberinput__longdescription {
-  color: $light-gray;
-  background-color: $very-light-gray;
-  font-size: $font-sm;
-  padding: 0.125rem 0.5rem;
-  margin-top: $error-top-margin;
-  margin-right: $field-right-margin;
-}
-.cmp-adaptiveform-numberinput__shortdescription {
-  font-size: $font-sm;
-  margin-top: $error-top-margin;
-}
-.cmp-adaptiveform-numberinput__questionmark {
-  position: absolute;
-  display:inline-block;
-  top:8px;
-  right:28px;
-  width:1rem;
-  height:1rem;
-  border-radius: 9px;
-  background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
-  cursor : pointer;
-}
-.cmp-adaptiveform-numberinput__errormessage{
-  color: $error;
-  font-size: $font-sm;
-  margin-top: $error-top-margin;
-}
-.cmp-adaptiveform-numberinput[data-cmp-valid=false]{
-  background: $light-error;
-  border: 0 solid $error;
-  border-left-width: 4px;
-  padding-left: 5px;
-}
-.cmp-adaptiveform-numberinput[data-cmp-valid=true]{
-  border: 0 solid $success;
-  border-left-width: 4px;
-  padding-left: 5px;
-}
+// .cmp-adaptiveform-numberinput{
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
+  
+// }
+

@@ -1,11 +1,12 @@
 /* ===============Container================== */
 .cmp-adaptiveform-container__wrapper{
   margin: 0 auto;
-  margin-bottom: 20px;
+  padding-top: $space-l;
+  padding-bottom: $space-l;
 }
 @media(max-width:767px){
   .cmp-adaptiveform-container__wrapper{
-    padding: 10px 20px 10px 10px;
+    padding: 20px;
   }
 }
 @media(min-width:768px){
@@ -20,7 +21,7 @@
 }
 @media(min-width:1200px){
   .cmp-adaptiveform-container__wrapper{
-    width:1140px
+    width: 720px;
   }
 }
 .cmp-adaptiveform-container--loading {

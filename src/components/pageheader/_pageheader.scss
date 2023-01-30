@@ -1,17 +1,28 @@
 .cmp-adaptiveform-pageheader{
-  font-size: $font-md;
   display: flex;
-  height: 90px;
-  background: $panel-bg-color;
+  align-items: center;
+  height: 80px;
+  background: white;
+  column-gap: $space-s;
+  padding: 24px;
+  color: $dark-gray;
+  font-size: $font-m;
+  border-bottom: $border-light;
 }
+
 .cmp-adaptiveform-pageheader img{
-  height: 3.75rem;
-  margin: $field-margin;
-  max-width: 100%;
+  height: $tap-height / 1.5;
+  margin: 0;
   width: auto;
+  color: white;
+  display: block;
 }
+
 .cmp-adaptiveform-pageheader div:last-child{
   display: flex;
   align-items: center;
-  margin-left: 2rem;
+}
+
+p {
+  margin: 0;
 }

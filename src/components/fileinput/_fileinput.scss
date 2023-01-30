@@ -1,81 +1,94 @@
 /* ===============File Input================== */
-.cmp-adaptiveform-fileinput {
-  color: $dark-gray;
-  font-size: $font-md;
-  margin: $field-margin;
-  position: relative;
-}
+
+
 
 .cmp-adaptiveform-fileinput__widget {
-  margin-top: 5px;
-  margin-right: $field-right-margin;
+  
+  
 }
 .cmp-adaptiveform-fileinput__widget::-webkit-file-upload-button {
   visibility: hidden;
+  background-color: $very-light-gray;
+  border: none;
+  height: $tap-height;
+  border-radius: $button-radius;
+  font-weight: 500 !important;
+  padding: 0 $space-l;
+  
 }
-.cmp-adaptiveform-fileinput__widget::before {
-  content: 'Attach';
-  display: inline-block;
-  outline: none;
-  border: 2px solid $dark-gray;
-  background: $white;
-  color: $dark-gray;
-  border-radius: 1.5rem;
-  font-size: $font-md;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+
+
+br {
+  display: none;
 }
 
 .cmp-adaptiveform-fileinput__widgetlabel {
-  border-radius: 1.5rem;
-  border: 2px solid;
-  padding: 0.625rem 1rem;
-  font-size: $font-sm;
-  display: inline-block;
-  cursor: pointer;
+  position: static;
+  align-self: flex-start;
+  background: $bg-gray;
+  border: none;
+  height: $tap-height;
+  border-radius: $button-radius;
+  
+  vertical-align: text-bottom;
+  cursor: pointer !important;
+  color: $dark-gray;
+  
+  font-size: $font-m;
+  padding: $space-s - 2 $space-l;
+  font-weight: 500;
+  margin-top: 0 !important;
+  margin-bottom: $space-s;
+  opacity: 1;
 }
 
-.cmp-adaptiveform-fileinput__longdescription {
-  color: $light-gray;
-  background-color: $very-light-gray;
-  font-size: $font-sm;
-  padding: 0.125rem 0.5rem;
-  margin-top: $error-top-margin;
-  margin-right: $field-right-margin;
+input[type="file"] {
+  column-gap: $space-l !important;
 }
 
-.cmp-adaptiveform-fileinput__shortdescription {
-  font-size: $font-sm;
-  margin-top: $error-top-margin;
-}
+// .cmp-adaptiveform-fileinput__longdescription {
+//   color: $light-gray;
+//   background-color: $very-light-gray;
+//   font-size: $font-s;
+//   padding: 0.125rem 0.5rem;
+//   margin-top: $error-top-margin;
+//   margin-right: $field-right-margin;
+// }
 
-.cmp-adaptiveform-fileinput__questionmark {
-  position: absolute;
-  display:inline-block;
-  top:8px;
-  right:28px;
-  width:1rem;
-  height:1rem;
-  border-radius: 9px;
-  background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
-  cursor : pointer;
-}
-.cmp-adaptiveform-fileinput__errormessage{
-  color: $error;
-  font-size: $font-sm;
-  margin-top: $error-top-margin;
-}
-.cmp-adaptiveform-fileinput[data-cmp-valid=false]{
-  background: $light-error;
-  border: 0 solid $error;
-  border-left-width: 4px;
-  padding-left: 5px;
-}
-.cmp-adaptiveform-fileinput[data-cmp-valid=true]{
-  border: 0 solid $success;
-  border-left-width: 4px;
-  padding-left: 5px;
-}
+// .cmp-adaptiveform-fileinput__shortdescription {
+//   font-size: $font-s;
+//   margin-top: $error-top-margin;
+// }
+
+// .cmp-adaptiveform-fileinput__questionmark {
+//   position: absolute;
+//   display:inline-block;
+//   top:8px;
+//   right:28px;
+//   width:1rem;
+//   height:1rem;
+//   border-radius: 9px;
+//   background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
+//   cursor : pointer;
+// }
+
+// .cmp-adaptiveform-fileinput__errormessage{
+//   color: $error;
+//   font-size: $font-s;
+// }
+
+// .cmp-adaptiveform-fileinput[data-cmp-valid=false]{
+//   background: $light-error;
+//   border: 0 solid $error;
+//   border-left-width: 4px;
+//   padding-left: 5px;
+// }
+
+// .cmp-adaptiveform-fileinput[data-cmp-valid=true]{
+//   border: 0 solid $success;
+//   border-left-width: 4px;
+//   padding-left: 5px;
+// }
 
 .cmp-adaptiveform-fileinput__filelist {
   padding-left: 0;
@@ -84,16 +97,18 @@
 }
 .cmp-adaptiveform-fileinput__fileitem {
   display: block;
-  padding: 10px;
-  border-top: 1px solid $light-gray;
+  padding: $space-s;
+  border-top: $border-light;
 }
 .cmp-adaptiveform-fileinput__filename {
-  text-decoration: underline;
-  cursor: pointer;
+  position: static;
 }
+
+
+
 .cmp-adaptiveform-fileinput__filedelete {
   float: right;
-  font-size: $font-lg;
+  font-size: $font-l;
   font-weight: bold;
   line-height: 1;
   text-shadow: 0 1px 0 $white;

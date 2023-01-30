@@ -1,9 +1,15 @@
 /* ===============Imaget================== */
 .cmp-image{
-  margin: $field-margin;
+  border: 1px solid $very-light-gray;
+  border-radius: 8px;
 }
 .cmp-image__image{
+  border-radius: 8px;
+  display: block;
   height: auto;
   max-width: 100%;
   width: inherit;
+  margin: 0 !important;
+
+  padding: 0 !important;
 }

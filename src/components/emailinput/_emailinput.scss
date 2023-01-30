@@ -1,7 +1,7 @@
 /* ===============Email Input================== */
 .cmp-adaptiveform-emailinput {
   color: $dark-gray;
-  font-size: $font-md;
+  font-size: $font-m;
   margin: $field-margin;
   position: relative;
   display: flex;
@@ -12,7 +12,7 @@
   height: $field-height;
   border-radius: 0.25rem;
   border: 1px solid $dark-gray;
-  font-size: $font-md;
+  font-size: $font-m;
   color: $dark-gray;
   padding-left: $field-padding-left;
   margin-right: $field-right-margin;
@@ -20,13 +20,13 @@
 .cmp-adaptiveform-emailinput__longdescription {
   color: $light-gray;
   background-color: $very-light-gray;
-  font-size: $font-sm;
+  font-size: $font-s;
   padding: 0.125rem 0.5rem;
   margin-top: $error-top-margin;
   margin-right: $field-right-margin;
 }
 .cmp-adaptiveform-emailinput__shortdescription {
-  font-size: $font-sm;
+  font-size: $font-s;
   margin-top: $error-top-margin;
 }
 .cmp-adaptiveform-emailinput__questionmark{
@@ -42,7 +42,7 @@
 }
 .cmp-adaptiveform-emailinput__errormessage{
   color: $error;
-  font-size: $font-sm;
+  font-size: $font-s;
   margin-top: $error-top-margin;
 }
 .cmp-adaptiveform-emailinput[data-cmp-valid=false]{

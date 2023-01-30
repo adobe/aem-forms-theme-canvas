@@ -2,9 +2,12 @@
 //== Defaults
 html, body {
   color: $dark-gray;
-  font-size: $font-md;
+  font-size: $font-m;
+  background-color: $white;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
 }
+
+
 
 .aem-Grid {
   @include generate-grid(default, $max_col);
