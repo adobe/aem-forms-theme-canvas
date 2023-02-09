@@ -1,59 +1,42 @@
-.cmp-accordion{
-  margin: $field-margin;
-  position: relative;
-  margin-right: $field-right-margin;
+.cmp-accordion {
+    margin: $field-margin;
+    position: relative;
+    margin-right: $field-right-margin;
+  &__item {
+    border: 2px solid $silver;
+  }
+  &__button {
+    font-size:$font-sm;
+    color:$light-gray;
+    cursor: pointer;
+    border: none;
+    padding: 1rem;
+  }  
+  &__button:hover {
+    color: $dark-gray
+  }
+  &__title::before {
+    border: 3px solid $light-gray;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    content: '';
+    margin-right: 1rem;
+  }
+  & {
+    &__button--expanded{
+      &__title:before {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+  }
+  &__panel {
+    padding: 1rem 3.5rem;
+    background: $panel-bg-color;
+  }
+  @include descriptionMixin(5px,0,8px);
 }
-.cmp-accordion__item{
-  border: 2px solid $silver;
-}
-.cmp-accordion__button{
-  font-size:$font-sm;
-  color:$light-gray;
-  cursor: pointer;
-  border: none;
-  padding: 1rem;
-}
-.cmp-accordion__button:hover{
-  color:$dark-gray;
-}
-.cmp-accordion__title:before{
-  border: 3px solid $light-gray;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 4px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  content: '';
-  margin-right: 1rem;
-}
-.cmp-accordion__button.cmp-accordion__button--expanded .cmp-accordion__title:before{
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-.cmp-accordion__panel{
-  padding: 1rem 3.5rem;
-  background: $panel-bg-color;
-}
-.cmp-accordion__longdescription {
-  color: $light-gray;
-  background-color: $very-light-gray;
-  font-size: $font-sm;
-  padding: 0.125rem 0.5rem;
-  margin-top: $error-top-margin;
-  margin-bottom: 5px;
-}
-.cmp-accordion__shortdescription {
-  font-size: $font-sm;
-  margin-top: $error-top-margin;
-}
-.cmp-accordion__questionmark{
-  position: absolute;
-  display:inline-block;
-  top:8px;
-  right:8px;
-  width:1rem;
-  height:1rem;
-  border-radius: 9px;
-  background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
-  cursor : pointer;
-}
+

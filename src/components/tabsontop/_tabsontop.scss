@@ -1,47 +1,29 @@
-.cmp-tabs{
-  color: $dark-gray;
-  font-size: $font-md;
-  margin: $field-margin;
-  position: relative;
-  margin-right: $field-right-margin;
+.cmp-tabs {
+   color: $dark-gray;
+   font-size: $font-md;
+   margin: $field-margin;
+   position: relative;
+   margin-right: $field-right-margin;
+  &__tablist {
+     border-bottom: 1px solid $very-light-gray;
+  } 
+  &__tab {
+    padding: 0.5rem 0 1rem 0;
+    color: $light-gray;
+    margin-right: 3rem;
+  }
+  & {
+    &__tab--active {
+      border-bottom: 2px solid $dark-gray;
+      color: $dark-gray;
+    }
+    &__tab--active:hover {
+      border-bottom: 2px solid $dark-gray;
+    }
+  }
+  &__tab:hover {
+    border-bottom: 2px solid $light-gray;
+  }
+  @include descriptionMixin(0,0,8px);
 }
-.cmp-tabs__tablist{
-  border-bottom: 1px solid $very-light-gray;
-}
-.cmp-tabs__tab{
-  padding: 0.5rem 0 1rem 0;
-  color: $light-gray;
-  margin-right: 3rem;
-}
-.cmp-tabs__tab.cmp-tabs__tab--active{
-  border-bottom: 2px solid $dark-gray;
-  color: $dark-gray;
-}
-.cmp-tabs__tab.cmp-tabs__tab--active:hover{
-  border-bottom: 2px solid $dark-gray;
-}
-.cmp-tabs__tab:hover{
-  border-bottom: 2px solid $light-gray;
-}
-.cmp-tabs__longdescription {
-  color: $light-gray;
-  background-color: $very-light-gray;
-  font-size: $font-sm;
-  padding: 0.125rem 0.5rem;
-  margin-top: $error-top-margin;
-}
-.cmp-tabs__shortdescription {
-  font-size: $font-sm;
-  margin-top: $error-top-margin;
-}
-.cmp-tabs__questionmark{
-  position: absolute;
-  display:inline-block;
-  top:8px;
-  right:8px;
-  width:1rem;
-  height:1rem;
-  border-radius: 9px;
-  background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
-  cursor : pointer;
-}
+

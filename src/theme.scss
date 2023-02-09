@@ -8,6 +8,7 @@
 //== base
 @import 'site/_grid.scss';
 @import 'site/_base';
+@import './mixin.scss';
 
 //== Core components
 @import 'src/components/button/_button.scss';

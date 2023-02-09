@@ -3,15 +3,15 @@
   display: flex;
   height: 90px;
   background: $panel-bg-color;
-}
-.cmp-adaptiveform-pageheader img{
+ & img {
   height: 3.75rem;
   margin: $field-margin;
   max-width: 100%;
   width: auto;
-}
-.cmp-adaptiveform-pageheader div:last-child{
+ } 
+ & div:last-child {
   display: flex;
   align-items: center;
   margin-left: 2rem;
+ }
 }

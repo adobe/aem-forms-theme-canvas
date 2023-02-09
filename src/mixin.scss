@@ -1,0 +1,104 @@
+@mixin questionMark($right) {
+    position: absolute;
+    display:inline-block;
+    top: 8px;
+    right:$right;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 9px;
+    background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
+    cursor : pointer;
+  }
+
+  @mixin container () {
+    color: $dark-gray;
+    font-size: $font-md;
+    margin: $field-margin;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @mixin longDescription($marginBottom: 0, $marginRight: 0) {
+    color: $light-gray;
+    background-color: $very-light-gray;
+    font-size: $font-sm;
+    padding: 0.125rem 0.5rem;
+    margin-top: $error-top-margin;
+    margin-bottom: $marginBottom;
+    margin-right: $marginRight;
+  }
+
+  @mixin shortDescription() {
+    font-size: $font-sm;
+    margin-top: $error-top-margin;
+  }
+  
+  @mixin error() {
+    color: $error;
+    font-size: $font-sm;
+    margin-top: $error-top-margin;
+  }
+
+  @mixin Invalid() {
+    background: $light-error;
+    border-width: 0;
+    border-style: solid;
+    border-color: $error;
+    border-left-width: 4px;
+    padding-left: 5px;
+  }
+
+  @mixin Valid() {
+    border-width: 0;
+    border-style: solid;
+    border-color: $success;
+    border-left-width: 4px;
+    padding-left: 5px;
+  }
+
+  @mixin widget($borderRadius: 0, $marginRight: 0, $marginTop: 0) {
+    color: $dark-gray;
+    font-size: $font-md;
+    border-radius: $borderRadius;
+    margin-right: $marginRight;
+    margin-top: $marginTop;
+  }
+
+  @mixin wizardNavMixin($right, $marginRight) {
+    position: absolute;
+    right: $right;
+    top: 75px;
+    cursor:pointer;
+    height:2.5rem;
+    width:2.5rem;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $light-gray;
+    border-radius:1.5rem;
+    margin-right:$marginRight;
+  }
+
+  @mixin descriptionMixin($marginBottom: 0, $marginRight: 0, $right) {
+    &__longdescription {
+      @include longDescription($marginBottom, $marginRight);
+    };
+    &__shortdescription {
+      @include shortDescription();
+    };
+    &__questionmark {
+      @include questionMark($right);
+    };
+  }
+
+  @mixin validInvalidMixin() {
+    &__errormessage {
+      @include error();
+    };
+    &[data-cmp-valid=false] {
+      @include Invalid();
+    };
+    &[data-cmp-valid=true] {
+      @include Valid();
+    }
+  }

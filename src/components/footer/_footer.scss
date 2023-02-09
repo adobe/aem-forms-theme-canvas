@@ -5,7 +5,7 @@
   font-size: $font-xsm;
   margin: $field-margin;
   text-align: center;
-}
-.cmp-adaptiveform-footer__text{
-  padding: .5rem 0;
+ &__text {
+  padding: 0.5rem 0;
+ }
 }
