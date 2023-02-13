@@ -5,7 +5,7 @@
 }
 
 .cmp-adaptiveform-wizard__tabList {
-  padding: 0 ;
+  padding: 0 $space-s;
   counter-reset: section;
   display: flex;
   flex-wrap: wrap;
@@ -54,7 +54,7 @@
 
 .cmp-adaptiveform-wizard .cmp-adaptiveform-wizard__tab{
   
-  padding: 0 $space-s;
+  padding: 0 ;
   border-bottom-width: 2px;
   height: $tap-height;
   margin-right: $space-s;

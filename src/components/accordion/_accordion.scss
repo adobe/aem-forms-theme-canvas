@@ -14,14 +14,15 @@ opacity: 1;
   opacity: 1;
   height: $tap-height !important;
   font-size:$font-m;
-  font-weight: bold ;
+  font-weight: 500;
   color:gray;
   background-color: transparent;
   cursor: pointer;
   border: none;
-  border-top: $border-light;
-  border-width: 2px;
-  padding: $space-s;
+  border-bottom: $border-light;
+ 
+  
+  padding: 0;
 
 
 }
@@ -29,10 +30,8 @@ opacity: 1;
 
 .cmp-accordion__button--expanded {
   color: $blue;
-  border-color: $blue;
+  border-color: transparent;
 
-  box-shadow:  inset 0 15px 10px -15px rgba(42, 69, 152, 0.345);
-  
 }
 
 .cmp-accordion__button--expanded:hover {

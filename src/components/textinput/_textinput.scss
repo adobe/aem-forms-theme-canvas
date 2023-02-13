@@ -19,37 +19,14 @@ div[data-cmp-is="adaptiveFormDropDown"],
 div[data-cmp-is='adaptiveFormFileInput'],
 div[data-cmp-is="adaptiveFormRadioButton"],
 div[data-cmp-is="adaptiveFormCheckBoxGroup"] {
-  padding: 0 $space-s;
+  padding: 0 0;
+  margin: $space-m 0;
 }
 
 div:has(input:focus) {
   z-index: 10;
 }
 
-
-
-//dynamic labels
-
-/* autoprefixer: off */
-.cmp-adaptiveform-textinput:has(input:not(:placeholder-shown):valid) label,
-.cmp-adaptiveform-numberinput:has(input:not(:placeholder-shown):valid) label,
-.cmp-adaptiveform-datepicker:has(input:not(:placeholder-shown):valid) label {
-  margin-top: $space-s;
-  font-size: $font-s  !important;
-}
-/* autoprefixer: on */
-
-.cmp-adaptiveform-dropdown:has(option[selected='selected']) > label {
-  margin-top: $space-s;
-  font-size: $font-s  !important;
-}
-
-.cmp-adaptiveform-textinput:focus-within > label,
-.cmp-adaptiveform-numberinput:focus-within > div label,
-.cmp-adaptiveform-datepicker:focus-within > div label {
-  margin-top: $space-s;
-  font-size: $font-s!important;
-}
 
 
 //static labels
@@ -62,39 +39,38 @@ div:has(input:focus) {
 }
 
 
-input {
-  border-radius: 0;
+input, select {
+  border-radius: 4px;
   font-size: $font-m;
   height: $field-height;
-  padding: 18px 0 0 0;
-  margin: 0 !important;
-  outline: 0;
-  border: none;
+  padding: 0 $space-s;
+  margin: $space-s 0;
+  border: $border-light;
   background-color: transparent;
+}
+
+input:focus, select:focus {
+  background-color: white  !important;
+  outline-offset: 2px;
+  outline: $focus-outline;
+  outline-width: 2px !important;
 }
 
 
 label {
-  position: absolute;
   opacity: 1;
   color: $dark-gray;
   padding: 0;
-  margin-top: 20px;
   font-size: $font-m;
   pointer-events: none;
   z-index: 11;
-  transition: margin-top cubic-bezier(0.215, 0.610, 0.355, 1) 0.3s;
-  transition: font-size cubic-bezier(0.215, 0.610, 0.355, 1) 0.3s;
-}
+ }
 
 
 
 
 
-input::placeholder {
-  opacity: 0;
-  display: none;
-}
+
 
 
 
@@ -161,8 +137,9 @@ input::placeholder {
 .cmp-adaptiveform-fileinput__questionmark {
   position: absolute;
   display: flex;
-  top: $space-s;
-  right: $space-s;
+  top: 0;
+  right: 0;
+  padding: 0;
   width: $font-m;
   height: $font-m;
   border-radius: 9px;
@@ -192,7 +169,7 @@ input::placeholder {
   color: $error;
   font-size: $font-s;
   font-weight: 500;
-  margin: 0 0 $space-s 0;
+  margin: 0 ;
 }
 
 
@@ -207,11 +184,6 @@ input::placeholder {
   display: none;
 }
 
-div[data-cmp-valid=false] > label, 
-div[data-cmp-valid=false] > div > label {
-  font-weight: 500 ;
-  color: $error ;
-}
 
 .cmp-adaptiveform-textinput[data-cmp-valid=false] > .cmp-adaptiveform-textinput__errormessage, 
 .cmp-adaptiveform-numberinput[data-cmp-valid=false] > .cmp-adaptiveform-numberinput__errormessage, 
@@ -223,30 +195,12 @@ div[data-cmp-valid=false] > div > label {
   display: flex;
 }
 
-.cmp-adaptiveform-textinput[data-cmp-valid=false], 
-.cmp-adaptiveform-numberinput[data-cmp-valid=false], 
-.cmp-adaptiveform-datepicker[data-cmp-valid=false], 
-.cmp-adaptiveform-dropdown[data-cmp-valid=false], 
-.cmp-adaptiveform-checkboxgroup[data-cmp-valid=false], 
-.cmp-adaptiveform-radiobutton[data-cmp-valid=false], 
-.cmp-adaptiveform-fileinput[data-cmp-valid=false] 
+div[data-cmp-valid=false] > input,  div[data-cmp-valid=false] > select
  {
-  background: $light-error;
-  border: $border-error ;
-  border-bottom: 0;
-  outline-color: $error  !important;
+  outline: $border-error;
+  background-color: $light-error;
   // animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   
-}
-
-.cmp-adaptiveform-textinput:has(.cmp-adaptiveform-textinput[data-cmp-valid=false])  + div > div, 
-.cmp-adaptiveform-numberinput:has(.cmp-adaptiveform-numberinput[data-cmp-valid=false]) + div > div, 
-.cmp-adaptiveform-container:has(.cmp-adaptiveform-datepicker[data-cmp-valid=false]) + div > div, 
-.cmp-adaptiveform-dropdown:has(.cmp-adaptiveform-dropdown[data-cmp-valid=false]) + div > div, 
-.cmp-adaptiveform-checkboxgroup:has(.cmp-adaptiveform-checkboxgroup[data-cmp-valid=false]) + div > div, 
-.cmp-adaptiveform-radio:has(.cmp-adaptiveform-radiobutton[data-cmp-valid=false]) + div > div, 
-.cmp-adaptiveform-fileinput:has(.cmp-adaptiveform-fileinput[data-cmp-valid=false]) + div > div  {
-  border-top-color: $error;
 }
 
 

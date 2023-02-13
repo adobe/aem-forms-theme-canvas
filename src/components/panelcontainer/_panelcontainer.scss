@@ -11,103 +11,11 @@
 }
 
 
-.cmp-container[data-cmp-is = "adaptiveFormPanel"]:not(:last-child) {
-  margin-bottom: $space-l;
+
+.cmp-container:last-child, div:last-child > div {
+  margin-bottom: 0 !important;
 }
 
-// //first child panel inside panelz
-// .cmp-container[data-cmp-is = "adaptiveFormPanel"] > .panelcontainer:nth-child(2) > .cmp-container[data-cmp-is = "adaptiveFormPanel"] {
-//   margin-top: 0;
-// }
-
-// //responsive first child panel inside panel
-// .cmp-container[data-cmp-is = "adaptiveFormPanel"] > .aem-Grid > .panelcontainer:first-of-type > .cmp-container[data-cmp-is = "adaptiveFormPanel"] {
-//   margin-top: 0;
-// }
-
-
-
-//first field curved corners
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] > div:nth-child(3) > div[data-cmp-is = "adaptiveFormDropDown"],
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] > div:nth-child(3) > div[data-cmp-is = "adaptiveFormTextInput"],
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] > div:nth-child(3) > div[data-cmp-is = "adaptiveFormNumberInput"],
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] > div:nth-child(3) > div[data-cmp-is = "adaptiveFormDatePicker"],
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] > div:nth-child(3) > div[data-cmp-is = "adaptiveFormCheckBoxGroup"],
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] > div:nth-child(3) > div[data-cmp-is = "adaptiveFormFileInput"],
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] > div:nth-child(3) > div[data-cmp-is = "adaptiveFormRadioButton"] {
-  border-top-left-radius: $field-radius !important;
-  border-top-right-radius: $field-radius !important;
-}
-
-//first field curved corners - responsive
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] > .aem-Grid > div:nth-child(1) > div {
-  border-top-left-radius: $field-radius !important;
-  border-top-right-radius: $field-radius !important;
-}
-
-//last field curved corners - responsive
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] > .aem-Grid > div:last-child > div {
-  border-bottom: $border-dark;
-  border-bottom-left-radius: $field-radius !important;
-  border-bottom-right-radius: $field-radius !important;
-}
-
-// focus current field
-
-
-.cmp-container div:focus-within > div[data-cmp-is = "adaptiveFormDropDown"] ,
-.cmp-container div:focus-within > div[data-cmp-is = "adaptiveFormTextInput"],
-.cmp-container div:focus-within > div[data-cmp-is = "adaptiveFormNumberInput"],
-.cmp-container div:focus-within > div[data-cmp-is = "adaptiveFormDatePicker"],
-.cmp-container div:focus-within > div[data-cmp-is = "adaptiveFormCheckBoxGroup"],
-.cmp-container div:focus-within > div[data-cmp-is = "adaptiveFormFileInput"],
-.cmp-container div:focus-within > div[data-cmp-is = "adaptiveFormRadioButton"]  {
-  border-color: transparent !important;
-  background-color: transparent;
-
-  outline: $focus-outline ;
-  border-radius: $field-radius ;
-}
-
-
-//hide top border of next field
-.cmp-container div:focus-within + div > div[data-cmp-is = "adaptiveFormDropDown"],
-.cmp-container div:focus-within + div > div[data-cmp-is = "adaptiveFormTextInput"],
-.cmp-container div:focus-within + div > div[data-cmp-is = "adaptiveFormNumberInput"],
-.cmp-container div:focus-within + div > div[data-cmp-is = "adaptiveFormDatePicker"],
-.cmp-container div:focus-within + div > div[data-cmp-is = "adaptiveFormCheckBoxGroup"],
-.cmp-container div:focus-within + div > div[data-cmp-is = "adaptiveFormFileInput"],
-.cmp-container div:focus-within + div > div[data-cmp-is = "adaptiveFormRadioButton"]
-{
-  border-top-color: transparent !important;
-}
-
-//last field curved corners
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] > div:last-child > div[data-cmp-is = "adaptiveFormDropDown"],
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] > div:last-child > div[data-cmp-is = "adaptiveFormTextInput"],
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] > div:last-child > div[data-cmp-is = "adaptiveFormNumberInput"],
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] > div:last-child > div[data-cmp-is = "adaptiveFormDatePicker"],
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] > div:last-child > div[data-cmp-is = "adaptiveFormCheckBoxGroup"],
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] > div:last-child > div[data-cmp-is = "adaptiveFormFileInput"],
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] > div:last-child > div[data-cmp-is = "adaptiveFormRadioButton"]
-{
-  border-bottom: $border-dark;
-  border-bottom-left-radius: $field-radius !important;
-  border-bottom-right-radius: $field-radius !important;
-}
-
-//default state
-div[data-cmp-is = "adaptiveFormDropDown"],
-div[data-cmp-is = "adaptiveFormDatePicker"],
-div[data-cmp-is = "adaptiveFormNumberInput"],
-div[data-cmp-is = "adaptiveFormTextInput"],
-div[data-cmp-is = "adaptiveFormCheckBoxGroup"],
-div[data-cmp-is = "adaptiveFormFileInput"],
-div[data-cmp-is = "adaptiveFormRadioButton"] {
-  border: $border-dark;
-  border-bottom: 0;
-}
- 
 .new, .newpar, .section { 
   display: hidden;
 
@@ -129,7 +37,7 @@ div[data-cmp-is = "adaptiveFormRadioButton"] {
 
 .cmp-container__label {
   font-size: $font-l;
-  font-weight: 400;
+  font-weight: 500;
   color: $dark-gray;
   opacity: 1;
   margin-top: 0;
