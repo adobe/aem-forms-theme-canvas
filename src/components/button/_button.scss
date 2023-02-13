@@ -4,9 +4,9 @@
   border: none !important;
   margin: $space-s 0;
 }
-.cmp-adaptiveform-button__widget {
+.cmp-adaptiveform-button__widget, .cmp-adaptiveform-wizard__nextNav {
   background: $blue;
-  border: none;
+  border: none !important;
   border-radius: $button-radius;
   height: $tap-height;
   padding-left: $space-l;
@@ -15,10 +15,13 @@
   color: white;
   font-size: $font-m;
   font-weight: 500;
+
+  box-shadow:  0px 4px 20px 1px rgba(42, 69, 152, 0.345);
+
 }
 .cmp-adaptiveform-button__widget:hover {
   background: $dark-blue;
-  color: $white;
+  
 }
 .cmp-adaptiveform-button__widget[data-cmp-enabled]:not([data-cmp-enabled=true]) {
   background: $gray;

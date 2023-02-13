@@ -1,7 +1,13 @@
+
+  // @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
 .cmp-title__text{
-  font-size: $font-xl;
+  font-size: $font-xl ;
   color: $dark-gray;
   font-weight: 300;
+  letter-spacing: 0;
+  // font-family: 'Bebas Neue', cursive;
 }
 
 h1 {

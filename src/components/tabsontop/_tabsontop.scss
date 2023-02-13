@@ -4,7 +4,7 @@
   
 }
 .cmp-tabs__tablist{
-  margin: 0 0 $space-s 0 ;
+  margin: 0 0 0 0 ;
 
 }
 
@@ -14,9 +14,8 @@
 {
   padding: $space-l;
   background-color: white;
-  border: $border-light;
-  border-radius: $tap-height /2;
-  box-shadow:  0px 4px 20px 1px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  box-shadow:  0px 4px 20px 1px rgba(0, 0, 0, 0.04);
 
 }
 
@@ -29,16 +28,20 @@
   display: flex;
   align-items: center;
   font-weight: 500;
-  border-radius: $button-radius;
+  border-radius: 0;
+  border-width: 2px;
 }
 .cmp-tabs__tab.cmp-tabs__tab--active{
-  color: $dark-gray;
+  color: $blue !important;
   border-color: transparent;
   font-weight: 500;
   display: flex;
   align-items: center;
+  border-bottom-color: $blue;
 
-  background-color: $bg-gray;
+  box-shadow:   0 15px 10px -15px rgba(42, 69, 152, 0.345);
+  
+  
   
 }
 .cmp-tabs__tab.cmp-tabs__tab--active::after{
@@ -47,10 +50,14 @@
   color: $blue;
 }
 
-
+.cmp-tabs__tab.cmp-tabs__tab--active:hover{
+  
+  border-bottom-color: $blue;
+}
 
 .cmp-tabs__tab:hover{
-  background-color: $bg-gray;
+  color: $dark-gray;
+  border-bottom-color: $very-light-gray;
 
   
 }

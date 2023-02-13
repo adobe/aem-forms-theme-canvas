@@ -22,20 +22,24 @@ br {
   display: none;
 }
 
+.cmp-adaptiveform-fileinput__widgetlabel::before {
+  content: '📎 ';
+}
+
 .cmp-adaptiveform-fileinput__widgetlabel {
   position: static;
   align-self: flex-start;
-  background: $bg-gray;
-  border: none;
+  background: white;
+  border: $border-dark;
   height: $tap-height;
   border-radius: $button-radius;
   
   vertical-align: text-bottom;
   cursor: pointer !important;
-  color: $dark-gray;
+  color: $blue;
   
   font-size: $font-m;
-  padding: $space-s - 2 $space-l;
+  padding: $space-s - 2  $space-l;
   font-weight: 500;
   margin-top: 0 !important;
   margin-bottom: $space-s;

@@ -11,7 +11,7 @@
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  margin-bottom: $space-s;
+  margin-bottom: 0;
 }
 
 .cmp-adaptiveform-wizard__tab::before {
@@ -22,11 +22,13 @@
   padding: 6px;
   line-height: .56;
   border-radius: $button-radius;
-  color: $blue;
+  color: $dark-gray;
   text-align: center;
   font-size: $font-s;
   font-weight: bold;
 }
+
+
 
 .cmp-adaptiveform-wizard__tab--active::before {
   counter-increment: section;
@@ -47,13 +49,13 @@
 } 
 
 .cmp-adaptiveform-wizard__tab--active ~ .cmp-adaptiveform-wizard__tab::before {
-  color: $gray !important;
+  color: $dark-gray !important;
 } 
 
 .cmp-adaptiveform-wizard .cmp-adaptiveform-wizard__tab{
-  color: $gray;
-  padding: $space-s;
-
+  
+  padding: 0 $space-s;
+  border-bottom-width: 2px;
   height: $tap-height;
   margin-right: $space-s;
   box-sizing: border-box;
@@ -63,13 +65,27 @@
   font-size: $font-m;
   font-weight: 500;
   transition: flex-grow ease .3s;
+  border-radius:0;
+  border-bottom-width: 2px !important;
+  border-bottom: $border-light;
+  border-color: transparent;
+}
+
+.cmp-adaptiveform-wizard .cmp-adaptiveform-wizard__tab:last-child{
+  margin:0;
 }
 
 
 .cmp-adaptiveform-wizard .cmp-adaptiveform-wizard__tab--active{
-  flex-grow: 1.25;
+  flex-grow: 1.618;
   transition: flex-grow ease .3s;
   color: $blue;
+  border-bottom: $focus-outline;
+  background-color: transparent;
+
+  
+  box-shadow:   0 15px 10px -15px rgba(42, 69, 152, 0.345);
+  
 }
 
 
@@ -105,23 +121,12 @@
   width: fit-content;
   justify-content: center;
   align-items: center;
-  margin: $space-m 0;
+  margin: $space-s 0;
   
   height: $tap-height;
   position: static;
   cursor:pointer;
 
-  background: $very-light-gray;
-  border: none;
-  
-  border-radius: $button-radius;
-  height: $tap-height;
-  padding-left: $space-l;
-  padding-right: $space-l;
-  cursor: pointer;
-  color: $dark-gray;
-  font-size: $font-m;
-  font-weight: 500;
 
  }
 

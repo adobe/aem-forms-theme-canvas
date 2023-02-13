@@ -47,7 +47,7 @@
 
 //last field curved corners - responsive
 .cmp-container[data-cmp-is = "adaptiveFormPanel"] > .aem-Grid > div:last-child > div {
-  border-bottom: $border-light;
+  border-bottom: $border-dark;
   border-bottom-left-radius: $field-radius !important;
   border-bottom-right-radius: $field-radius !important;
 }
@@ -91,7 +91,7 @@
 .cmp-container[data-cmp-is = "adaptiveFormPanel"] > div:last-child > div[data-cmp-is = "adaptiveFormFileInput"],
 .cmp-container[data-cmp-is = "adaptiveFormPanel"] > div:last-child > div[data-cmp-is = "adaptiveFormRadioButton"]
 {
-  border-bottom: $border-light;
+  border-bottom: $border-dark;
   border-bottom-left-radius: $field-radius !important;
   border-bottom-right-radius: $field-radius !important;
 }
@@ -104,7 +104,7 @@ div[data-cmp-is = "adaptiveFormTextInput"],
 div[data-cmp-is = "adaptiveFormCheckBoxGroup"],
 div[data-cmp-is = "adaptiveFormFileInput"],
 div[data-cmp-is = "adaptiveFormRadioButton"] {
-  border: $border-light;
+  border: $border-dark;
   border-bottom: 0;
 }
  
