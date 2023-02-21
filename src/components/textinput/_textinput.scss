@@ -20,7 +20,7 @@ div[data-cmp-is='adaptiveFormFileInput'],
 div[data-cmp-is="adaptiveFormRadioButton"],
 div[data-cmp-is="adaptiveFormCheckBoxGroup"] {
   padding: 0 0;
-  margin: $space-m 0;
+  margin: $space-s 0;
 }
 
 div:has(input:focus) {
@@ -40,13 +40,12 @@ div:has(input:focus) {
 
 
 input, select {
-  border-radius: 4px;
   font-size: $font-m;
   height: $field-height;
   padding: 0 $space-s;
-  margin: $space-s 0;
-  border: $border-light;
-  background-color: transparent;
+  margin: $space-xs 0;
+  border: none;
+  background-color: $bg-gray;
 }
 
 input:focus, select:focus {
@@ -109,7 +108,6 @@ label {
   font-weight: 500;
   border-radius: 4px;
   padding: $space-s;
-
   margin: 0 0 $space-s 0;
 }
 

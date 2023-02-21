@@ -38,7 +38,7 @@
   padding: 6px;
   line-height: .56;
   border-radius: $button-radius;
-  color: white;
+  color: $dark-gray;
   text-align: center;
   font-size: $font-s;
   font-weight: bold;
@@ -67,8 +67,6 @@
   transition: flex-grow ease .3s;
   border-radius:0;
   border-bottom-width: 2px !important;
-  border-bottom: $border-light;
-  border-color: transparent;
 }
 
 .cmp-adaptiveform-wizard .cmp-adaptiveform-wizard__tab:last-child{
@@ -79,12 +77,9 @@
 .cmp-adaptiveform-wizard .cmp-adaptiveform-wizard__tab--active{
   flex-grow: 1.618;
   transition: flex-grow ease .3s;
-  color: $blue;
-  border-bottom: $focus-outline;
+  color: $dark-gray;
   background-color: transparent;
 
-  
-  box-shadow:   0 15px 10px -15px rgba(42, 69, 152, 0.345);
   
 }
 

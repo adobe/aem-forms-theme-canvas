@@ -7,12 +7,11 @@
 .cmp-adaptiveform-button__widget, .cmp-adaptiveform-wizard__nextNav {
   background: $blue;
   border: none !important;
-  border-radius: $button-radius;
   height: $tap-height;
   padding-left: $space-l;
   padding-right: $space-l;
   cursor: pointer;
-  color: white;
+  color: $dark-gray;
   font-size: $font-m;
   font-weight: 500;
 
