@@ -13,15 +13,21 @@
 .cmp-adaptiveform-wizard__wizardpanel, .cmp-accordion__panel
 
 {
-  padding: 0;
-  background-color: transparent;
+
+  padding: $space-l;
+  margin: 0 0 $space-l 0;
+  background-color: white;
+  border: $border-light;
+  border-width: 1px;
+  border-color: $bg-gray;
+  box-shadow: 0 8px 16px 0px rgba($color: #000000, $alpha: .02);
 }
 
 .cmp-tabs__tab{
   height: $tap-height;
   color: $gray;
   margin-right: $space-s;
-  font-size: $font-m;
+  font-size: $font-s;
   align-self: flex-start;
   display: flex;
   align-items: center;

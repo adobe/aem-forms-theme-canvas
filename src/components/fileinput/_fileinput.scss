@@ -32,14 +32,13 @@ br {
   background: white;
   border: $border-dark;
   height: $tap-height;
-  border-radius: $button-radius;
   
   vertical-align: text-bottom;
   cursor: pointer !important;
-  color: $blue;
+  color: $dark-gray;
   
   font-size: $font-m;
-  padding: $space-s - 2  $space-l;
+  padding: $space-s - 6  $space-m;
   font-weight: 500;
   margin-top: 0 !important;
   margin-bottom: $space-s;

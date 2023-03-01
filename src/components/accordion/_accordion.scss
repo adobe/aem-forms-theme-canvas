@@ -10,6 +10,17 @@ opacity: 1;
 
 .cmp-accordion__title {
   font-weight: 500;
+  display: flex;
+  column-gap: $space-s;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.cmp-accordion__title::after {
+  content: '+';
+  font-size: $font-l;
 }
 
 .cmp-accordion__button{
@@ -45,34 +56,14 @@ opacity: 1;
   color:$dark-gray;
 
 }
-.cmp-accordion__title:before{
-  border: 2px solid $gray;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  font-weight: 500 !important;
-  padding: 4px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  
-  content: '';
-  margin-right: $space-s;
-}
+
 
 .cmp-accordion__button:hover > .cmp-accordion__title:before{
   
   border-color: $dark-gray;
 }
 
-.cmp-accordion__button.cmp-accordion__button--expanded .cmp-accordion__title:before{
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  
-  border-color: $blue;
 
-  
-
-
-}
 .cmp-accordion__panel{
   background: white;
   margin: 0 0 $space-m $space-m;

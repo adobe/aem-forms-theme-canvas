@@ -8,7 +8,7 @@ $font-family-title: 'Source Serif Pro', 'Helvetica Neue', Helvetica, Arial, sans
 // ====== colors======
 $blue: #ffea00;
 $dark-blue: #ffea00;
-$focus-outline: 2px $blue solid;
+$focus-outline: 2px $dark-gray solid;
 $error-outline: 2px $error solid;
 $border-light: 1px $very-light-gray solid;
 $border-error: 1px $error solid;
@@ -28,7 +28,7 @@ $font-s: .75rem;
 // ====== space ======
 $space-xs: 4px;
 $space-s: 16px;
-$space-m: 64px;
+$space-m: 40px;
 $space-l: 72px;
 
 $field-radius: 12px;
@@ -38,3 +38,6 @@ $tap-height: 48px;
 //== Grid
 
 $max_col: 12;
+
+
+$error_icon: url(./resources/images/error.svg)

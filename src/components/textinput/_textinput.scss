@@ -43,14 +43,14 @@ input, select {
   font-size: $font-m;
   height: $field-height;
   padding: 0 $space-s;
-  margin: $space-xs 0;
+  margin: $space-xs 0 ;
   border: none;
   background-color: $bg-gray;
 }
 
 input:focus, select:focus {
   background-color: white  !important;
-  outline-offset: 2px;
+  
   outline: $focus-outline;
   outline-width: 2px !important;
 }
@@ -170,7 +170,32 @@ label {
   margin: 0 ;
 }
 
+.cmp-adaptiveform-textinput[data-cmp-valid=false] > .cmp-adaptiveform-textinput__errormessage,
+.cmp-adaptiveform-numberinput[data-cmp-valid=false] > .cmp-adaptiveform-numberinput__errormessage,
+.cmp-adaptiveform-datepicker[data-cmp-valid=false] > .cmp-adaptiveform-datepicker__errormessage,
+.cmp-adaptiveform-dropdown[data-cmp-valid=false] > .cmp-adaptiveform-dropdown__errormessage,
+.cmp-adaptiveform-checkboxgroup[data-cmp-valid=false] > .cmp-adaptiveform-checkboxgroup__errormessage,
+.cmp-adaptiveform-radiobutton[data-cmp-valid=false] > .cmp-adaptiveform-radiobutton__errormessage,
+.cmp-adaptiveform-fileinput[data-cmp-valid=false] > .cmp-adaptiveform-fileinput__errormessage
+ {
+  display: flex;
+  align-items: center;
+  column-gap: $space-xs;
+}
 
+.cmp-adaptiveform-textinput__errormessage::before,
+.cmp-adaptiveform-numberinput__errormessage::before,
+.cmp-adaptiveform-datepicker__errormessage::before,
+.cmp-adaptiveform-dropdown__errormessage::before,
+.cmp-adaptiveform-checkboxgroup__errormessage::before,
+.cmp-adaptiveform-radiobutton__errormessage::before,
+.cmp-adaptiveform-fileinput__errormessage::before
+ {
+  background: url(./resources/images/error.svg) no-repeat, $bg-gray;
+  width: 16px;
+  height: 16px;
+ content: '';
+}
 //add layouts and navigation - short long and help
 .cmp-adaptiveform-textinput[data-cmp-valid=false] > .cmp-adaptiveform-textinput__shortdescription, 
 .cmp-adaptiveform-numberinput[data-cmp-valid=false] > .cmp-adaptiveform-numberinput__shortdescription, 

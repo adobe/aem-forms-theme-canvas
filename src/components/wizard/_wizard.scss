@@ -5,13 +5,13 @@
 }
 
 .cmp-adaptiveform-wizard__tabList {
-  padding: 0 $space-s;
+  padding: 0;
   counter-reset: section;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  margin-bottom: 0;
+  margin-bottom: $space-s;
 }
 
 .cmp-adaptiveform-wizard__tab::before {
@@ -54,7 +54,7 @@
 
 .cmp-adaptiveform-wizard .cmp-adaptiveform-wizard__tab{
   
-  padding: 0 ;
+  padding: 0 $space-s;
   border-bottom-width: 2px;
   height: $tap-height;
   margin-right: $space-s;
@@ -62,11 +62,13 @@
   flex: 1;
   display: flex;
   align-items: center;
-  font-size: $font-m;
+  font-size: $font-s;
   font-weight: 500;
   transition: flex-grow ease .3s;
   border-radius:0;
   border-bottom-width: 2px !important;
+  text-transform: uppercase;
+  
 }
 
 .cmp-adaptiveform-wizard .cmp-adaptiveform-wizard__tab:last-child{
@@ -77,8 +79,8 @@
 .cmp-adaptiveform-wizard .cmp-adaptiveform-wizard__tab--active{
   flex-grow: 1.618;
   transition: flex-grow ease .3s;
-  color: $dark-gray;
-  background-color: transparent;
+  color: white;
+  background-color: $dark-gray;
 
   
 }
