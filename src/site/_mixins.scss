@@ -1,0 +1,45 @@
+@mixin tab_list {
+    padding: 0;
+    counter-reset: section;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    margin-bottom: $space-s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@mixin field_label {
+    opacity: 1;
+    color: $dark-gray;
+    padding: 0;
+    font-size: $font-m;
+    pointer-events: none;
+    z-index: 11;
+}
+
+@mixin field_widget {
+    height: $field-height;
+    color: $dark-gray;
+    padding: 0 $space-s;
+    font-size: $font-m;
+    
+}
+
+@mixin short_description {
+    display: flex;
+  position: static;
+  font-size: $font-s;
+  font-weight: bold;
+  color: $gray;
+  margin: 0 0 $space-s 0;
+}
+
+@mixin error_message {
+    display: none;
+    color: $error;
+    font-size: $font-s;
+    font-weight: bold;
+    margin: 0 ;
+}

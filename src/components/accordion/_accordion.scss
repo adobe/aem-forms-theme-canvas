@@ -9,13 +9,14 @@ opacity: 1;
 }
 
 .cmp-accordion__title {
-  font-weight: 500;
+  font-weight: bold;
   display: flex;
   column-gap: $space-s;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
-  font-weight: 500;
+  
+  font-family: "Source Sans Pro",Arial,sans-serif;
 }
 
 .cmp-accordion__title::after {
@@ -24,19 +25,16 @@ opacity: 1;
 }
 
 .cmp-accordion__button{
-
   opacity: 1;
   height: $tap-height !important;
   font-size:$font-m;
-  font-weight: 500;
-  color:gray;
   background-color: transparent;
   cursor: pointer;
   border: none;
   border-bottom: $border-light;
- 
+ border-width: 2px;
   
-  padding: 0;
+  padding: 0 $space-s;
 
 
 }

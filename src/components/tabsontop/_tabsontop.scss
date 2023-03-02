@@ -4,9 +4,7 @@
   
 }
 .cmp-tabs__tablist{
-  margin: 0 0 $space-s 0;
-  text-transform: uppercase;
-
+  @include tab_list;
 }
 
 .cmp-tabs__tabpanel ,
@@ -15,7 +13,7 @@
 {
 
   padding: $space-l;
-  margin: 0 0 $space-l 0;
+  margin: 0 0 $space-s 0;
   background-color: white;
   border: $border-light;
   border-width: 1px;
@@ -27,11 +25,10 @@
   height: $tap-height;
   color: $gray;
   margin-right: $space-s;
-  font-size: $font-s;
+  font-size: $font-m;
   align-self: flex-start;
   display: flex;
   align-items: center;
-  font-weight: 500;
   border-radius: 0;
   border-width: 2px;
   padding: 0 $space-s;
@@ -39,7 +36,6 @@
 .cmp-tabs__tab.cmp-tabs__tab--active{
   color: white !important;
   border-color: transparent;
-  font-weight: 500;
   
   display: flex;
   align-items: center;

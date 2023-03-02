@@ -8,12 +8,11 @@
   background: $blue;
   border: none !important;
   height: $tap-height;
-  padding-left: $space-l;
-  padding-right: $space-l;
+  padding: 0 $space-s;
   cursor: pointer;
   color: $dark-gray;
   font-size: $font-m;
-  font-weight: 500;
+  font-weight: bold;
 
 }
 .cmp-adaptiveform-button__widget:hover {

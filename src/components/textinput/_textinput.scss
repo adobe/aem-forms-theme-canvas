@@ -29,14 +29,6 @@ div:has(input:focus) {
 
 
 
-//static labels
-.cmp-adaptiveform-fileinput__label,
-.cmp-adaptiveform-radiobutton__label,
-.cmp-adaptiveform-checkboxgroup__label{
-  position: static;
-  font-size: $font-s;
-  margin: $space-s 0;
-}
 
 
 input, select {
@@ -57,38 +49,7 @@ input:focus, select:focus {
 
 
 label {
-  opacity: 1;
-  color: $dark-gray;
-  padding: 0;
-  font-size: $font-m;
-  pointer-events: none;
-  z-index: 11;
- }
-
-
-
-
-
-
-
-
-
-@keyframes shake {
-  10%, 90% {
-    translate: -1px 0;
-  }
-  
-  20%, 80% {
-    translate: 2px 0;
-  }
-
-  30%, 50%, 70% {
-    translate :-4px 0;
-  }
-
-  40%, 60% {
-    translate: 4px 0;
-  }
+  @include field_label;
 }
 
 
@@ -118,12 +79,7 @@ label {
 .cmp-adaptiveform-checkboxgroup__shortdescription,  
 .cmp-adaptiveform-radiobutton__shortdescription,  
 .cmp-adaptiveform-fileinput__shortdescription {
-  display: flex;
-  position: static;
-  font-size: $font-s;
-  font-weight: 500;
-  color: $gray;
-  margin: 0 0 $space-s 0;
+  @include short_description;
 }
 
 .cmp-adaptiveform-textinput__questionmark, 
@@ -163,11 +119,7 @@ label {
 .cmp-adaptiveform-checkboxgroup__errormessage,
 .cmp-adaptiveform-radiobutton__errormessage,
 .cmp-adaptiveform-fileinput__errormessage {
-  display: none;
-  color: $error;
-  font-size: $font-s;
-  font-weight: 500;
-  margin: 0 ;
+  @include error_message;
 }
 
 .cmp-adaptiveform-textinput[data-cmp-valid=false] > .cmp-adaptiveform-textinput__errormessage,
@@ -191,9 +143,9 @@ label {
 .cmp-adaptiveform-radiobutton__errormessage::before,
 .cmp-adaptiveform-fileinput__errormessage::before
  {
-  background: url(./resources/images/error.svg) no-repeat, $bg-gray;
-  width: 16px;
-  height: 16px;
+  background: url(./resources/images/error.svg) no-repeat center;
+  width: 18px;
+  height: 18px;
  content: '';
 }
 //add layouts and navigation - short long and help

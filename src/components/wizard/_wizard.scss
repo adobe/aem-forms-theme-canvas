@@ -5,13 +5,7 @@
 }
 
 .cmp-adaptiveform-wizard__tabList {
-  padding: 0;
-  counter-reset: section;
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  margin-bottom: $space-s;
+  @include tab_list;
 }
 
 .cmp-adaptiveform-wizard__tab::before {
@@ -62,8 +56,7 @@
   flex: 1;
   display: flex;
   align-items: center;
-  font-size: $font-s;
-  font-weight: 500;
+  font-size: $font-m;
   transition: flex-grow ease .3s;
   border-radius:0;
   border-bottom-width: 2px !important;
