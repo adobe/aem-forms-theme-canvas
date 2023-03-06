@@ -33,6 +33,7 @@ input:hover, select:hover {
 }
 
 
+
 input, select {
   font-size: $font-m;
   height: $field-height;
@@ -48,7 +49,7 @@ select::after {
 }
 
 input:focus, select:focus {
-  background-color: white  !important;
+  background-color: white !important ;
   
   outline: $focus-outline;
   outline-width: 2px !important;

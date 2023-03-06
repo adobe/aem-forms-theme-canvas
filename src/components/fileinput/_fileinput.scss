@@ -23,7 +23,10 @@ br {
 }
 
 .cmp-adaptiveform-fileinput__widgetlabel::before {
-  content: '📎';
+  content: '';
+  background: url(./resources/images/upload.svg);
+  width: 16px;
+  height: 16px;
 }
 
 .cmp-adaptiveform-fileinput__widgetlabel {
@@ -33,6 +36,9 @@ br {
 input[type="file"] {
   column-gap: $space-l !important;
 }
+
+
+
 
 // .cmp-adaptiveform-fileinput__longdescription {
 //   color: $light-gray;

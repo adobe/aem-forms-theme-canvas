@@ -32,10 +32,10 @@ opacity: 1;
   cursor: pointer;
   border: none;
   border-bottom: $border-light;
- border-width: 2px;
-  
+  border-width: 2px;
   padding: 0 $space-s;
 
+  color: $gray;
 
 }
 
@@ -48,10 +48,13 @@ opacity: 1;
 
 .cmp-accordion__button--expanded:hover {
   color: $dark-gray;
+
+  border-color: transparent !important;
 }
 
 .cmp-accordion__button:hover{
   color:$dark-gray;
+  border-color: $dark-gray;
 
 }
 
