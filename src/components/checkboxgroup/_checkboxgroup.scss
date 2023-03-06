@@ -5,38 +5,64 @@
 
 
 input[type='checkbox'] {
-  height: 1rem;
-  width: 1rem;
+  height: 16px !important;
+  width: 16px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  appearance: none;
+  @include field_widget;
+  background-color: $bg-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-input[type='checkbox']:hover {
+
+.cmp-adaptiveform-checkboxgroup-item:hover {
+  background-color: $very-light-gray;
   cursor: pointer;
-  height: 1rem;
-  width: 1rem;
 }
 
+.cmp-adaptiveform-checkbox__label:hover  input[type='checkbox'] {
+  background-color: white ;
+}
+
+input[type='checkbox']:checked {
+  background-color: $accent !important;
+}
+
+input[type='checkbox']:checked::after {
+  content: '';
+  background: url(./resources/images/check.svg);
+  width: 16px ;
+  height: 16px ;
+}
 
 
 
 
 .cmp-adaptiveform-checkbox__label {
+  height: $tap-height;
   display: flex;
   align-items: center;
   color: $dark-gray;
-  column-gap: $space-s;
   position: static;
-  margin-top: 0;
   opacity: 1;
+  padding: 0 $space-s;
+  column-gap: $space-s;
+ pointer-events: all;
+ cursor: pointer;
 }
 
 .cmp-adaptiveform-checkboxgroup-item {
+  display: flex;
+  align-items: center;
   position: static;
-  padding: 12px;
+  padding: 0;
 }
 
 .cmp-adaptiveform-checkboxgroup-item:focus-within {
-  background-color: $bg-gray;
-  border-radius: $field-radius;
+ 
   outline: $focus-outline;
 }
 

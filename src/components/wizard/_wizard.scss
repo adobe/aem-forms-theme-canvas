@@ -72,9 +72,7 @@
 .cmp-adaptiveform-wizard .cmp-adaptiveform-wizard__tab--active{
   flex-grow: 1.618;
   transition: flex-grow ease .3s;
-  color: white;
-  background-color: $dark-gray;
-
+  @include tab_active;
   
 }
 

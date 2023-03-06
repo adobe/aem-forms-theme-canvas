@@ -5,16 +5,16 @@
   flex-direction: column;
 }
 
-.cmp-container[data-cmp-is = "adaptiveFormPanel"] {
+.panelcontainer {
+ margin-bottom: $space-l;
+}
 
+.panelcontainer:last-child {
+  margin-bottom: 0;
 }
 
 
 
-
- div:last-child > div {
-  margin-bottom: 0 !important;
-}
 
 .new, .newpar, .section { 
   display: hidden;

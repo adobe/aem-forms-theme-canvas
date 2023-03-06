@@ -5,9 +5,19 @@
     flex-wrap: wrap;
     list-style: none;
     margin: 0;
-    margin-bottom: $space-s;
+    margin-bottom: $space-xs;
     text-transform: uppercase;
     font-family: SourceSansSemiBold;
+}
+
+@mixin tab_default {
+
+}
+
+@mixin tab_active {
+    color: $dark-gray;
+    border-bottom: $border-dark;
+  
 }
 
 @mixin field_label {
@@ -78,6 +88,7 @@
     font-family: SourceSansSemiBold;
     &:hover {
         background-color: $dark-accent;
+        transform: scale(1.1); 
       }
 }
 
@@ -98,10 +109,10 @@
     padding: 0  $space-m;
   
     font-weight: bold;
-    margin-top: $space-xs;
-    margin-bottom: 0;
+    margin: $space-xs 0;
     opacity: 1;
-
-    
-
+    &:hover {
+        background-color: black;
+        transform: scale(1.1); 
+      }
 }

@@ -31,6 +31,7 @@ br {
 
 .cmp-adaptiveform-fileinput__widgetlabel {
  @include secondary_button;
+ pointer-events: all;
 }
 
 input[type="file"] {
@@ -90,9 +91,12 @@ input[type="file"] {
   list-style: none;
 }
 .cmp-adaptiveform-fileinput__fileitem {
-  display: block;
-  padding: $space-s;
-  border-top: $border-light;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $tap-height;
+  padding: 0 $space-s;
+  border-bottom: $border-light;
 }
 .cmp-adaptiveform-fileinput__filename {
   position: static;
@@ -100,12 +104,8 @@ input[type="file"] {
 
 
 
-.cmp-adaptiveform-fileinput__filedelete {
-  float: right;
-  font-size: $font-l;
-  font-weight: bold;
-  line-height: 1;
-  text-shadow: 0 1px 0 $white;
-  opacity: .2;
+.cmp-adaptiveform-fileinput__filedelete { 
+  visibility: hidden;
+  background: url(./resources/images/bin.svg);
   cursor: pointer;
 }

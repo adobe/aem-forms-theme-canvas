@@ -30,20 +30,15 @@
   padding: 0 $space-s;
 }
 .cmp-tabs__tab.cmp-tabs__tab--active{
-  color: white !important;
-  border-color: transparent;
   
   display: flex;
   align-items: center;
-  background-color: $dark-gray;
+  @include tab_active;
   
   
 }
 
 
-.cmp-tabs__tab.cmp-tabs__tab--active:hover{
-  background-color: $dark-gray;
-}
 
 .cmp-tabs__tab:hover{
   color: $dark-gray;

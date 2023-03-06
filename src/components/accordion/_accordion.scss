@@ -42,14 +42,18 @@ opacity: 1;
 
 .cmp-accordion__button--expanded {
   color: $dark-gray;
-  border-color: transparent;
+  border-bottom: $border-dark;
+  margin-bottom: $space-xs;
 
+}
+
+.cmp-accordion__button--expanded .cmp-accordion__title::after {
+  content: '−';
 }
 
 .cmp-accordion__button--expanded:hover {
   color: $dark-gray;
 
-  border-color: transparent !important;
 }
 
 .cmp-accordion__button:hover{
@@ -63,6 +67,7 @@ opacity: 1;
   
   border-color: $dark-gray;
 }
+
 
 
 .cmp-accordion__panel{
