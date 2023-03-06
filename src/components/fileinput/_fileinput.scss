@@ -27,26 +27,7 @@ br {
 }
 
 .cmp-adaptiveform-fileinput__widgetlabel {
-  display: flex;
-  column-gap: $space-xs;
-  position: static;
-  align-self: flex-start;
-  background: white;
-  border: $border-light;
-  border-width: 2px;
-  height: $tap-height;
-  
-  vertical-align: text-bottom;
-  cursor: pointer !important;
-  color: $dark-gray;
-  
-  font-size: $font-m;
-  padding: $space-s - 6  $space-m;
-
-  font-weight: bold;
-  margin-top: 0 !important;
-  margin-bottom: $space-s;
-  opacity: 1;
+ @include secondary_button;
 }
 
 input[type="file"] {

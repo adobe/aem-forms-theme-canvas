@@ -15,8 +15,8 @@ opacity: 1;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
-  
-  font-family: "Source Sans Pro",Arial,sans-serif;
+  @include tab_list;
+  margin: 0;
 }
 
 .cmp-accordion__title::after {

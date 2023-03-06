@@ -28,7 +28,9 @@ div:has(input:focus) {
 }
 
 
-
+input:hover, select:hover {
+  background-color: $very-light-gray;
+}
 
 
 input, select {
@@ -37,7 +39,12 @@ input, select {
   padding: 0 $space-s;
   margin: $space-xs 0 ;
   border: none;
-  background-color: $bg-gray;
+  @include field_widget;
+}
+
+select::after {
+  content: '' ;
+  background: url(./resources/images/dropdown.svg) center center / cover no-repeat;
 }
 
 input:focus, select:focus {
@@ -46,6 +53,22 @@ input:focus, select:focus {
   outline: $focus-outline;
   outline-width: 2px !important;
 }
+
+
+
+.cmp-adaptiveform-textinput:has(input:required) label::after,
+.cmp-adaptiveform-numberinput:has(input:required) label::after,
+.cmp-adaptiveform-datepicker:has(input:required) label::after,
+.cmp-adaptiveform-dropdown:has(input:required) label::after,
+.cmp-adaptiveform-checkboxgroup:has(input:required) label::after,
+.cmp-adaptiveform-radiobutton:has(input:required) label::after,
+.cmp-adaptiveform-fileinput:has(input:required) label::after
+ {
+  content: "*";
+  color: red;
+  margin-left: $space-xs;
+}
+
 
 
 label {
@@ -62,14 +85,7 @@ label {
 .cmp-adaptiveform-fileinput__longdescription
 
 {
-  display: flex;
-  color: $dark-gray;
-  background-color: $bg-gray;
-  font-size: $font-s;
-  font-weight: 500;
-  border-radius: 4px;
-  padding: $space-s;
-  margin: 0 0 $space-s 0;
+ @include long_description;
 }
 
 .cmp-adaptiveform-textinput__shortdescription, 
@@ -94,23 +110,14 @@ label {
   top: 0;
   right: 0;
   padding: 0;
-  width: $font-m;
-  height: $font-m;
-  border-radius: 9px;
-  background: url(./resources/images/question.svg) center center / cover no-repeat, $very-light-gray;
+  width: 16px;
+  height: 16px;
+  background: url(./resources/images/question.svg) center center / cover no-repeat;
   cursor: pointer;
   border: none;
 }
 
-.cmp-adaptiveform-textinput__questionmark:hover, 
-.cmp-adaptiveform-numberinput__questionmark:hover,
-.cmp-adaptiveform-datepicker__questionmark:hover,
-.cmp-adaptiveform-dropdown__questionmark:hover,
-.cmp-adaptiveform-checkboxgroup__questionmark:hover,
-.cmp-adaptiveform-radiobutton__questionmark:hover,
-.cmp-adaptiveform-fileinput__questionmark:hover {
-  background: $blue;
-}
+
 
 .cmp-adaptiveform-textinput__errormessage, 
 .cmp-adaptiveform-numberinput__errormessage,
@@ -144,9 +151,9 @@ label {
 .cmp-adaptiveform-fileinput__errormessage::before
  {
   background: url(./resources/images/error.svg) no-repeat center;
-  width: 18px;
-  height: 18px;
- content: '';
+  width: 16px;
+  height: 16px;
+  content: '';
 }
 //add layouts and navigation - short long and help
 .cmp-adaptiveform-textinput[data-cmp-valid=false] > .cmp-adaptiveform-textinput__shortdescription, 

@@ -1,17 +1,16 @@
 .cmp-adaptiveform-pageheader{
   display: flex;
   align-items: center;
-  height: 80px;
-  background: $blue;
+  height: $space-l;
+  background: $accent;
   column-gap: $space-s;
   padding: 24px;
   color: $dark-gray;
   font-size: $font-m;
-  
   }
 
 .cmp-adaptiveform-pageheader img{
-  height: $tap-height / 1.5;
+  height: $space-m;
   margin: 0;
   width: auto;
   color: white;

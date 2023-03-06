@@ -2,9 +2,10 @@
 
 .cmp-adaptiveform-dropdown__widget {
   height: $field-height;
-  padding: 18px 0 0 0;
   font-size: $font-m;
- 
+  background-image: url('./resources/images/dropdown.svg');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
   appearance: none;
 }
 

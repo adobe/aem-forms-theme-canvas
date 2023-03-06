@@ -1,7 +1,7 @@
-<svg id="Decorative_icon" data-name="Decorative icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-  <rect id="Placement_Area" data-name="Placement Area" width="18" height="18" fill="eb3c36" opacity="0"/>
+<svg id="Decorative_icon" data-name="Decorative icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <rect id="Placement_Area" data-name="Placement Area" width="16" height="16" fill="red" opacity="0"/>
   <g id="Icon">
-    <rect id="Canvas" width="18" height="18" fill="#eb3c36" opacity="0"/>
-    <path id="Path_5" data-name="Path 5" d="M8.564,1.289.2,16.256A.5.5,0,0,0,.636,17H17.364a.5.5,0,0,0,.436-.744L9.436,1.289a.5.5,0,0,0-.873,0ZM10,14.75a.25.25,0,0,1-.25.25H8.25A.25.25,0,0,1,8,14.75v-1.5A.25.25,0,0,1,8.25,13h1.5a.25.25,0,0,1,.25.25Zm0-3a.25.25,0,0,1-.25.25H8.25A.25.25,0,0,1,8,11.75v-6a.25.25,0,0,1,.25-.25h1.5a.25.25,0,0,1,.25.25Z" fill="#eb3c36"/>
+    <rect id="Canvas" width="16" height="16" fill="#eb3c36" opacity="0"/>
+    <path id="Path_5" data-name="Path 5" d="M7.666,1.262.193,14.634a.447.447,0,0,0,.39.665H15.529a.447.447,0,0,0,.39-.665L8.446,1.262a.447.447,0,0,0-.78,0ZM8.949,13.289a.223.223,0,0,1-.223.223H7.386a.223.223,0,0,1-.223-.223v-1.34a.223.223,0,0,1,.223-.223h1.34a.223.223,0,0,1,.223.223Zm0-2.68a.223.223,0,0,1-.223.223H7.386a.223.223,0,0,1-.223-.223V5.248a.223.223,0,0,1,.223-.223h1.34a.223.223,0,0,1,.223.223Z" transform="translate(-0.015 -0.11)" fill="#eb3c36"/>
   </g>
 </svg>

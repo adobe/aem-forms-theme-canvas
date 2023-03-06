@@ -3,10 +3,10 @@
 @import 'site/variables';
 
 @import 'site/themeconfig';
-@import 'site/mixins';
+@import 'site/_mixins';
 
 //== fonts
-// @import 'site/fonts';
+@import 'site/fonts';
 
 //== base
 @import 'site/_grid.scss';

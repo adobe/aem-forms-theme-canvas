@@ -5,20 +5,10 @@
   margin: $space-s 0;
 }
 .cmp-adaptiveform-button__widget, .cmp-adaptiveform-wizard__nextNav {
-  background: $blue;
-  border: none !important;
-  height: $tap-height;
-  padding: 0 $space-s;
-  cursor: pointer;
-  color: $dark-gray;
-  font-size: $font-m;
-  font-weight: bold;
+ @include primary_button;
 
 }
-.cmp-adaptiveform-button__widget:hover {
-  background: $dark-blue;
-  
-}
+
 .cmp-adaptiveform-button__widget[data-cmp-enabled]:not([data-cmp-enabled=true]) {
   background: $gray;
   color: $very-light-gray;

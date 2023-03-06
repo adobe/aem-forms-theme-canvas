@@ -7,7 +7,7 @@
     margin: 0;
     margin-bottom: $space-s;
     text-transform: uppercase;
-    font-weight: bold;
+    font-family: SourceSansSemiBold;
 }
 
 @mixin field_label {
@@ -24,22 +24,88 @@
     color: $dark-gray;
     padding: 0 $space-s;
     font-size: $font-m;
-    
+    font-family: SourceSans;
+    border-radius: 0;
+    background-color: $bg-gray;
+}
+
+@mixin long_description {
+    display: flex;
+    font-size: $font-s;
+    font-weight: bold;
+    padding: $space-s;
+    margin: 0 0 $space-s 0;
+    @include surface();
+    font-family: SourceSansSemiBold;
 }
 
 @mixin short_description {
     display: flex;
-  position: static;
-  font-size: $font-s;
-  font-weight: bold;
-  color: $gray;
-  margin: 0 0 $space-s 0;
+    position: static;
+    font-size: $font-s;
+    font-family: SourceSansSemiBold;
+    color: $gray;
+    margin: 0 0 $space-s 0;
 }
 
 @mixin error_message {
     display: none;
     color: $error;
     font-size: $font-s;
+    font-family: SourceSansSemiBold;
+    margin: 0;
+}
+
+@mixin surface {
+
+    color: $dark-gray;
+    background-color: white;
+    border: $border-light;
+    border-width: 1px;
+    border-color: $bg-gray;
+    box-shadow: 0 8px 16px 0px rgba($color: #000000, $alpha: .02);
+}
+
+
+
+@mixin primary_button {
+    background: $accent;
+    border: none !important;
+    height: $tap-height;
+    padding: 0 $space-s;
+    cursor: pointer;
+    color: $dark-gray;
+    font-size: $font-m;
+    font-family: SourceSansSemiBold;
+    &:hover {
+        background-color: $dark-accent;
+      }
+}
+
+@mixin secondary_button {
+    display: flex;
+    column-gap: $space-xs;
+    position: static;
+    align-self: flex-start;
+    background: white;
+    border: $border-light;
+    border-width: 2px;
+    height: $tap-height;
+    
+    vertical-align: text-bottom;
+    cursor: pointer !important;
+    color: $dark-gray;
+    
+    font-size: $font-m;
+    padding: $space-s - 6  $space-m;
+  
     font-weight: bold;
-    margin: 0 ;
+    margin-top: 0 !important;
+    margin-bottom: $space-s;
+    opacity: 1;
+
+    &:hover {
+        background-color: $bg-gray;
+      }
+
 }
