@@ -61,30 +61,13 @@ input[type='checkbox']:checked::after {
   padding: 0;
 }
 
-.cmp-adaptiveform-checkboxgroup-item:focus-within {
- 
-  outline: $focus-outline;
+
+
+
+.cmp-adaptiveform-checkboxgroup__widget {
+  @include choice_widget;
 }
 
-
-
-
-
-.cmp-adaptiveform-checkboxgroup__widget.HORIZONTAL{
-  flex-direction: row;
-  margin: 0;
-  column-gap: 0;
-  display: flex;
-  margin-bottom: $space-s;
-
-}
-.cmp-adaptiveform-checkboxgroup__widget.VERTICAL{
-  flex-direction: column;
-  margin: 0;
-  row-gap: 0;
-  display: flex;
-  margin-bottom: $space-s;
-}
 // .cmp-adaptiveform-checkboxgroup__longdescription {
 //   color: $light-gray;
 //   background-color: $very-light-gray;

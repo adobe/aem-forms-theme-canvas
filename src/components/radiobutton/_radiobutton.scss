@@ -7,24 +7,10 @@
 
 
 .cmp-adaptiveform-radiobutton__widget{
-  
-}
-
-.cmp-adaptiveform-radiobutton__widget.HORIZONTAL{
-  margin: 0 0 $space-s 0;
-  display: flex;
-  flex-direction: row;
-  column-gap: 0px;
+  @include choice_widget;
 }
 
 
-.cmp-adaptiveform-radiobutton__widget.VERTICAL{
-  margin: 0 0 $space-s 0;
-  display: flex;
-  flex-direction: column;
-  row-gap: 0px;
-  
-}
 // .cmp-adaptiveform-radiobutton__longdescription {
 //   color: $light-gray;
 //   background-color: $very-light-gray;
@@ -87,7 +73,7 @@ input[type='radio']:checked {
 input[type='radio']:checked::after  {
   content: '';
   background: $dark-gray;
-  border-radius: 1rem;
+  border-radius: 6px;
   width: 100%;
   height: 100%;
 }

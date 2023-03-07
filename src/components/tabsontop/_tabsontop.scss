@@ -7,14 +7,11 @@
   @include tab_list;
 }
 
-.cmp-tabs__tabpanel ,
-.cmp-adaptiveform-wizard__wizardpanel, .cmp-accordion__panel
+.cmp-tabs__tabpanel 
 
 {
-
-  padding: $space-l;
-  margin: 0 0 $space-s 0;
-  @include surface;
+ @include tab_panel;
+ 
 }
 
 .cmp-tabs__tab{

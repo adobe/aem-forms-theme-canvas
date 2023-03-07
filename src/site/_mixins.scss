@@ -10,14 +10,64 @@
     font-family: SourceSansSemiBold;
 }
 
-@mixin tab_default {
-
+@mixin question_mark {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    background: url(./resources/images/question.svg) center center / cover no-repeat;
+    cursor: pointer;
+    border: none;
 }
+
+
+@mixin component_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+
+
+    &:has(input:required) label::after {
+        content: "*";
+        color: red;
+        margin-left: $space-xs;
+    }
+
+    &[data-cmp-valid=false]>&__shortdescription {
+        display: none;
+    }
+
+    &[data-cmp-valid=false]>&__errormessage {
+        display: flex;
+        align-items: center;
+        column-gap: $space-xs;
+    }
+
+
+    &[data-cmp-valid=false]>input,
+    &[data-cmp-valid=false]>select {
+        outline: $border-error;
+        background-color: $light-error;
+    }
+}
+
+@mixin tab_panel {
+    padding: $space-l;
+    margin: 0 0 0 0;
+    @include surface;
+}
+
+
+
 
 @mixin tab_active {
     color: $dark-gray;
     border-bottom: $border-dark;
-  
+
 }
 
 @mixin field_label {
@@ -26,10 +76,13 @@
     padding: 0;
     font-size: $font-m;
     pointer-events: none;
+    margin: 0;
     z-index: 11;
 }
 
 @mixin field_widget {
+    margin: $space-xs 0;
+    border: none;
     height: $field-height;
     color: $dark-gray;
     padding: 0 $space-s;
@@ -37,16 +90,36 @@
     font-family: SourceSans;
     border-radius: 0;
     background-color: $bg-gray;
+
+    &:hover {
+        background-color: $very-light-gray;
+    }
+
+    &:focus {
+        background-color: white !important;
+        outline: $focus-outline;
+        outline-width: 2px !important;
+    }
+
 }
 
 @mixin long_description {
     display: flex;
+    align-items: center;
     font-size: $font-s;
     font-weight: bold;
     padding: $space-s;
-    margin: 0 0 $space-s 0;
+    margin: $space-xs 0 $space-s 0;
     @include surface();
     font-family: SourceSansSemiBold;
+
+    &::before {
+        content: '';
+        background: url(./resources/images/info.svg);
+        margin-right: $space-s;
+        width: 16px;
+        height: 16px;
+    }
 }
 
 @mixin short_description {
@@ -55,7 +128,8 @@
     font-size: $font-s;
     font-family: SourceSansSemiBold;
     color: $gray;
-    margin: 0 0 $space-s 0;
+    margin: 0;
+
 }
 
 @mixin error_message {
@@ -64,6 +138,13 @@
     font-size: $font-s;
     font-family: SourceSansSemiBold;
     margin: 0;
+
+    &::before {
+        background: url(./resources/images/error.svg) no-repeat center;
+        width: 16px;
+        height: 16px;
+        content: '';
+    }
 }
 
 @mixin surface {
@@ -86,10 +167,11 @@
     color: $dark-gray;
     font-size: $font-m;
     font-family: SourceSansSemiBold;
+    margin: $space-xs 0 !important;
+
     &:hover {
         background-color: $dark-accent;
-        transform: scale(1.1); 
-      }
+    }
 }
 
 @mixin secondary_button {
@@ -100,19 +182,52 @@
     background: $dark-gray;
     height: $tap-height;
     align-items: center;
-    
+
     vertical-align: text-bottom;
     cursor: pointer !important;
     color: white;
-    
+
     font-size: $font-m;
-    padding: 0  $space-m;
-  
+    padding: 0 $space-m;
+
     font-weight: bold;
     margin: $space-xs 0;
     opacity: 1;
+
     &:hover {
-        background-color: black;
-        transform: scale(1.1); 
-      }
+        background-color: $very-light-gray;
+        color: $dark-gray;
+    }
+
+    &:hover &::before {
+        content: '';
+        background: url(./resources/images/upload-dark.svg);
+        width: 16px;
+        height: 16px;
+    }
+
+    &::before {
+        content: '';
+        background: url(./resources/images/upload.svg);
+        width: 16px;
+        height: 16px;
+    }
+
+
+}
+
+@mixin choice_widget {
+    margin: $space-xs 0;
+
+    &.HORIZONTAL {
+        display: flex;
+        flex-direction: row;
+        column-gap: 0px;
+    }
+
+    &.VERTICAL {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0px;
+    }
 }

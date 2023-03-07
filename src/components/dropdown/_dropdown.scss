@@ -1,14 +1,17 @@
 /* ===============Drop Down================== */
 
 .cmp-adaptiveform-dropdown__widget {
-  height: $field-height;
-  font-size: $font-m;
+  @include field_widget;
   background-image: url('./resources/images/dropdown.svg');
   background-repeat: no-repeat;
   background-position: right 10px center;
   appearance: none;
 }
 
+select::after {
+  content: '' ;
+  background: url(./resources/images/dropdown.svg) center center / cover no-repeat;
+}
 
 
 

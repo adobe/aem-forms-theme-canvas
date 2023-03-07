@@ -23,6 +23,10 @@
 }
 
 
+.cmp-adaptiveform-wizard__wizardpanel {
+  @include tab_panel;
+}
+
 
 .cmp-adaptiveform-wizard__tab--active::before {
   counter-increment: section;
@@ -109,12 +113,11 @@
   width: fit-content;
   justify-content: center;
   align-items: center;
-  margin: $space-s 0;
   
   height: $tap-height;
   position: static;
   cursor:pointer;
-
+  @include primary_button;
 
  }
 

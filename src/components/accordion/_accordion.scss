@@ -71,8 +71,7 @@ opacity: 1;
 
 
 .cmp-accordion__panel{
-  background: white;
-  margin: 0 0 $space-m $space-m;
+  @include tab_panel;
 }
 // .cmp-accordion__longdescription {
 //   color: $light-gray;

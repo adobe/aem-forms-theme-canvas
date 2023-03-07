@@ -4,7 +4,7 @@
   border: none !important;
   margin: $space-s 0;
 }
-.cmp-adaptiveform-button__widget, .cmp-adaptiveform-wizard__nextNav {
+.cmp-adaptiveform-button__widget {
  @include primary_button;
 
 }

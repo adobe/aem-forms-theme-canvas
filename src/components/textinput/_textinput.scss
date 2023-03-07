@@ -1,15 +1,13 @@
 //containers
 .cmp-adaptiveform-textinput,
-.cmp-adaptiveform-numberinput, 
+.cmp-adaptiveform-numberinput,
 .cmp-adaptiveform-datepicker,
 .cmp-adaptiveform-dropdown,
 .cmp-adaptiveform-fileinput,
 .cmp-adaptiveform-radiobutton,
 .cmp-adaptiveform-checkboxgroup {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  
+  @include component_container;
+
 }
 
 div[data-cmp-is="adaptiveFormTextInput"],
@@ -19,56 +17,18 @@ div[data-cmp-is="adaptiveFormDropDown"],
 div[data-cmp-is='adaptiveFormFileInput'],
 div[data-cmp-is="adaptiveFormRadioButton"],
 div[data-cmp-is="adaptiveFormCheckBoxGroup"] {
-  padding: 0 0;
   margin: $space-s 0;
 }
 
-div:has(input:focus) {
-  z-index: 10;
-}
-
-
-input:hover, select:hover {
-  background-color: $very-light-gray;
-}
 
 
 
-input, select {
-  font-size: $font-m;
-  height: $field-height;
-  padding: 0 $space-s;
-  margin: $space-xs 0 ;
-  border: none;
+
+
+input {
   @include field_widget;
 }
 
-select::after {
-  content: '' ;
-  background: url(./resources/images/dropdown.svg) center center / cover no-repeat;
-}
-
-input:focus, select:focus {
-  background-color: white !important ;
-  
-  outline: $focus-outline;
-  outline-width: 2px !important;
-}
-
-
-
-.cmp-adaptiveform-textinput:has(input:required) label::after,
-.cmp-adaptiveform-numberinput:has(input:required) label::after,
-.cmp-adaptiveform-datepicker:has(input:required) label::after,
-.cmp-adaptiveform-dropdown:has(input:required) label::after,
-.cmp-adaptiveform-checkboxgroup:has(input:required) label::after,
-.cmp-adaptiveform-radiobutton:has(input:required) label::after,
-.cmp-adaptiveform-fileinput:has(input:required) label::after
- {
-  content: "*";
-  color: red;
-  margin-left: $space-xs;
-}
 
 
 
@@ -78,49 +38,38 @@ label {
 
 
 .cmp-adaptiveform-textinput__longdescription,
-.cmp-adaptiveform-numberinput__longdescription, 
-.cmp-adaptiveform-datepicker__longdescription, 
-.cmp-adaptiveform-dropdown__longdescription, 
-.cmp-adaptiveform-checkboxgroup__longdescription, 
-.cmp-adaptiveform-radiobutton__longdescription, 
-.cmp-adaptiveform-fileinput__longdescription
-
-{
- @include long_description;
+.cmp-adaptiveform-numberinput__longdescription,
+.cmp-adaptiveform-datepicker__longdescription,
+.cmp-adaptiveform-dropdown__longdescription,
+.cmp-adaptiveform-checkboxgroup__longdescription,
+.cmp-adaptiveform-radiobutton__longdescription,
+.cmp-adaptiveform-fileinput__longdescription {
+  @include long_description;
 }
 
-.cmp-adaptiveform-textinput__shortdescription, 
-.cmp-adaptiveform-numberinput__shortdescription,  
-.cmp-adaptiveform-datepicker__shortdescription,  
-.cmp-adaptiveform-dropdown__shortdescription,  
-.cmp-adaptiveform-checkboxgroup__shortdescription,  
-.cmp-adaptiveform-radiobutton__shortdescription,  
+.cmp-adaptiveform-textinput__shortdescription,
+.cmp-adaptiveform-numberinput__shortdescription,
+.cmp-adaptiveform-datepicker__shortdescription,
+.cmp-adaptiveform-dropdown__shortdescription,
+.cmp-adaptiveform-checkboxgroup__shortdescription,
+.cmp-adaptiveform-radiobutton__shortdescription,
 .cmp-adaptiveform-fileinput__shortdescription {
   @include short_description;
 }
 
-.cmp-adaptiveform-textinput__questionmark, 
-.cmp-adaptiveform-numberinput__questionmark,  
+.cmp-adaptiveform-textinput__questionmark,
+.cmp-adaptiveform-numberinput__questionmark,
 .cmp-adaptiveform-datepicker__questionmark,
 .cmp-adaptiveform-dropdown__questionmark,
 .cmp-adaptiveform-checkboxgroup__questionmark,
 .cmp-adaptiveform-radiobutton__questionmark,
 .cmp-adaptiveform-fileinput__questionmark {
-  position: absolute;
-  display: flex;
-  top: 0;
-  right: 0;
-  padding: 0;
-  width: 16px;
-  height: 16px;
-  background: url(./resources/images/question.svg) center center / cover no-repeat;
-  cursor: pointer;
-  border: none;
+  @include question_mark;
 }
 
 
 
-.cmp-adaptiveform-textinput__errormessage, 
+.cmp-adaptiveform-textinput__errormessage,
 .cmp-adaptiveform-numberinput__errormessage,
 .cmp-adaptiveform-datepicker__errormessage,
 .cmp-adaptiveform-dropdown__errormessage,
@@ -130,61 +79,11 @@ label {
   @include error_message;
 }
 
-.cmp-adaptiveform-textinput[data-cmp-valid=false] > .cmp-adaptiveform-textinput__errormessage,
-.cmp-adaptiveform-numberinput[data-cmp-valid=false] > .cmp-adaptiveform-numberinput__errormessage,
-.cmp-adaptiveform-datepicker[data-cmp-valid=false] > .cmp-adaptiveform-datepicker__errormessage,
-.cmp-adaptiveform-dropdown[data-cmp-valid=false] > .cmp-adaptiveform-dropdown__errormessage,
-.cmp-adaptiveform-checkboxgroup[data-cmp-valid=false] > .cmp-adaptiveform-checkboxgroup__errormessage,
-.cmp-adaptiveform-radiobutton[data-cmp-valid=false] > .cmp-adaptiveform-radiobutton__errormessage,
-.cmp-adaptiveform-fileinput[data-cmp-valid=false] > .cmp-adaptiveform-fileinput__errormessage
- {
-  display: flex;
-  align-items: center;
-  column-gap: $space-xs;
-}
-
-.cmp-adaptiveform-textinput__errormessage::before,
-.cmp-adaptiveform-numberinput__errormessage::before,
-.cmp-adaptiveform-datepicker__errormessage::before,
-.cmp-adaptiveform-dropdown__errormessage::before,
-.cmp-adaptiveform-checkboxgroup__errormessage::before,
-.cmp-adaptiveform-radiobutton__errormessage::before,
-.cmp-adaptiveform-fileinput__errormessage::before
- {
-  background: url(./resources/images/error.svg) no-repeat center;
-  width: 16px;
-  height: 16px;
-  content: '';
-}
-//add layouts and navigation - short long and help
-.cmp-adaptiveform-textinput[data-cmp-valid=false] > .cmp-adaptiveform-textinput__shortdescription, 
-.cmp-adaptiveform-numberinput[data-cmp-valid=false] > .cmp-adaptiveform-numberinput__shortdescription, 
-.cmp-adaptiveform-datepicker[data-cmp-valid=false] > .cmp-adaptiveform-datepicker__shortdescription, 
-.cmp-adaptiveform-dropdown[data-cmp-valid=false] > .cmp-adaptiveform-dropdown__shortdescription, 
-.cmp-adaptiveform-checkboxgroup[data-cmp-valid=false] > .cmp-adaptiveform-checkboxgroup__shortdescription, 
-.cmp-adaptiveform-radiobutton[data-cmp-valid=false] > .cmp-adaptiveform-radiobutton__shortdescription, 
-.cmp-adaptiveform-fileinput[data-cmp-valid=false] > .cmp-adaptiveform-fileinput__shortdescription {
-  display: none;
-}
 
 
-.cmp-adaptiveform-textinput[data-cmp-valid=false] > .cmp-adaptiveform-textinput__errormessage, 
-.cmp-adaptiveform-numberinput[data-cmp-valid=false] > .cmp-adaptiveform-numberinput__errormessage, 
-.cmp-adaptiveform-datepicker[data-cmp-valid=false] > .cmp-adaptiveform-datepicker__errormessage, 
-.cmp-adaptiveform-dropdown[data-cmp-valid=false] > .cmp-adaptiveform-dropdown__errormessage, 
-.cmp-adaptiveform-checkboxgroup[data-cmp-valid=false] > .cmp-adaptiveform-checkboxgroup__errormessage, 
-.cmp-adaptiveform-radiobutton[data-cmp-valid=false] > .cmp-adaptiveform-radiobutton__errormessage, 
-.cmp-adaptiveform-fileinput[data-cmp-valid=false] > .cmp-adaptiveform-fileinput__errormessage {
-  display: flex;
-}
 
-div[data-cmp-valid=false] > input,  div[data-cmp-valid=false] > select
- {
-  outline: $border-error;
-  background-color: $light-error;
-  // animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-  
-}
+
+
 
 
 
