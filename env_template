@@ -1,8 +1,8 @@
 # AEM url
 AEM_URL=<site URL>
 
-# AEM site name
-AEM_SITE=<site name>
+# Adaptive form name
+AEM_ADAPTIVE_FORM=<form name>
 
 # AEM proxy port
 AEM_PROXY_PORT=7000
