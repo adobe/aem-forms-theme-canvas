@@ -1,7 +1,7 @@
 {
-    "name": "aem-forms-canvas-theme-updated",
+    "name": "wknd-theme",
     "version": "0.0.1",
-    "description": "Standard AEM Forms Canvas theme",
+    "description": "WKND Theme",
     "license": "MIT License, Copyright 2022 Adobe Systems Incorporated",
     "scripts": {
         "build": "rimraf dist && parcel build src/theme.ts",
