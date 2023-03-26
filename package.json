@@ -1,5 +1,5 @@
 {
-    "name": "@aemforms/af-canvas-theme",
+    "name": "af-canvas-theme",
     "version": "0.0.35",
     "description": "Standard AEM Forms Canvas theme",
     "license": "MIT License, Copyright 2022 Adobe Systems Incorporated",
@@ -12,7 +12,7 @@
         "deploy-zip": "node scripts/deploy-zip.mjs"
     },
     "devDependencies": {
-        "@adobe/aem-site-theme-builder": "5.3.0",
+        "@aemforms/aem-site-theme-builder": "5.3.0",
         "@parcel/transformer-sass": "^2.0.1",
         "autoprefixer": "^10.3.7",
         "browser-sync": "^2.26.13",
@@ -29,10 +29,6 @@
     "dependencies": {
         "jszip": "^3.10.1",
         "version": "^0.1.2"
-    },
-    "publishConfig": {
-        "registry": "https://artifactory.corp.adobe.com/artifactory/api/npm/npm-aem-release-local",
-        "access": "public"
     },
     "parcel-namer-rewrite": {
         "chain": "@parcel/namer-default",
