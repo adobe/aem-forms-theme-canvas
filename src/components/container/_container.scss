@@ -3,6 +3,9 @@
   margin: 0 auto;
   margin-bottom: 20px;
   width: 100%;
+  label p, span p {
+    display: inline;
+  }
 }
 @media(max-width:767px){
   .cmp-adaptiveform-container__wrapper{
