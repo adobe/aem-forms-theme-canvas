@@ -1,5 +1,5 @@
 {
-    "name": "af-canvas-theme",
+    "name": "@aemforms/af-canvas-theme",
     "version": "0.0.35",
     "description": "Standard AEM Forms Canvas theme",
     "license": "MIT License, Copyright 2022 Adobe Systems Incorporated",
@@ -29,6 +29,9 @@
     "dependencies": {
         "jszip": "^3.10.1",
         "version": "^0.1.2"
+    },
+    "publishConfig": {
+        "access": "public"
     },
     "parcel-namer-rewrite": {
         "chain": "@parcel/namer-default",
