@@ -4,6 +4,20 @@ This is the standard Canvas theme for Adobe Experience Manager (AEM) Forms.
 
 This theme can be modified to customize the visual appearance of Adaptive Form.
 
+## Usage
+
+If you're using CSS modules in JavaScript, you can install the NPM module:
+
+```
+npm install --save @aemforms/af-canvas-theme
+```
+
+Then just import the files as you would other CSS.
+
+```
+import '@aemforms/af-canvas-theme/dist/theme.css';
+```
+
 ## Structure
 
 * `src/main.ts`: This is the main entry point of your JS & CSS theme.
