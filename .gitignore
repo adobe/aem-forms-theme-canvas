@@ -114,3 +114,4 @@ dist
 
 # TernJS port file
 .tern-port
+/libs/fd/af/themes/corecomponents/canvas3-theme
