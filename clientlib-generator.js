@@ -3,7 +3,7 @@ var path = require("path");
 var process = require("process");
 
 
-const CLIENTLIB_PATH = process.env.npm_config_path || "libs/fd/af/themes/corecomponents/canvas3-theme/clientlibs/"
+const CLIENTLIB_DIR = process.env.npm_config_directory || "libs/fd/af/themes/corecomponents/canvas3-theme/clientlibs/"
 const CLIENTLIB_CATEGORY = process.env.npm_config_category || "adaptiveform.theme.canvas3"
 
 
@@ -38,7 +38,7 @@ clientlib(
   ],
   {
     cwd: __dirname,
-    clientLibRoot: path.join(__dirname, CLIENTLIB_PATH),
+    clientLibRoot: path.join(__dirname, CLIENTLIB_DIR),
   },
   function () {
     console.log("clientlibs created");
