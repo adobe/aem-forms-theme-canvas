@@ -9,11 +9,14 @@
         "proxy": "aem-site-theme-builder live",
         "live": "npm-run-all -p watch proxy",
         "create-zip": "cd dist/ && zip ./theme.zip ./* -r",
-        "deploy-zip": "node scripts/deploy-zip.mjs"
+        "deploy-zip": "node scripts/deploy-zip.mjs",
+        "clientlib-generator":"node clientlib-generator.js",
+        "create-clientlib": "npm run build && npm run clientlib-generator --category=adaptiveform.theme.canvas3"
     },
     "devDependencies": {
         "@aemforms/aem-site-theme-builder": "5.3.0",
         "@parcel/transformer-sass": "^2.0.1",
+        "aem-clientlib-generator": "^1.8.0",
         "autoprefixer": "^10.3.7",
         "browser-sync": "^2.26.13",
         "install": "^0.13.0",
@@ -22,7 +25,9 @@
         "npm-run-all": "^4.1.5",
         "parcel": "^2.0.1",
         "parcel-namer-rewrite": "^2.0.0-rc.1",
+        "path": "^0.12.7",
         "postcss": "^8.3.11",
+        "process": "^0.11.10",
         "rimraf": "^3.0.2",
         "typescript": "^4.5.2"
     },

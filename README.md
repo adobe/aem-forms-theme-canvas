@@ -39,6 +39,15 @@ Initialize the project with following command executed at the theme root:
 npm install
 ```
 
+### Creating Clientlib for AEM 65
+In AEM 65, core-component themes are deployed as clientlibs. To create clientlib from theme:
+```
+npm run create-clientlib --category="adaptiveform.theme.canvas3"
+```
+This takes to args 
+1. category : Clientlib category
+2. directory : Where should the clientlib be created
+
 ### Environment Variables
 
 Theme Builder scripts are based on the environment variables you provide. These variables are used to properly provide live preview and deploy functionality of the AEM Site Theme Builder. 
