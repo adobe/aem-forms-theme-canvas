@@ -6,7 +6,7 @@ var process = require("process");
 const CLIENTLIB_DIR = process.env.npm_config_directory || "theme-clientlibs"
 const CLIENTLIB_CATEGORY = process.env.npm_config_category
 
-if(!!!CLIENTLIB_CATEGORY){
+if(!CLIENTLIB_CATEGORY){
   throw 'category parameter should be present'
 }
 clientlib(
