@@ -11,7 +11,7 @@
         "create-zip": "cd dist/ && zip ./theme.zip ./* -r",
         "deploy-zip": "node scripts/deploy-zip.mjs",
         "clientlib-generator":"node clientlib-generator.js",
-        "create-clientlib": "npm run build && npm run clientlib-generator --category=adaptiveform.theme.canvas3"
+        "create-clientlib": "npm run build && npm run clientlib-generator"
     },
     "devDependencies": {
         "@aemforms/aem-site-theme-builder": "5.3.0",

@@ -42,10 +42,10 @@ npm install
 ### Creating Clientlib for AEM 65
 In AEM 65, core-component themes are deployed as clientlibs. To create clientlib from theme:
 ```
-npm run create-clientlib --category="adaptiveform.theme.canvas3"
+npm run create-clientlib --category="adaptiveform.theme.yourtheme"
 ```
 This takes to args 
-1. category : Clientlib category
+1. category [Required] : Clientlib category
 2. directory : Where should the clientlib be created
 
 ### Environment Variables
