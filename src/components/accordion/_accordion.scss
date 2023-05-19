@@ -57,3 +57,27 @@
   background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
   cursor : pointer;
 }
+.cmp-accordion__header{
+  display: flex;
+}
+.cmp-accordion__button{
+  flex: 1;
+}
+.cmp-accordion__repeatable-buttons{
+  display: flex;
+  align-items: center;
+  background: $panel-bg-color;
+  gap: 5px;
+}
+.cmp-accordion__add-button{
+  background: url(resources/images/add-button.svg) 50% 40% / 1.2rem 1.2rem no-repeat;
+  width: 1.5rem;
+  border: 0;
+  height: 1.5rem;
+}
+.cmp-accordion__remove-button{
+  background: url(resources/images/remove-button.svg) 50% 40% / 1.2rem 1.2rem no-repeat;
+  width: 1.5rem;
+  border: 0;
+  height: 1.5rem;
+}
