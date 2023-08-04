@@ -1,0 +1,46 @@
+/*******************************************************************************
+ * Copyright 2022 Adobe
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ ******************************************************************************/
+
+ .cmp-adaptiveform-review {
+
+ }
+ .cmp-adaptiveform-review__container {
+    width: 600px;
+ }
+ .cmp-adaptiveform-review__panel{
+   margin: 12px 0;
+   display: flex;
+ }
+ .cmp-adaptiveform-review__panel .cmp-adaptiveform-review__label{
+  font-weight: bold;
+}
+ .cmp-adaptiveform-review__field{
+   display: flex;
+   margin: 12px 0;
+   align-items: baseline;
+ }
+ .cmp-adaptiveform-review__label{
+   flex: 1;
+ }
+ .cmp-adaptiveform-review__value{
+   flex: 1;
+ }
+ .cmp-adaptiveform-review__edit-button{
+    background: url(resources/images/pencil.svg) 50%/1rem 1rem no-repeat;
+    padding: 5px 12px;
+    border: 1px solid $light-gray;
+    border-radius: 4px;
+ }
