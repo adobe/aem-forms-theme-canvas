@@ -1,19 +1,18 @@
-.cmp-adaptiveform-checkbox{
+/* ===============Checkbox================== */
+.cmp-adaptiveform-checkbox {
+  color: $dark-gray;
+  font-size: $font-md;
+  margin: $field-margin;
+  position: relative;
+}
+.cmp-adaptiveform-checkbox__widget {
+  margin-top: $label-top-margin;
+  border-radius: 0.25rem;
+  border: 1px solid $dark-gray;
   font-size: $font-md;
   color: $dark-gray;
-  gap: $radio-checkbox-gap;
-  margin-top: $label-top-margin;
-  margin-right: $field-right-margin;
+  padding-left: $field-padding-left;
 }
-
-.cmp-adaptiveform-checkbox__widget {
-
-}
-
-.cmp-adaptiveform-checkbox__label {
-
-}
-
 .cmp-adaptiveform-checkbox__longdescription {
   color: $light-gray;
   background-color: $very-light-gray;
@@ -22,13 +21,11 @@
   margin-top: $error-top-margin;
   margin-right: $field-right-margin;
 }
-
 .cmp-adaptiveform-checkbox__shortdescription {
   font-size: $font-sm;
   margin-top: $error-top-margin;
 }
-
-.cmp-adaptiveform-checkbox__questionmark {
+.cmp-adaptiveform-checkbox__questionmark{
   position: absolute;
   display:inline-block;
   top:8px;
@@ -39,20 +36,17 @@
   background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
   cursor : pointer;
 }
-
-.cmp-adaptiveform-checkbox__errormessage {
+.cmp-adaptiveform-checkbox__errormessage{
   color: $error;
   font-size: $font-sm;
   margin-top: $error-top-margin;
 }
-
-.cmp-adaptiveform-checkbox[data-cmp-valid=false] {
+.cmp-adaptiveform-checkbox[data-cmp-valid=false]{
   background: $light-error;
   border: 0 solid $error;
   border-left-width: 4px;
   padding-left: 5px;
 }
-
 .cmp-adaptiveform-checkbox[data-cmp-valid=true]{
   border: 0 solid $success;
   border-left-width: 4px;
