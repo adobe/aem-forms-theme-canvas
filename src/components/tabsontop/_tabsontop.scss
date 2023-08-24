@@ -7,6 +7,10 @@
 }
 .cmp-tabs__tablist{
   border-bottom: 1px solid $very-light-gray;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style: none;
 }
 .cmp-tabs__tab{
   padding: 0.5rem 0 1rem 0;
