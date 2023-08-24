@@ -37,6 +37,7 @@ Initialize the project with following command executed at the theme root:
 
 ```
 npm install
+npm run build
 ```
 
 ### Creating Clientlib for AEM 65
