@@ -12,11 +12,12 @@
   color: $dark-gray;
   margin-top: $label-top-margin;
   display: flex;
+  flex-wrap: wrap;
   gap: $radio-checkbox-gap;
   margin-right: $field-right-margin;
 }
 .cmp-adaptiveform-radiobutton__widget.HORIZONTAL{
-  height: $field-height;
+  min-height: $field-height;
 }
 .cmp-adaptiveform-radiobutton__widget.VERTICAL{
   flex-direction: column;
@@ -42,6 +43,9 @@
   border-radius: 9px;
   background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
   cursor : pointer;
+}
+.cmp-adaptiveform-radiobutton__widget.HORIZONTAL .cmp-adaptiveform-radiobutton__option{
+  max-width: 240px;
 }
 .cmp-adaptiveform-radiobutton__errormessage{
   color: $error;
