@@ -1,6 +1,8 @@
 .cmp-adaptiveform-pageheader{
   font-size: $font-md;
   display: flex;
+  gap: 30px;
+  align-items: center;
   height: 90px;
   background: $panel-bg-color;
 }
@@ -11,7 +13,8 @@
   width: auto;
 }
 .cmp-adaptiveform-pageheader div:last-child{
-  display: flex;
-  align-items: center;
-  margin-left: 2rem;
+  p{
+    padding: 0;
+    margin: 0;
+  }
 }

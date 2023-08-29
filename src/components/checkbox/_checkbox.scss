@@ -3,7 +3,16 @@
   color: $dark-gray;
   font-size: $font-md;
   margin: $field-margin;
-  position: relative;
+}
+.cmp-adaptiveform-checkbox__label-container{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.cmp-adaptiveform-checkbox__widget-container{
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  gap: 10px;
 }
 .cmp-adaptiveform-checkbox__widget {
   margin-top: $label-top-margin;
@@ -17,19 +26,20 @@
   color: $light-gray;
   background-color: $very-light-gray;
   font-size: $font-sm;
-  padding: 0.125rem 0.5rem;
   margin-top: $error-top-margin;
-  margin-right: $field-right-margin;
+  margin-bottom: 5px;
+  padding: 10px;
+  p{
+    margin: 0;
+    padding: 0;
+  }
 }
 .cmp-adaptiveform-checkbox__shortdescription {
   font-size: $font-sm;
   margin-top: $error-top-margin;
 }
 .cmp-adaptiveform-checkbox__questionmark{
-  position: absolute;
   display:inline-block;
-  top:8px;
-  right:28px;
   width:1rem;
   height:1rem;
   border-radius: 9px;

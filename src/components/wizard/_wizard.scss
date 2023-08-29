@@ -2,15 +2,16 @@
   color: $dark-gray;
   font-size: $font-md;
   margin: $field-margin;
-  position: relative;
   background: $wizard-bg-color;
-  padding-bottom: 2rem;
+  padding: 10px;
   border: 1px solid $very-light-gray;
-  padding-left: 10px;
-  margin-right: $field-right-margin;
 }
-.cmp-adaptiveform-wizard__widget{
-  position: relative;
+.cmp-adaptiveform-wizard__label-container{
+  display: flex;
+  align-items: center;
+}
+.cmp-adaptiveform-wizard__label{
+  flex: 1;
 }
 .cmp-adaptiveform-wizard__tabList {
   display: flex;
@@ -21,8 +22,7 @@
 .cmp-adaptiveform-wizard .cmp-adaptiveform-wizard__tab{
   border-bottom: 2px solid $very-light-gray;
   color: $dark-gray;
-  padding: 0.5rem 0 1rem 0;
-  margin-right: .75rem;
+  padding: 1rem 0;
   box-sizing: border-box;
   flex: 1;
 }
@@ -30,13 +30,12 @@
   border-bottom: 2px solid $dark-gray;
   color: $dark-gray;
 }
-.cmp-adaptiveform-wizard__wizardpanel{
-  margin-top: 45px;
+.cmp-adaptiveform-wizard__containerNav{
+  display: flex;
+  gap: 20px;
+  justify-content: end;
 }
 .cmp-adaptiveform-wizard__previousNav{
-  position: absolute;
-  right: 140px;
-  top: 75px;
   cursor:pointer;
   height:2.5rem;
   width:2.5rem;
@@ -49,9 +48,6 @@
   background:url(./resources/images/Chevron-Left-White.svg) center center / 1rem 1rem no-repeat,$light-gray;
 }
 .cmp-adaptiveform-wizard__nextNav{
-  position: absolute;
-  right: 45px;
-  top: 75px;
   height:2.5rem;
   cursor:pointer;
   width:2.5rem;
@@ -64,23 +60,37 @@
   background:url(./resources/images/Chevron-Right-White.svg) center center / 1rem 1rem no-repeat,$dark-gray;
   border-color:$dark-gray;
 }
+// change icon for rtl
+[dir="rtl"] .cmp-adaptiveform-wizard__previousNav{
+  background:url(./resources/images/Chevron-Right.svg) center center / 1rem 1rem no-repeat;
+}
+[dir="rtl"] .cmp-adaptiveform-wizard__nextNav{
+  background:url(./resources/images/Chevron-Left.svg) center center / 1rem 1rem no-repeat;
+}
+[dir="rtl"] .cmp-adaptiveform-wizard__previousNav:hover{
+  background:url(./resources/images/Chevron-Right-White.svg) center center / 1rem 1rem no-repeat,$dark-gray;
+}
+[dir="rtl"] .cmp-adaptiveform-wizard__nextNav:hover{
+  background:url(./resources/images/Chevron-Left-White.svg) center center / 1rem 1rem no-repeat,$light-gray;
+}
 .cmp-adaptiveform-wizard__longdescription {
   color: $light-gray;
   background-color: $very-light-gray;
   font-size: $font-sm;
-  padding: 0.125rem 0.5rem;
   margin-top: $error-top-margin;
-  margin-left: -10px;
+  margin-bottom: 5px;
+  padding: 10px;
+  p{
+    margin: 0;
+    padding: 0;
+  }
 }
 .cmp-adaptiveform-wizard__shortdescription {
   font-size: $font-sm;
   margin-top: $error-top-margin;
 }
 .cmp-adaptiveform-wizard__questionmark {
-  position: absolute;
   display:inline-block;
-  top:8px;
-  right:8px;
   width:1rem;
   height:1rem;
   border-radius: 9px;
