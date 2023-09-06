@@ -1,7 +1,12 @@
 .cmp-accordion{
   margin: $field-margin;
-  position: relative;
-  margin-right: $field-right-margin;
+}
+.cmp-accordion__label-container{
+  display: flex;
+  align-items: center;
+}
+.cmp-accordion__label{
+  flex: 1;
 }
 .cmp-accordion__item{
   border: 2px solid $silver;
@@ -12,24 +17,32 @@
   cursor: pointer;
   border: none;
   padding: 1rem;
+  width: unset;
   display: block;
-  width: 100%;
   text-align: left;
 }
 .cmp-accordion__button:hover{
   color:$dark-gray;
 }
-.cmp-accordion__title:before{
+.cmp-accordion__title{
+}
+.cmp-accordion__icon{
+  width: 10px;
+  height: 10px;
   border: 3px solid $light-gray;
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 4px;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-  content: '';
-  margin-right: 1rem;
+  margin: 0 10px;
 }
-.cmp-accordion__button.cmp-accordion__button--expanded .cmp-accordion__title:before{
+// change icon for rtl
+[dir="rtl"] .cmp-accordion__icon{
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.cmp-accordion__button.cmp-accordion__button--expanded .cmp-accordion__icon{
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
@@ -41,19 +54,20 @@
   color: $light-gray;
   background-color: $very-light-gray;
   font-size: $font-sm;
-  padding: 0.125rem 0.5rem;
   margin-top: $error-top-margin;
   margin-bottom: 5px;
+  padding: 10px;
+  p{
+    margin: 0;
+    padding: 0;
+  }
 }
 .cmp-accordion__shortdescription {
   font-size: $font-sm;
   margin-top: $error-top-margin;
 }
 .cmp-accordion__questionmark{
-  position: absolute;
   display:inline-block;
-  top:8px;
-  right:8px;
   width:1rem;
   height:1rem;
   border-radius: 9px;
@@ -62,10 +76,8 @@
 }
 .cmp-accordion__header{
   display: flex;
-  margin: 0
-}
-.cmp-accordion__button{
-  flex: 1;
+  justify-content: space-between;
+  background: $panel-bg-color;
 }
 .cmp-accordion__repeatable-buttons{
   display: flex;

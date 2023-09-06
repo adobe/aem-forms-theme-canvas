@@ -3,9 +3,15 @@
   color: $dark-gray;
   font-size: $font-md;
   margin: $field-margin;
-  position: relative;
   display: flex;
   flex-direction: column;
+}
+.cmp-adaptiveform-dropdown__label-container{
+  display: flex;
+  align-items: center;
+}
+.cmp-adaptiveform-dropdown__label{
+  flex: 1;
 }
 .cmp-adaptiveform-dropdown__widget {
   margin-top: $label-top-margin;
@@ -14,25 +20,25 @@
   border: 1px solid $dark-gray;
   font-size: $font-md;
   color: $dark-gray;
-  margin-right: $field-right-margin;
 }
 .cmp-adaptiveform-dropdown__longdescription {
   color: $light-gray;
   background-color: $very-light-gray;
   font-size: $font-sm;
-  padding: 0.125rem 0.5rem;
   margin-top: $error-top-margin;
-  margin-right: $field-right-margin;
+  margin-bottom: 5px;
+  padding: 10px;
+  p{
+    margin: 0;
+    padding: 0;
+  }
 }
 .cmp-adaptiveform-dropdown__shortdescription {
   font-size: $font-sm;
   margin-top: $error-top-margin;
 }
 .cmp-adaptiveform-dropdown__questionmark{
-  position: absolute;
   display:inline-block;
-  top:8px;
-  right:28px;
   width:1rem;
   height:1rem;
   border-radius: 9px;
