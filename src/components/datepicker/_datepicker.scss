@@ -15,9 +15,7 @@
 .cmp-adaptiveform-datepicker__label-container{
   display: flex;
   align-items: center;
-}
-.cmp-adaptiveform-datepicker__label{
-  flex: 1;
+  justify-content: space-between;
 }
 .cmp-adaptiveform-datepicker__widget {
   margin-top: 14px;
@@ -51,6 +49,14 @@
   border-radius: 9px;
   background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
   cursor : pointer;
+  // below properties for backward compatibility
+  position: absolute;
+  right: 0px;
+}
+// below properties for backward compatibility
+.cmp-adaptiveform-datepicker__label-container .cmp-adaptiveform-datepicker__questionmark{
+  position: unset;
+  right: unset;
 }
 .cmp-adaptiveform-datepicker__errormessage{
   color: $error;

@@ -32,6 +32,14 @@
   border-radius: 9px;
   background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
   cursor : pointer;
+  // below properties for backward compatibility
+  position: absolute;
+  right: 20px;
+}
+// below properties for backward compatibility
+.cmp-adaptiveform-recaptcha__label-container .cmp-adaptiveform-recaptcha__questionmark{
+  position: unset;
+  right: unset;
 }
 .cmp-adaptiveform-recaptcha__errormessage{
   color: $error;

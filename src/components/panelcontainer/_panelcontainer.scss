@@ -7,9 +7,9 @@
 .cmp-container__label-container{
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .cmp-container__label{
-  flex: 1;
   font-size: $font-lg
 }
 .cmp-container__longdescription {
@@ -35,4 +35,12 @@
   border-radius: 9px;
   background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
   cursor : pointer;
+  // below properties for backward compatibility
+  position: absolute;
+  right: 20px;
+}
+// below properties for backward compatibility
+.cmp-container__label-container .cmp-container__questionmark{
+  position: unset;
+  right: unset;
 }

@@ -47,4 +47,12 @@
   border-radius: 9px;
   background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
   cursor : pointer;
+  // below properties for backward compatibility
+  position: absolute;
+  right: 20px;
+}
+// below properties for backward compatibility
+.cmp-adaptiveform-button__help-container .cmp-adaptiveform-button__questionmark{
+  position: unset;
+  right: unset;
 }
