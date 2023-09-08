@@ -9,9 +9,7 @@
 .cmp-adaptiveform-numberinput__label-container{
   display: flex;
   align-items: center;
-}
-.cmp-adaptiveform-numberinput__label{
-  flex: 1;
+  justify-content: space-between;
 }
 .cmp-adaptiveform-numberinput__widget{
   margin-top: $label-top-margin;
@@ -20,7 +18,7 @@
   border: 1px solid $dark-gray;
   font-size: $font-md;
   color: $dark-gray;
-  padding-left: 0 $field-padding-left;
+  padding: 0 $field-padding-left;
 }
 .cmp-adaptiveform-numberinput__longdescription {
   color: $light-gray;
@@ -45,6 +43,14 @@
   border-radius: 9px;
   background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
   cursor : pointer;
+  // below properties for backward compatibility
+  position: absolute;
+  right: 20px;
+}
+// below properties for backward compatibility
+.cmp-adaptiveform-numberinput__label-container .cmp-adaptiveform-numberinput__questionmark{
+  position: unset;
+  right: unset;
 }
 .cmp-adaptiveform-numberinput__errormessage{
   color: $error;

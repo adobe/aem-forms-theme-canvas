@@ -6,12 +6,18 @@
   padding: 10px;
   border: 1px solid $very-light-gray;
 }
+// below class for backward compatibility
+.cmp-adaptiveform-wizard__widget{
+  position: relative;
+}
+// below class for backward compatibility
+.cmp-adaptiveform-wizard__widget--v2.cmp-adaptiveform-wizard__widget{
+  position: unset;
+}
 .cmp-adaptiveform-wizard__label-container{
   display: flex;
   align-items: center;
-}
-.cmp-adaptiveform-wizard__label{
-  flex: 1;
+  justify-content: space-between;
 }
 .cmp-adaptiveform-wizard__tabList {
   display: flex;
@@ -35,7 +41,20 @@
   gap: 20px;
   justify-content: end;
 }
+
+// below class for backward compatibility
+.cmp-adaptiveform-wizard__wizardpanel{
+  margin-top: 45px;
+}
+// below class for backward compatibility
+.cmp-adaptiveform-wizard__wizardpanel--v2.cmp-adaptiveform-wizard__wizardpanel{
+  margin-top: unset;
+}
+// below class for backward compatibility
 .cmp-adaptiveform-wizard__previousNav{
+  position: absolute;
+  right: 140px;
+  top: 75px;
   cursor:pointer;
   height:2.5rem;
   width:2.5rem;
@@ -44,10 +63,15 @@
   margin-right:0.5rem;
   background:url(./resources/images/Chevron-Left.svg) center center / 1rem 1rem no-repeat;
 }
+// below class for backward compatibility
 .cmp-adaptiveform-wizard__previousNav:hover{
   background:url(./resources/images/Chevron-Left-White.svg) center center / 1rem 1rem no-repeat,$light-gray;
 }
+// below class for backward compatibility
 .cmp-adaptiveform-wizard__nextNav{
+  position: absolute;
+  right: 45px;
+  top: 75px;
   height:2.5rem;
   cursor:pointer;
   width:2.5rem;
@@ -56,23 +80,12 @@
   border-radius:1.5rem;
   background:url(./resources/images/Chevron-Right.svg) center center / 1rem 1rem no-repeat;
 }
+// below class for backward compatibility
 .cmp-adaptiveform-wizard__nextNav:hover{
   background:url(./resources/images/Chevron-Right-White.svg) center center / 1rem 1rem no-repeat,$dark-gray;
   border-color:$dark-gray;
 }
-// change icon for rtl
-[dir="rtl"] .cmp-adaptiveform-wizard__previousNav{
-  background:url(./resources/images/Chevron-Right.svg) center center / 1rem 1rem no-repeat;
-}
-[dir="rtl"] .cmp-adaptiveform-wizard__nextNav{
-  background:url(./resources/images/Chevron-Left.svg) center center / 1rem 1rem no-repeat;
-}
-[dir="rtl"] .cmp-adaptiveform-wizard__previousNav:hover{
-  background:url(./resources/images/Chevron-Right-White.svg) center center / 1rem 1rem no-repeat,$dark-gray;
-}
-[dir="rtl"] .cmp-adaptiveform-wizard__nextNav:hover{
-  background:url(./resources/images/Chevron-Left-White.svg) center center / 1rem 1rem no-repeat,$light-gray;
-}
+
 .cmp-adaptiveform-wizard__longdescription {
   color: $light-gray;
   background-color: $very-light-gray;
@@ -96,4 +109,50 @@
   border-radius: 9px;
   background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
   cursor : pointer;
+  // below properties for backward compatibility
+  position: absolute;
+  right: 30px;
 }
+// below properties for backward compatibility
+.cmp-adaptiveform-wizard__label-container .cmp-adaptiveform-wizard__questionmark{
+  position: unset;
+  right: unset;
+}
+
+// =======css for v2 start=======
+.cmp-adaptiveform-wizard__nav{
+  cursor:pointer;
+  height:2.5rem;
+  width:2.5rem;
+  margin-right:1rem;
+  border: 2px solid $light-gray;
+  border-radius:1.5rem;
+  &--previous{
+    background:url(./resources/images/Chevron-Left.svg) center center / 1rem 1rem no-repeat;
+    &:hover{
+      background:url(./resources/images/Chevron-Left-White.svg) center center / 1rem 1rem no-repeat,$light-gray;
+    }
+  }
+  &--next{
+    background:url(./resources/images/Chevron-Right.svg) center center / 1rem 1rem no-repeat;
+    &:hover{
+      background:url(./resources/images/Chevron-Right-White.svg) center center / 1rem 1rem no-repeat,$dark-gray;
+      border-color:$dark-gray;
+    }
+  }
+}
+[dir="rtl"] .cmp-adaptiveform-wizard__nav{
+  &--previous{
+    background:url(./resources/images/Chevron-Right.svg) center center / 1rem 1rem no-repeat;
+    &:hover{
+      background:url(./resources/images/Chevron-Right-White.svg) center center / 1rem 1rem no-repeat,$dark-gray;
+    }
+  }
+  &--next{
+    background:url(./resources/images/Chevron-Left.svg) center center / 1rem 1rem no-repeat;
+    &:hover{
+      background:url(./resources/images/Chevron-Left-White.svg) center center / 1rem 1rem no-repeat,$light-gray;
+    }
+  }
+}
+// ========css for v2 end=======

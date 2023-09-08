@@ -9,9 +9,7 @@
 .cmp-adaptiveform-radiobutton__label-container{
   display: flex;
   align-items: center;
-}
-.cmp-adaptiveform-radiobutton__label{
-  flex: 1;
+  justify-content: space-between;
 }
 .cmp-adaptiveform-radiobutton__widget{
   font-size: $font-md;
@@ -50,6 +48,14 @@
   border-radius: 9px;
   background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
   cursor : pointer;
+  // below properties for backward compatibility
+  position: absolute;
+  right: 20px;
+}
+// below properties for backward compatibility
+.cmp-adaptiveform-radiobutton__label-container .cmp-adaptiveform-radiobutton__questionmark{
+  position: unset;
+  right: unset;
 }
 .cmp-adaptiveform-radiobutton__widget.HORIZONTAL .cmp-adaptiveform-radiobutton__option{
   max-width: 240px;

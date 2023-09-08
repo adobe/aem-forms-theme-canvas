@@ -6,9 +6,7 @@
 .cmp-tabs__label-container{
   display: flex;
   align-items: center;
-}
-.cmp-tabs__label{
-  flex: 1;
+  justify-content: space-between;
 }
 .cmp-tabs__tablist{
   border-bottom: 1px solid $very-light-gray;
@@ -56,4 +54,12 @@
   border-radius: 9px;
   background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
   cursor : pointer;
+  // below properties for backward compatibility
+  position: absolute;
+  right: 20px;
+}
+// below properties for backward compatibility
+.cmp-tabs__label-container .cmp-tabs__questionmark{
+  position: unset;
+  right: unset;
 }
