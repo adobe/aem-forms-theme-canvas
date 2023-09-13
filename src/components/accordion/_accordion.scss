@@ -25,8 +25,6 @@
 .cmp-accordion__title{
 }
 .cmp-accordion__icon{
-  width: 10px;
-  height: 10px;
   border: 3px solid $light-gray;
   border-width: 0 2px 2px 0;
   display: inline-block;
@@ -47,6 +45,9 @@
 .cmp-accordion__panel{
   padding: 1rem 3.5rem;
   background: $panel-bg-color;
+}
+.cmp-accordion__panel--hidden{
+  display: none;
 }
 .cmp-accordion__longdescription {
   color: $light-gray;
@@ -84,6 +85,7 @@
   display: flex;
   justify-content: space-between;
   background: $panel-bg-color;
+  margin: 0;
 }
 .cmp-accordion__repeatable-buttons{
   display: flex;
