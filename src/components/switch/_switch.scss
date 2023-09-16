@@ -1,0 +1,135 @@
+/* ===============Switch================== */
+.cmp-adaptiveform-switch {
+  color: $dark-gray;
+  font-size: $font-md;
+  margin: $field-margin;
+}
+
+.cmp-adaptiveform-switch__container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.cmp-adaptiveform-switch__widget {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  display: block;
+}
+
+.cmp-adaptiveform-switch__widget-slider {
+  cursor: pointer;
+  background-color: $chinese-silver;
+  border-radius: 34px;
+  transition: all .4s;
+  width: 60px;
+  height: 32px;
+  position: relative;
+}
+
+input:checked + .cmp-adaptiveform-switch__widget-slider {
+  background-color: $dark-blue;
+}
+
+input:focus + .cmp-adaptiveform-switch__widget-slider {
+  box-shadow: 0 0 1px $dark-blue;
+}
+
+.cmp-adaptiveform-switch__circle-indicator{
+  height: 24px;
+  width: 24px;
+  background-color: $white;
+  border-radius: 50%;
+  transition: all .4s;
+  position: absolute;
+  inset-block-start: 4px;
+  inset-inline-start: 4px;
+}
+[dir="rtl"] .cmp-adaptiveform-switch--filled  .cmp-adaptiveform-switch__circle-indicator {
+  -webkit-transform: translateX(-26px);
+  -ms-transform: translateX(-26px);
+  transform: translateX(-26px);
+  inset-block-end: 4px;
+  inset-block-start: unset;
+  -webkit-transition: .4s;
+}
+.cmp-adaptiveform-switch--filled  .cmp-adaptiveform-switch__circle-indicator {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  inset-block-end: 4px;
+  inset-block-start: unset;
+  -webkit-transition: .4s;
+}
+
+.cmp-adaptiveform-switch__longdescription {
+  color: $light-gray;
+  background-color: $very-light-gray;
+  font-size: $font-sm;
+  margin-top: $error-top-margin;
+  margin-bottom: 5px;
+  padding: 10px;
+  p{
+    margin: 0;
+    padding: 0;
+  }
+}
+.cmp-adaptiveform-switch__questionmark{
+  display:inline-block;
+  width:1rem;
+  height:1rem;
+  border-radius: 9px;
+  background: url(./resources/images/question.svg) center center / cover no-repeat,$light-gray;
+  cursor : pointer;
+  position: absolute;
+  right: 20px;
+  left: unset;
+}
+[dir="rtl"] .cmp-adaptiveform-switch__questionmark{
+  position: absolute;
+  right: unset;
+  left: 20px;
+}
+.cmp-adaptiveform-switch__errormessage{
+  color: $error;
+  font-size: $font-sm;
+  margin-top: $error-top-margin;
+}
+.cmp-adaptiveform-switch__help-container .cmp-adaptiveform-switch__questionmark{
+  position: unset;
+  right: unset;
+  left: unset;
+}
+[dir="rtl"] .cmp-adaptiveform-switch__help-container .cmp-adaptiveform-switch__questionmark{
+  position: unset;
+  right: unset;
+  left: unset;
+}
+.cmp-adaptiveform-switch__shortdescription {
+  font-size: $font-sm;
+  margin-top: $error-top-margin;
+}
+.cmp-adaptiveform-switch[data-cmp-valid=false]{
+  background: $light-error;
+  border: 0 solid $error;
+  border-inline-start-width: 4px;
+  padding-inline-start: 5px;
+}
+.cmp-adaptiveform-switch[data-cmp-valid=true]{
+  border: 0 solid $success;
+  border-inline-start-width: 4px;
+  padding-inline-start: 5px;
+}
+.cmp-adaptiveform-switch__hide-labels .cmp-adaptiveform-switch__option--on {
+  display: none;
+}
+.cmp-adaptiveform-switch__hide-labels .cmp-adaptiveform-switch__option--off {
+  display: none;
+}
+.cmp-adaptiveform-switch__unhide-labels .cmp-adaptiveform-switch__option--on {
+  display:block
+}
+.cmp-adaptiveform-switch__unhide-labels .cmp-adaptiveform-switch__option--off {
+  display:block
+}
