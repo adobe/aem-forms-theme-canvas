@@ -18,13 +18,13 @@
 /* grid component */
 .aem-Grid {
   display: block;
-  width: 100%;
+  inline-size: 100%;
 }
 
 .aem-Grid::before,
 .aem-Grid::after {
   display: table;
-  content: ' ';
+  content: " ";
 }
 
 .aem-Grid::after {
@@ -55,11 +55,11 @@
 
 /* Generates all the rules for the grid columns up to the given amount of column */
 @mixin generate-columns($breakPoint, $columnTotal, $column: 1) {
-  @if ($column <= $columnTotal) {
+  @if $column <= $columnTotal {
     & > .aem-GridColumn.aem-GridColumn--#{$breakPoint}--#{$column} {
       float: left;
       clear: none;
-      width: ($column * 100% / $columnTotal);
+      inline-size: ($column * 100% / $columnTotal);
     }
 
     @include generate-columns($breakPoint, $columnTotal, ($column + 1));
@@ -68,9 +68,9 @@
 
 /* Generates all the rules for the grid column offset up to the given amount of column */
 @mixin generate-offsets($breakPoint, $columnTotal, $column: 0) {
-  @if ($column <= $columnTotal) {
+  @if $column <= $columnTotal {
     & > .aem-GridColumn.aem-GridColumn--offset--#{$breakPoint}--#{$column} {
-      margin-left: ($column * 100% / $columnTotal);
+      margin-inline-start: ($column * 100% / $columnTotal);
     }
 
     @include generate-offsets($breakPoint, $columnTotal, ($column + 1));
@@ -79,7 +79,7 @@
 
 /* Generates all the rules for the grid and columns for the given break point and total of columns */
 @mixin generate-grid-columns($breakPoint, $columnTotal) {
-  @if ($columnTotal > 0) {
+  @if $columnTotal > 0 {
     &.aem-Grid--#{$columnTotal} {
       @include generate-columns($breakPoint, $columnTotal);
       @include generate-offsets($breakPoint, $columnTotal);
@@ -94,7 +94,7 @@
 
 /* Generates all the rules for the grids and columns */
 @mixin grid-loop($breakPoint, $columnTotal, $column: 1) {
-  @if ($column <= $columnTotal) {
+  @if $column <= $columnTotal {
     @include generate-grid-columns($breakPoint, $column);
     @include grid-loop($breakPoint, $columnTotal, ($column + 1));
   }
