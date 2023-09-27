@@ -1,10 +1,10 @@
 {
     "name": "@aemforms/af-canvas-theme",
-    "version": "1.0.12",
+    "version": "1.0.14",
     "description": "Standard AEM Forms Canvas theme",
     "license": "MIT License, Copyright 2022 Adobe Systems Incorporated",
     "scripts": {
-        "build": "rimraf dist && parcel build src/theme.ts",
+        "build": "rimraf dist && mkdir dist && parcel build src/theme.ts --no-cache --dist-dir dist",
         "watch": "parcel watch src/theme.ts",
         "proxy": "aem-site-theme-builder live",
         "live": "npm-run-all -p watch proxy",
