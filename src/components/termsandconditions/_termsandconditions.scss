@@ -26,56 +26,56 @@
   position: fixed;
   z-index: 1;
   padding-top: 100px;
-  left: 0;
-  top: 0;
+  inset-inline-start: 0;
+  inset-block-start: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
   background-color: $gray;
 }
 
-.cmp-adaptiveform-termsandcondition__content-container--modal .cmp-adaptiveform-termsandcondition__body {
-  background-color: $white;
-  margin: auto;
-  width: 600px;
-  border-radius: 4px;
+.cmp-adaptiveform-termsandcondition__content-container--modal {
+  .cmp-adaptiveform-termsandcondition__text {
+    max-height: 500px;
+  }
+
+  .cmp-adaptiveform-termsandcondition__body {
+    background-color: $white;
+    margin: auto;
+    width: 600px;
+    border-radius: 4px;
+  }
+
+  .cmp-adaptiveform-termsandcondition__header {
+    display: flex;
+    flex-direction: row-reverse;
+    background: $tnc-header-bg-color;
+    padding: 5px 20px;
+    align-items: flex-start;
+  }
+
+  .cmp-adaptiveform-termsandcondition__header h3 {
+    flex: 1;
+  }
+
+  .cmp-adaptiveform-termsandcondition__close-button {
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+  
+  }
+
+  .cmp-adaptiveform-termsandcondition__content {
+    padding: 20px;
+  
+  }
 }
-
-.cmp-adaptiveform-termsandcondition__content-container--modal .cmp-adaptiveform-termsandcondition__header {
-  display: flex;
-  flex-direction: row-reverse;
-  background: #afb0b5;
-  padding: 5px 20px;
-  align-items: flex-start;
-}
-
-.cmp-adaptiveform-termsandcondition__content-container--modal .cmp-adaptiveform-termsandcondition__header h3 {
-  flex: 1;
-}
-
-.cmp-adaptiveform-termsandcondition__content-container--modal .cmp-adaptiveform-termsandcondition__close-button {
-  border: none;
-  background: transparent;
-  font-size: 22px;
-  cursor: pointer;
-
-}
-
-.cmp-adaptiveform-termsandcondition__content-container--modal .cmp-adaptiveform-termsandcondition__content {
-  padding: 20px;
-
-}
-
 
 .cmp-adaptiveform-termsandcondition__text {
 
   overflow: auto;
-  border-style: solid;
-  border-top-width: 1px;
-  border-left-width: 1px;
-  border-bottom-width: 1px;
-  border-right-width: 1px;
-  border-color: #ccc;
+  border: 1px solid $silver;
   margin-bottom: .25rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -84,17 +84,13 @@
   border-top-left-radius: .25rem;
   border-top-right-radius: .25rem;
   font-size: .875rem;
-  color: #969696;
+  color: $light-gray;
   max-height: 160px;
-}
-
-.cmp-adaptiveform-termsandcondition__content-container--modal .cmp-adaptiveform-termsandcondition__text {
-  max-height: 500px;
 }
 
 .cmp-adaptiveform-termsandcondition__link .cmp-adaptiveform-checkboxgroup[data-cmp-valid=true] {
   border: none;
-  padding-left: 5px;
+  padding-inline-start: 5px;
 }
 
 
@@ -122,8 +118,8 @@
 }
 
 .cmp-adaptiveform-termsandcondition__longdescription {
-  color: #969696;
-  background-color: #e6e6e6;
+  color: $light-gray;
+  background-color: $very-light-gray;
   margin-top: 10px;
   margin-bottom: 5px;
   padding: 10px;
