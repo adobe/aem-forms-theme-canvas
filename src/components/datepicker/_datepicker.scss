@@ -12,6 +12,10 @@
   left: 30px;
   right: unset;
 }
+[dir="rtl"] .cmp-adaptiveform-datepicker__calendar-icon{
+  left: 30px;
+  right: unset;
+}
 .cmp-adaptiveform-datepicker__label-container{
   display: flex;
   align-items: center;
@@ -66,11 +70,11 @@
 .cmp-adaptiveform-datepicker[data-cmp-valid=false]{
   background: $light-error;
   border: 0 solid $error;
-  border-left-width: 4px;
-  padding-left: 5px;
+  border-inline-start-width: 4px;
+  padding-inline-start: 5px;
 }
 .cmp-adaptiveform-datepicker[data-cmp-valid=true]{
   border: 0 solid $success;
-  border-left-width: 4px;
-  padding-left: 5px;
+  border-inline-start-width: 4px;
+  padding-inline-start: 5px;
 }

@@ -59,13 +59,13 @@
 .cmp-adaptiveform-dropdown[data-cmp-valid=false]{
   background: $light-error;
   border: 0 solid $error;
-  border-left-width: 4px;
-  padding-left: 5px;
+  border-inline-start-width: 4px;
+  padding-inline-start: 5px;
 }
 .cmp-adaptiveform-dropdown[data-cmp-valid=true]{
   border: 0 solid $success;
-  border-left-width: 4px;
-  padding-left: 5px;
+  border-inline-start-width: 4px;
+  padding-inline-start: 5px;
 }
 .cmp-adaptiveform-dropdown__widget[multiple='multiple'] {
   height: 80px;

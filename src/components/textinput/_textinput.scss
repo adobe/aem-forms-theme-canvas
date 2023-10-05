@@ -60,13 +60,13 @@
 .cmp-adaptiveform-textinput[data-cmp-valid=false]{
   background: $light-error;
   border: 0 solid $error;
-  border-left-width: 4px;
-  padding-left: 5px;
+  border-inline-start-width: 4px;
+  padding-inline-start: 5px;
 }
 .cmp-adaptiveform-textinput[data-cmp-valid=true]{
   border: 0 solid $success;
-  border-left-width: 4px;
-  padding-left: 5px;
+  border-inline-start-width: 4px;
+  padding-inline-start: 5px;
 }
 textarea.cmp-adaptiveform-textinput__widget{
   height: 80px;
