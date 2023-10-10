@@ -1,0 +1,136 @@
+/* ===============Terms And Conditions ================== */
+
+.cmp-adaptiveform-termsandcondition {
+  color: $dark-gray;
+  font-size: $font-md;
+  margin: $field-margin;
+}
+
+
+.cmp-adaptiveform-termsandcondition__label-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cmp-adaptiveform-termsandcondition__label {
+  flex: 1;
+  font-size: $font-lg;
+}
+
+.cmp-adaptiveform-termsandcondition__content-container {
+  margin-top: 10px
+}
+
+.cmp-adaptiveform-termsandcondition__content-container--modal {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $gray;
+}
+
+.cmp-adaptiveform-termsandcondition__content-container--modal {
+  .cmp-adaptiveform-termsandcondition__text {
+    max-height: 500px;
+  }
+
+  .cmp-adaptiveform-termsandcondition__body {
+    background-color: $white;
+    margin: auto;
+    width: 600px;
+    border-radius: 4px;
+  }
+
+  .cmp-adaptiveform-termsandcondition__header {
+    display: flex;
+    flex-direction: row-reverse;
+    background: $tnc-header-bg-color;
+    padding: 5px 20px;
+    align-items: flex-start;
+  }
+
+  .cmp-adaptiveform-termsandcondition__header h3 {
+    flex: 1;
+  }
+
+  .cmp-adaptiveform-termsandcondition__close-button {
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+  
+  }
+
+  .cmp-adaptiveform-termsandcondition__content {
+    padding: 20px;
+  
+  }
+}
+
+.cmp-adaptiveform-termsandcondition__text {
+
+  overflow: auto;
+  border: 1px solid $silver;
+  margin-bottom: .25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-bottom-right-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  font-size: .875rem;
+  color: $light-gray;
+  max-height: 160px;
+}
+
+.cmp-adaptiveform-termsandcondition__link .cmp-adaptiveform-checkboxgroup[data-cmp-valid=true] {
+  border: none;
+  padding-inline-start: 5px;
+}
+
+
+.cmp-adaptiveform-termsandcondition__link {}
+
+.cmp-adaptiveform-termsandcondition__approvalcheckbox .cmp-adaptiveform-checkbox__label {
+  cursor: pointer;
+}
+
+.cmp-adaptiveform-termsandcondition__approvalcheckbox {}
+
+
+.cmp-adaptiveform-termsandcondition__questionmark {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  background: url(resources/images/question.svg) 50%/cover no-repeat, #969696;
+  border-radius: 9px;
+  display: inline-block;
+}
+
+.cmp-adaptiveform-termsandcondition__shortdescription {
+  margin-top: 10px;
+  font-size: .875rem;
+}
+
+.cmp-adaptiveform-termsandcondition__longdescription {
+  color: $light-gray;
+  background-color: $very-light-gray;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 10px;
+  font-size: .875rem;
+}
+
+.cmp-adaptiveform-termsandcondition__link a:link {
+	color: $dark-gray;
+}
+
+
+.cmp-adaptiveform-termsandcondition__link a:visited {
+	color: $light-gray
+}
