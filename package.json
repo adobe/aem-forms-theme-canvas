@@ -41,7 +41,7 @@
     },
     "dependencies": {
         "jszip": "^3.10.1",
-        "version": "^0.1.2"
+        "version": "1.0.15"
     },
     "publishConfig": {
         "access": "public"
