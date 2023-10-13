@@ -52,6 +52,9 @@ jobs:
         git config --global user.name "ci-build"
         git add package.json
         git commit -m "Bump version to ${{ steps.bump_version.outputs.new_version }}"
+      env:
+        GITHUB_TOKEN: ${{ secrets.ADOBE_GH_TOKEN }}
+        GH_TOKEN: ${{ secrets.ADOBE_GH_TOKEN }}
 
     - name: Publish to npm
       run: |
