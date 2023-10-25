@@ -47,10 +47,18 @@ jobs:
       run: |
         npm version patch -m "Bump version to %s"
 
+    - name: Authenticate with NPM Registry
+      run: |
+        echo "registry=https://registry.npmjs.org/" >> .npmrc
+        echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
+        npm whoami
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_DEPLOY_TOKEN }}
+
     - name: Publish to npm
       run: |
-        npm config set //registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}
         npm publish --access public
         git push origin HEAD:main
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_DEPLOY_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_DEPLOY_TOKEN }}
