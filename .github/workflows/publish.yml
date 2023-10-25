@@ -15,32 +15,43 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+          fetch-depth: 0
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '16'
+        registry-url: https://registry.npmjs.org/
 
-    - name: Install dependencies
-      run: npm install
-
-    - name: Discard Uncommitted Changes
-      run: git reset --hard
-
-    - name: Build theme
-      run: npm run build
-
-    - name: Get current version
-      id: get_version
-      run: echo ::set-output name=version::$(node -p "require('./package.json').version")
-
-    - name: Config git
+    - name: Set Git Config
       run: |
         git config --global user.email "ci-build@aemforms"
         git config --global user.name "ci-build"
       env:
         GITHUB_TOKEN: ${{ secrets.ADOBE_GH_TOKEN }}
         GH_TOKEN: ${{ secrets.ADOBE_GH_TOKEN }}
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build theme
+      run: npm run build
+  
+    - name: Authenticate with NPM Registry
+      run: |
+        echo "registry=https://registry.npmjs.org/" >> .npmrc
+        echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
+        npm whoami
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_DEPLOY_TOKEN }}
+
+    - name: Discard Uncommitted Changes
+      run: git reset --hard
+
+    - name: Get current version
+      id: get_version
+      run: echo ::set-output name=version::$(node -p "require('./package.json').version")
 
     - name: Bump version
       id: bump_version
@@ -49,8 +60,8 @@ jobs:
 
     - name: Publish to npm
       run: |
-        npm config set //registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}
         npm publish --access public
         git push origin HEAD:main
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_DEPLOY_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_DEPLOY_TOKEN }}
