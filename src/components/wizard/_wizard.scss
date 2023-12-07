@@ -1,10 +1,8 @@
 .cmp-adaptiveform-wizard{
-  color: $dark-gray;
-  font-size: $font-md;
-  margin: $field-margin;
-  background: $wizard-bg-color;
-  padding: 10px;
-  border: 1px solid $very-light-gray;
+  color: #666;
+  border: 2px solid #757575;
+  margin: 0.25rem 0;
+  font-size: 1rem;
 }
 // below class for backward compatibility
 .cmp-adaptiveform-wizard__widget{
@@ -13,6 +11,7 @@
 // below class for backward compatibility
 .cmp-adaptiveform-wizard__widget--v2.cmp-adaptiveform-wizard__widget{
   position: unset;
+  display: flex;
 }
 .cmp-adaptiveform-wizard__label-container{
   display: flex;
@@ -20,21 +19,37 @@
   justify-content: space-between;
 }
 .cmp-adaptiveform-wizard__tabList {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 0;
   list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: section;
+  padding-bottom: 30px;
 }
-.cmp-adaptiveform-wizard .cmp-adaptiveform-wizard__tab{
-  border-bottom: 2px solid $very-light-gray;
+// .cmp-adaptiveform-wizard 
+.cmp-adaptiveform-wizard__tab{
   color: $dark-gray;
-  padding: 1rem 0;
-  box-sizing: border-box;
-  flex: 1;
+  padding: 30px 30px 0 30px;
+  &:before {
+    counter-increment: section;
+    content: counter(section);
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 2px;
+    margin-right: 10px;
+    background: #fff;
+    border: 1px solid #006781;
+    color: #006781;
+  }
 }
 .cmp-adaptiveform-wizard .cmp-adaptiveform-wizard__tab--active{
-  border-bottom: 2px solid $dark-gray;
-  color: $dark-gray;
+  &:before {
+    background: #006781;
+    border: 1px solid #006781;
+    color: #fff;
+  }
 }
 .cmp-adaptiveform-wizard__containerNav{
   display: flex;
@@ -122,22 +137,19 @@
 // =======css for v2 start=======
 .cmp-adaptiveform-wizard__nav{
   cursor:pointer;
-  height:2.5rem;
-  width:2.5rem;
-  margin-right:1rem;
-  border: 2px solid $light-gray;
-  border-radius:1.5rem;
+  border: 2px solid #006781;
+  color: #006781;
+  text-align: center;
+  padding: 8px 0;
+  min-width: 150px;
   &--previous{
-    background:url(./resources/images/Chevron-Left.svg) center center / 1rem 1rem no-repeat;
-    &:hover{
-      background:url(./resources/images/Chevron-Left-White.svg) center center / 1rem 1rem no-repeat,$light-gray;
+    &::after{
+      content: 'Back';
     }
   }
   &--next{
-    background:url(./resources/images/Chevron-Right.svg) center center / 1rem 1rem no-repeat;
-    &:hover{
-      background:url(./resources/images/Chevron-Right-White.svg) center center / 1rem 1rem no-repeat,$dark-gray;
-      border-color:$dark-gray;
+    &::after{
+      content: 'Next';
     }
   }
 }
@@ -157,3 +169,14 @@
   }
 }
 // ========css for v2 end=======
+
+.cmp-adaptiveform-wizard__tabs-container{
+  border-right: 2px solid #757575;
+  width: 400px;
+  background: #f2f2f2;
+  font-size: 20px;
+}
+.cmp-adaptiveform-wizard__panelContainer{
+  padding: 20px;
+  flex: 1;
+}
