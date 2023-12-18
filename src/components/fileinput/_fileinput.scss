@@ -94,7 +94,8 @@
   list-style: none;
 }
 .cmp-adaptiveform-fileinput__fileitem {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   padding: 10px;
   border-top: 1px solid $light-gray;
 }
@@ -103,7 +104,6 @@
   cursor: pointer;
 }
 .cmp-adaptiveform-fileinput__filedelete {
-  float: right;
   font-size: $font-lg;
   font-weight: bold;
   line-height: 1;
