@@ -99,6 +99,13 @@
   padding: 10px;
   border-top: 1px solid $light-gray;
 }
+
+.cmp-adaptiveform-fileinput__fileitem--v2 {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #666;
+}
+
 .cmp-adaptiveform-fileinput__filename {
   text-decoration: underline;
   cursor: pointer;
@@ -110,4 +117,30 @@
   text-shadow: 0 1px 0 $white;
   opacity: .2;
   cursor: pointer;
+}
+
+.cmp-adaptiveform-fileinput__dragarea {
+  border: 1px dashed #666;
+  border-radius: 5px;
+  padding: 10px 5px;
+}
+
+.cmp-adaptiveform-fileinput__dragtext {
+  padding-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.cmp-adaptiveform-fileinput__icon {
+}
+
+.cmp-adaptiveform-fileinput__filesize {
+  text-shadow: 0 1px #fff;
+  opacity: .2;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-inline-end: 5px;
+}
+
+.cmp-adaptiveform-fileinput__fileendcontainer {
 }
