@@ -16,15 +16,15 @@
   width: 0;
   height: 0;
   display: block;
+  margin: 0px;
 }
 
 .cmp-adaptiveform-switch__widget-slider {
-  cursor: pointer;
   background-color: $chinese-silver;
   border-radius: 34px;
   transition: all .4s;
-  width: 60px;
-  height: 32px;
+  width: 24px;
+  height: 14px;
   position: relative;
 }
 
@@ -37,28 +37,28 @@ input:focus + .cmp-adaptiveform-switch__widget-slider {
 }
 
 .cmp-adaptiveform-switch__circle-indicator{
-  height: 24px;
-  width: 24px;
+  height: 10px;
+  width: 10px;
   background-color: $white;
   border-radius: 50%;
   transition: all .4s;
   position: absolute;
-  inset-block-start: 4px;
-  inset-inline-start: 4px;
+  inset-block-start: 2px;
+  inset-inline-start: 2px;
 }
 [dir="rtl"] .cmp-adaptiveform-switch--filled  .cmp-adaptiveform-switch__circle-indicator {
-  -webkit-transform: translateX(-26px);
-  -ms-transform: translateX(-26px);
-  transform: translateX(-26px);
-  inset-block-end: 4px;
+  -webkit-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  inset-block-end: 2px;
   inset-block-start: unset;
   -webkit-transition: .4s;
 }
 .cmp-adaptiveform-switch--filled  .cmp-adaptiveform-switch__circle-indicator {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-  inset-block-end: 4px;
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  inset-block-end: 2px;
   inset-block-start: unset;
   -webkit-transition: .4s;
 }
@@ -113,13 +113,22 @@ input:focus + .cmp-adaptiveform-switch__widget-slider {
 .cmp-adaptiveform-switch[data-cmp-valid=false]{
   background: $light-error;
   border: 0 solid $error;
-  border-inline-start-width: 4px;
+  border-inline-start-width: 2px;
   padding-inline-start: 5px;
 }
 .cmp-adaptiveform-switch[data-cmp-valid=true]{
   border: 0 solid $success;
-  border-inline-start-width: 4px;
+  border-inline-start-width: 2px;
   padding-inline-start: 5px;
+}
+.cmp-adaptiveform-switch__widget-label {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.cmp-adaptiveform-switch__option {
+  font-size: 0.9rem;
 }
 .cmp-adaptiveform-switch__hide-labels .cmp-adaptiveform-switch__option--on {
   display: none;
