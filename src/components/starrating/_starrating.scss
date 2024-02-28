@@ -1,0 +1,73 @@
+/* ===============Star Rating================== */
+
+.cmp-adaptiveform-starrating {
+  align-items: center;
+}
+.cmp-adaptiveform-starrating--label {
+  font-size: 35px;
+  line-height: 1;
+  color:black;
+  position: relative;
+  z-index: 1;
+}
+
+.cmp-adaptiveform-starrating__option__widget {
+  appearance: none;
+}
+
+.cmp-adaptiveform-starrating__filled {
+  color: red!important;
+}
+
+.cmp-adaptiveform-starrating__option__widget + label:before {
+  content: '★';
+}
+
+.cmp-adaptiveform-starrating__widget label {
+  font-size: 50px;
+  line-height: 1;
+  color: pink;
+  transition: 0.2s ease;
+}
+
+.cmp-adaptiveform-starrating__widget label:hover {
+  color: yellow;
+  transition: 0.2s ease;
+}
+.cmp-adaptiveform-starrating__shortdescription {
+  font-size: $font-sm;
+  margin-top: $error-top-margin;
+}
+.cmp-adaptiveform-starrating__questionmark{
+  display:inline-block;
+  width:1rem;
+  height:1rem;
+  border-radius: 9px;
+  background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
+  cursor : pointer;
+  // below properties for backward compatibility
+  position: absolute;
+  right: 20px;
+}
+// below properties for backward compatibility
+.cmp-adaptiveform-starrating__label-container .cmp-adaptiveform-starrating__questionmark{
+  position: unset;
+  right: unset;
+}
+.cmp-adaptiveform-starrating__errormessage{
+  color: $error;
+  font-size: $font-sm;
+  margin-top: $error-top-margin;
+}
+.cmp-adaptiveform-starrating[data-cmp-valid=false]{
+  background: $light-error;
+  border: 0 solid $error;
+  border-inline-start-width: 4px;
+  padding-inline-start: 5px;
+}
+.cmp-adaptiveform-starrating[data-cmp-valid=true]{
+  border: 0 solid $success;
+  border-inline-start-width: 4px;
+  padding-inline-start: 5px;
+}
+
