@@ -19,7 +19,7 @@
   background: $dark-gray;
   color: $white;
 }
-.cmp-adaptiveform-button__widget[data-cmp-enabled]:not([data-cmp-enabled=true]) {
+[data-cmp-enabled]:not([data-cmp-enabled=true]) .cmp-adaptiveform-button__widget {
   background: $gray;
   color: $very-light-gray;
 }
