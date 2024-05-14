@@ -1,0 +1,59 @@
+/* ===============HCaptcha================== */
+.cmp-adaptiveform-hcaptcha{
+  color: $dark-gray;
+  font-size: $font-md;
+  margin: $field-margin;
+  display: flex;
+  flex-direction: column;
+}
+.cmp-adaptiveform-hcaptcha__widget{
+
+}
+.cmp-adaptiveform-hcaptcha__longdescription {
+  color: $light-gray;
+  background-color: $very-light-gray;
+  font-size: $font-sm;
+  margin-top: $error-top-margin;
+  margin-bottom: 5px;
+  padding: 10px;
+  p{
+    margin: 0;
+    padding: 0;
+  }
+}
+.cmp-adaptiveform-hcaptcha__shortdescription {
+  font-size: $font-sm;
+  margin-top: $error-top-margin;
+}
+.cmp-adaptiveform-hcaptcha__questionmark {
+  display:inline-block;
+  width:1rem;
+  height:1rem;
+  border-radius: 9px;
+  background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
+  cursor : pointer;
+  // below properties for backward compatibility
+  position: absolute;
+  right: 20px;
+}
+// below properties for backward compatibility
+.cmp-adaptiveform-hcaptcha__label-container .cmp-adaptiveform-hcaptcha__questionmark{
+  position: unset;
+  right: unset;
+}
+.cmp-adaptiveform-hcaptcha__errormessage{
+  color: $error;
+  font-size: $font-sm;
+  margin-top: $error-top-margin;
+}
+.cmp-adaptiveform-hcaptcha[data-cmp-valid=false]{
+  background: $light-error;
+  border: 0 solid $error;
+  border-inline-start-width: 4px;
+  padding-inline-start: 5px;
+}
+.cmp-adaptiveform-hcaptcha[data-cmp-valid=true]{
+  border: 0 solid $success;
+  border-inline-start-width: 4px;
+  padding-inline-start: 5px;
+}
