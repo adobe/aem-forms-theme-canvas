@@ -1,96 +1,112 @@
 /* ===============Image choice================== */
 .cmp-adaptiveform-imagechoice {
-  color: $dark-gray;
-  font-size: $font-md;
-  margin: $field-margin;
-  display: flex;
+  color: #666;
   flex-direction: column;
-}
-.cmp-adaptiveform-imagechoice__label-container{
+  margin: 0.25rem 0;
+  font-size: 1rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 .cmp-adaptiveform-imagechoice__widget {
-  font-size: $font-md;
-  color: $dark-gray;
-  display: flex;
+  color: #666;
   flex-wrap: wrap;
-  gap: $radio-checkbox-gap;
-  margin-top: $label-top-margin;
+  gap: 20px;
+  margin-top: 10px;
+  font-size: 1rem;
+  display: flex
 }
-.cmp-adaptiveform-imagechoice__widget.HORIZONTAL{
-  min-height: $field-height;
+.cmp-adaptiveform-imagechoice__label {
 }
-.cmp-adaptiveform-imagechoice__widget.VERTICAL{
-  flex-direction: column;
+.cmp-adaptiveform-imagechoice__label-container{
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.cmp-adaptiveform-imagechoice__widget__label {
 }
 .cmp-adaptiveform-imagechoice__longdescription {
-  color: $light-gray;
-  background-color: $very-light-gray;
-  font-size: $font-sm;
-  margin-top: $error-top-margin;
+  color: #969696;
+  background-color: #E6E6E6;
+  margin-top: 10px;
   margin-bottom: 5px;
   padding: 10px;
-  p{
-    margin: 0;
-    padding: 0;
-  }
+  font-size: .875rem
+}
+.cmp-adaptiveform-imagechoice__longdescription p {
+  margin: 0;
+  padding: 0
 }
 .cmp-adaptiveform-imagechoice__shortdescription {
-  font-size: $font-sm;
-  margin-top: $error-top-margin;
+  margin-top: 10px;
+  font-size: .875rem
+}
+.cmp-adaptiveform-imagechoice__label-container .cmp-adaptiveform-imagechoice__questionmark {
+  position: unset;
+  right: unset
 }
 .cmp-adaptiveform-imagechoice__questionmark {
-  display:inline-block;
-  width:1rem;
-  height:1rem;
+  display: inline-block;
+  cursor: pointer;
+  background: url(http://localhost:4502/apps/forms-components-examples/clientlibs/forms-clientlib-site/styles/components/adaptive-form/resources/question.svg) 50%/cover no-repeat,#969696;
   border-radius: 9px;
-  background: url(./resources/images/question.svg) center center / cover no-repeat,#969696;
-  cursor : pointer;
-  // below properties for backward compatibility
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
   position: absolute;
-  right: 20px;
+  right: 20px
 }
-// below properties for backward compatibility
-.cmp-adaptiveform-imagechoice__label-container .cmp-adaptiveform-imagechoice__questionmark{
-  position: unset;
-  right: unset;
+.cmp-adaptiveform-imagechoice__options {
 }
-.cmp-adaptiveform-imagechoice__errormessage{
-  color: $error;
-  font-size: $font-sm;
-  margin-top: $error-top-margin;
-}
-.cmp-adaptiveform-imagechoice__widget.HORIZONTAL .cmp-adaptiveform-imagechoice-option{
-  max-width: 240px;
-}
-.cmp-adaptiveform-imagechoice-option {
-  color: $dark-gray;
-}
-.cmp-adaptiveform-imagechoice[data-cmp-valid=false]{
-  background: $light-error;
-  border: 0 solid $error;
-  border-inline-start-width: 4px;
-  padding-inline-start: 5px;
-}
-.cmp-adaptiveform-imagechoice[data-cmp-valid=true]{
-  border: 0 solid $success;
-  border-inline-start-width: 4px;
-  padding-inline-start: 5px;
-}
-.cmp-adaptiveform-imagechoice__option__widget__image {
+.cmp-adaptiveform-imagechoice__option {
     background-repeat: no-repeat;
     background-size: contain;
-	width: 80px;
+	color: #666;
+}
+.cmp-adaptiveform-imagechoice__option--selected {
 }
 .cmp-adaptiveform-imagechoice__option input[type="checkbox"],
 .cmp-adaptiveform-imagechoice__option input[type="radio"] {
-    position: relative;
-    float: none;
-    vertical-align: middle;
-    display: none;
+  position: relative;
+  float: none;
+  vertical-align: middle;
+  display: none;
+}
+.cmp-adaptiveform-imagechoice__option-label {
+}
+
+.cmp-adaptiveform-imagechoice__option__widget__image {
+  width: 80px;
+  height: 80px;
+}
+.cmp-adaptiveform-imagechoice__widget.HORIZONTAL {
+  min-height: 40px;
+}
+.cmp-adaptiveform-imagechoice__widget.VERTICAL {
+  flex-direction: column
+}
+.cmp-adaptiveform-imagechoice__widget.HORIZONTAL .cmp-adaptiveform-imagechoice-option {
+  max-width: 240px
+}
+.cmp-adaptiveform-imagechoice__errormessage {
+  color: #EB3C36;
+  margin-top: 10px;
+  font-size: .875rem;
+}
+.cmp-adaptiveform-imagechoice[data-cmp-valid=false] {
+  -webkit-padding-start: 5px;
+  border: 0 solid #EB3C36;
+  background: #eb3c360d;
+  border-inline-start-width:4px;
+  padding-inline-start:5px
+}
+
+
+.cmp-adaptiveform-imagechoice[data-cmp-valid=true] {
+  -webkit-padding-start: 5px;
+  border: 0 solid #23B482;
+  border-inline-start-width:4px;
+  padding-inline-start:5px
 }
 input.cmp-adaptiveform-imagechoice__option__widget:checked + .cmp-adaptiveform-imagechoice__option__widget__image {
-	background:url(../assets/ImageChoiceSelectIcon.svg) center center no-repeat,rgba(23,107,230,0.5);
+  z-index: 1;
+  background: url(/libs/fd/af/runtime/clientlibs/guidetheme2/default/resources/ImageChoiceSelectIcon.svg) center center no-repeat, rgba(23, 107, 230, 0.5); center center no-repeat,rgba(23,107,230,0.5)) center center no-repeat, rgba(23, 107, 230, 0.5);
 }
