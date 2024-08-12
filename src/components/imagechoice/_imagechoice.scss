@@ -46,7 +46,7 @@
 .cmp-adaptiveform-imagechoice__questionmark {
   display: inline-block;
   cursor: pointer;
-  background: url(http://localhost:4502/apps/forms-components-examples/clientlibs/forms-clientlib-site/styles/components/adaptive-form/resources/question.svg) 50%/cover no-repeat,#969696;
+  background: url(/apps/forms-components-examples/clientlibs/forms-clientlib-site/styles/components/adaptive-form/resources/question.svg) 50%/cover no-repeat,#969696;
   border-radius: 9px;
   width: 1rem;
   height: 1rem;
@@ -68,7 +68,6 @@
   position: relative;
   float: none;
   vertical-align: middle;
-  display: none;
 }
 .cmp-adaptiveform-imagechoice__option-label {
 }
@@ -76,6 +75,9 @@
 .cmp-adaptiveform-imagechoice__option__widget__image {
   width: 80px;
   height: 80px;
+}
+.cmp-adaptiveform-imagechoice__option__widget{
+  top: -69px;
 }
 .cmp-adaptiveform-imagechoice__widget.HORIZONTAL {
   min-height: 40px;
@@ -99,14 +101,14 @@
   padding-inline-start:5px
 }
 
-
 .cmp-adaptiveform-imagechoice[data-cmp-valid=true] {
   -webkit-padding-start: 5px;
   border: 0 solid #23B482;
   border-inline-start-width:4px;
   padding-inline-start:5px
 }
-input.cmp-adaptiveform-imagechoice__option__widget:checked + .cmp-adaptiveform-imagechoice__option__widget__image {
-  z-index: 1;
-  background: url(/libs/fd/af/runtime/clientlibs/guidetheme2/default/resources/ImageChoiceSelectIcon.svg) center center no-repeat, rgba(23, 107, 230, 0.5); center center no-repeat,rgba(23,107,230,0.5)) center center no-repeat, rgba(23, 107, 230, 0.5);
+
+.cmp-adaptiveform-imagechoice__option__alt-text {
+    text-align: center;
+    margin-left: 25px;
 }
