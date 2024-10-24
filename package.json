@@ -1,5 +1,5 @@
 {
-    "name": "@aemforms/af-canvas-theme",
+    "name": "af-canvas-theme",
     "version": "1.0.28",
     "description": "Standard AEM Forms Canvas theme",
     "license": "MIT License, Copyright 2022 Adobe Systems Incorporated",

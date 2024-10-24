@@ -60,7 +60,7 @@ jobs:
 
     - name: Publish to npm
       run: |
-        npm publish --access public
+        npm publish --access public --scope @aemforms
         git push origin HEAD:main
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_DEPLOY_TOKEN }}
