@@ -57,11 +57,26 @@ jobs:
       id: bump_version
       run: |
         npm version patch -m "Bump version to %s"
+    
+    - name: Backup original package.json
+      run: cp package.json package.json.bak
+
+    - name: Modify package.json for scoped publish
+      run: |
+        jq '.name = "@aemforms/af-canvas-theme"' package.json > package.json.tmp && mv package.json.tmp package.json
 
     - name: Publish to npm
       run: |
-        npm publish --access public --scope @aemforms
-        git push origin HEAD:main
+        npm publish --access public
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_DEPLOY_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_DEPLOY_TOKEN }}
+
+    - name: Restore original package.json
+      run: mv package.json.bak package.json
+
+    - name: Push changes to remote repository
+      run: git push origin HEAD:main
+      env:
+        GITHUB_TOKEN: ${{ secrets.ADOBE_GH_TOKEN }}
+        GH_TOKEN: ${{ secrets.ADOBE_GH_TOKEN }}
