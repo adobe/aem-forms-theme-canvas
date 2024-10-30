@@ -1,0 +1,43 @@
+.cmp-adaptiveform-review__container {
+   width: 600px;
+   font-size: $font-md;
+   color: $dark-gray;
+}
+.cmp-adaptiveform-review__panel{
+  margin: $label-top-margin 0;
+}
+.cmp-adaptiveform-review__label-container{
+ display: flex;
+ border-bottom: 1px solid $very-light-gray;
+ padding-bottom: $label-top-margin;
+}
+.cmp-adaptiveform-review__label-container .cmp-adaptiveform-review__label {
+  font-weight: bold;
+}
+
+.cmp-adaptiveform-review__field{
+  display: flex;
+  margin: $label-top-margin 0;
+  display: flex;
+  color: $dark-gray;
+}
+.cmp-adaptiveform-review__label{
+  flex: 1;
+}
+.cmp-adaptiveform-review__value{
+  flex: 1;
+  color: #000;
+  font-weight: 500;
+}
+.cmp-adaptiveform-review__edit-button{
+   background: url(./resources/images/pencil.svg) 14%/1rem 1rem no-repeat;
+   border-radius: 4px;
+   width: 24px;
+   height: 24px;
+   cursor: pointer;
+   border: 1px solid $very-light-gray;
+}
+.cmp-adaptiveform-review__edit-button[disabled="true"]{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
