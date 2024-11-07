@@ -30,15 +30,15 @@
   z-index: 100000;
 }
 
-.cmp-adaptiveform-container [data-cmp-visible="false"] {
+.cmp-adaptiveform-container .cmp-adaptiveform-container__hamburger-menu [data-panel-visible="false"] {
   display: none !important;
 }
 
-.cmp-adaptiveform-container [data-cmp-enabled="false"] {
+.cmp-adaptiveform-container .cmp-adaptiveform-container__hamburger-menu [data-panel-enabled="false"] {
   opacity: 0.4;
 }
 
-.cmp-adaptiveform-container-hamburger-menu {
+.cmp-adaptiveform-container__hamburger-menu-dropdown {
   display: none;
   flex-direction: column;
   position: absolute;
@@ -55,13 +55,13 @@
   width: 215px;
 }
 
-.cmp-adaptiveform-container-hamburger-menu > li {
+.cmp-adaptiveform-container__hamburger-menu-dropdown > li {
   position: relative;
   border: none;
   margin: 2px 0px;
 }
 
-.cmp-adaptiveform-container-hamburger-icon {
+.cmp-adaptiveform-container__hamburger-menu-icon {
   display: flex;
   border: none;
   flex-direction: column;
@@ -73,26 +73,16 @@
   height: 30px;
   background: no-repeat;
   background-size: 30px 30px;
-  background-image:url('./resources/images/menu.png');
+  background-image:url(./resources/images/menu.png);
 }
 
-.cmp-adaptiveform-container-hamburger-icon div {
+.cmp-adaptiveform-container__hamburger-menu-icon div {
   height: 4px;
   background-color: black;
   margin: 5px 0;
 }
 
-.cmp-adaptiveform-container-hamburgerMenuTitle {
-  padding: 10px;
-  border: none;
-  margin: 2px 0px;
-  height: 20px;
-  width: 40px;
-  display: flex;
-  align-items: center;
-}
-
-.cmp-adaptiveform-container-submenu {
+.cmp-adaptiveform-container__hamburger-menu-submenu {
   display: none;
   flex-direction: column;
   position: relative;
@@ -103,23 +93,21 @@
   width: 100%;
 }
 
-.cmp-adaptiveform-container-submenu li {
+.cmp-adaptiveform-container__hamburger-menu-submenu li {
   box-sizing: border-box;
   border: none;
   margin: 2px 0px;
 }
 
-
 a:hover {
   text-decoration: none !important;
 }
 
-.cmp-adaptiveform-container-hamburger-menu-item-active {
+.cmp-adaptiveform-container__hamburger-menu-item--active {
   background-color: #B1B1B1 !important;
 }
 
-
-.cmp-adaptiveform-container-hamburger-menu-container {
+.cmp-adaptiveform-container__hamburger-menu {
   display: flex;
   flex-direction: column;
   margin: 10px;
@@ -131,19 +119,19 @@ a:hover {
 }
 
 @media (min-width: 767px) {
-  .cmp-adaptiveform-container-hamburger-icon {
+  .cmp-adaptiveform-container__hamburger-menu-icon {
       display: none;
   }
-  .cmp-adaptiveform-container-hamburger-menu-container {
+  .cmp-adaptiveform-container__hamburger-menu-container {
       display: none;
   }
 }
 
-.cmp-adaptiveform-container-nav-title {
+.cmp-adaptiveform-container__hamburger-menu-active-item-title {
   font-size: 20px;
 }
 
-.cmp-adaptiveform-container-nav-bar {
+.cmp-adaptiveform-container__hamburger-menu-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -153,11 +141,11 @@ a:hover {
   border: 1px solid #e6e6e6;
 }
 
-.cmp-adaptiveform-container-menu {
+.cmp-adaptiveform-container__hamburger-menu-top {
   border-bottom: 2px solid #D3D3D3;
 }
 
-.cmp-adaptiveform-container-nav-button-previous {
+.cmp-adaptiveform-container__hamburger-menu-button--prev {
   width: 20px;
   cursor: pointer;
   background: no-repeat;
@@ -166,10 +154,10 @@ a:hover {
   margin: 5px;
   height: 2.0rem;
   border: 0;
-  background-image:url('./resources/images/leftChevron.svg');
+  background-image:url(./resources/images/leftChevron.svg);
 }
 
-.cmp-adaptiveform-container-nav-button-next {
+.cmp-adaptiveform-container__hamburger-menu-button--next {
   width: 20px;
   cursor: pointer;
   background: no-repeat;
@@ -178,18 +166,18 @@ a:hover {
   background-size: 20px 24px;
   margin: 5px;
   border: 0;
-  background-image: url('./resources/images/rightChevron.svg');
+  background-image: url(./resources/images/rightChevron.svg);
 }
 
-[dir="rtl"] .cmp-adaptiveform-container-nav-button-previous {
+[dir="rtl"] .cmp-adaptiveform-container__hamburger-menu-button--prev {
   transform: rotate(180deg);
 }
 
-[dir="rtl"] .cmp-adaptiveform-container-nav-button-next {
+[dir="rtl"] .cmp-adaptiveform-container__hamburger-menu-button--next {
   transform: rotate(180deg);
 }
 
-.cmp-adaptiveform-container-nav-button-open {
+.cmp-adaptiveform-container__hamburger-menu-button--open {
   width: 20px;
   cursor: pointer;
   background: no-repeat;
@@ -198,10 +186,10 @@ a:hover {
   background-size: 20px 24px;
   margin: 5px;
   border: 0;
-  background-image: url('./resources/images/downChevron.svg');
+  background-image: url(./resources/images/downChevron.svg);
 }
 
-.cmp-adaptiveform-container-nav-button-close {
+.cmp-adaptiveform-container__hamburger-menu-button--close {
   width: 20px;
   cursor: pointer;
   background: no-repeat;
@@ -210,25 +198,25 @@ a:hover {
   background-size: 20px 24px;
   margin: 5px;
   border: 0;
-  background-image: url('./resources/images/upChevron.svg');
+  background-image: url(./resources/images/upChevron.svg);
 }
 
-.cmp-adaptiveform-container-hamburger-menu-top-bar {
+.cmp-adaptiveform-container__hamburger-menu-icon-container {
   display: flex;
   float: inline-end;
 }
 
 
-.cmp-adaptiveform-container-nav-buttons {
+.cmp-adaptiveform-container__hamburger-menu-navigation {
   display: flex;
   justify-content: space-around;
 }
 
-.cmp-adaptiveform-container-hamburger-menu-item-activeparent {
+.cmp-adaptiveform-container__hamburger-menu-item--activeparent {
   background-color: #E6E6E6;
 }
 
-.cmp-adaptiveform-container-nav-link {
+.cmp-adaptiveform-container__hamburger-menu-link {
   display: flex !important;
   padding: 10px;
   text-decoration: none;
@@ -242,18 +230,18 @@ a:hover {
   align-items: center;
 }
 
-.cmp-adaptiveform-container-nav-link button {
+.cmp-adaptiveform-container__hamburger-menu-link button {
   flex-shrink: 0;
 }
 
-.cmp-adaptiveform-container-nav-link span {
+.cmp-adaptiveform-container__hamburger-menu-link span {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   flex-grow: 1;
 }
 
-.cmp-adaptiveform-container-breadcrumbs-container {
+.cmp-adaptiveform-container__hamburger-menu-middle {
   list-style-type: none;
   padding: 0px;
   margin: 0px;
