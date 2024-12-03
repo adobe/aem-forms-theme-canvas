@@ -156,4 +156,45 @@
     }
   }
 }
+
+.cmp-adaptiveform-wizard__tabList {
+  counter-reset: item; 
+}
+.cmp-adaptiveform-wizard__tabList > li.cmp-adaptiveform-wizard__tab--active::before{
+  background-color: #666;
+  border-color: #666;
+  color: #fff;
+  outline: 2px;
+}
+.cmp-adaptiveform-wizard__tabList > li::before{
+  counter-increment: item;
+  content: counter(item);
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  text-align: center;
+  line-height: 1.35rem;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: .75rem;
+  flex-shrink: 0;
+}
+.cmp-adaptiveform-wizard__tabList > li.cmp-adaptiveform-wizard__tab--stepped::before {
+  content: "";
+  background: url(./resources/images/tick.svg) center center / .75rem .75rem no-repeat, #969696;
+  border-color: rgba(0, 0, 0, 0); 
+}
+.cmp-adaptiveform-wizard__tabList > li.cmp-adaptiveform-wizard__tab--active.cmp-adaptiveform-wizard__tab--stepped::before{
+  background-color: #666;
+  border-color: #666;
+}
+.cmp-adaptiveform-wizard__tabList > li.cmp-adaptiveform-wizard__tab--stepped{
+  display: flex;
+  gap: 10px;
+}
+.cmp-adaptiveform-wizard__tabList > li {
+  display: flex; 
+  align-items: flex-start; 
+  gap: 10px;
+}
 // ========css for v2 end=======
