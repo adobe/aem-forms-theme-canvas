@@ -6,9 +6,6 @@
     display: flex;
     flex-direction: column;
   }
-  .cmp-adaptiveform-turnstile__widget{
-  
-  }
   .cmp-adaptiveform-turnstile__longdescription {
     color: $light-gray;
     background-color: $very-light-gray;
@@ -35,6 +32,11 @@
     // below properties for backward compatibility
     position: absolute;
     right: 20px;
+  }
+  .cmp-adaptiveform-turnstile__label-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   // below properties for backward compatibility
   .cmp-adaptiveform-turnstile__label-container .cmp-adaptiveform-turnstile__questionmark{
