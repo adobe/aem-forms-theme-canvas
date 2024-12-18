@@ -1,0 +1,13 @@
+@mixin tablist-counter($size: 1.5rem, $border-width: 2px, $border-radius: 0.75rem, $line-height: 1.35rem) {
+  counter-increment: item;
+  content: counter(item);
+  display: inline-block;
+  block-size: $size;
+  inline-size: $size;
+  text-align: center;
+  line-height: $line-height;
+  border-style: solid;
+  border-width: $border-width;
+  border-radius: $border-radius;
+  flex-shrink: 0;
+}

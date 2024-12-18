@@ -156,4 +156,35 @@
     }
   }
 }
+
+.cmp-adaptiveform-wizard__tabList {
+  counter-reset: item; 
+}
+.cmp-adaptiveform-wizard__tabList > li.cmp-adaptiveform-wizard__tab--active::before{
+  background-color: $dark-gray;
+  border-color: $dark-gray;
+  color: $white;
+  outline: 2px;
+}
+.cmp-adaptiveform-wizard__tabList > li::before{
+  @include tablist-counter();
+}
+.cmp-adaptiveform-wizard__tabList > li.cmp-adaptiveform-wizard__tab--stepped::before {
+  content: "";
+  background: url(./resources/images/tick.svg) center center / .75rem .75rem no-repeat, $light-gray;
+  border-color: rgba(0, 0, 0, 0); 
+}
+.cmp-adaptiveform-wizard__tabList > li.cmp-adaptiveform-wizard__tab--active.cmp-adaptiveform-wizard__tab--stepped::before{
+  background-color: $dark-gray;
+  border-color: $dark-gray;
+}
+.cmp-adaptiveform-wizard__tabList > li.cmp-adaptiveform-wizard__tab--stepped{
+  display: flex;
+  gap: 10px;
+}
+.cmp-adaptiveform-wizard__tabList > li {
+  display: flex; 
+  align-items: flex-start; 
+  gap: 10px;
+}
 // ========css for v2 end=======

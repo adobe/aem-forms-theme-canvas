@@ -35,12 +35,11 @@
   border-right: none;
 }
 .cmp-verticaltabs__tab:hover{
-  background: url(./resources/images/tick_hover.svg) 0.5rem 50% / 0.8125rem auto no-repeat,$very-light-gray;
+  background: $very-light-gray;
 }
 .cmp-verticaltabs__tab.cmp-verticaltabs__tab--active{
   background: $gray;
   color: $white;
-  background: url(./resources/images/tick.svg) 0.5rem 50% / 0.8125rem auto no-repeat,$gray;
 }
 .cmp-verticaltabs__longdescription {
   color: $light-gray;
@@ -68,6 +67,36 @@
   // below properties for backward compatibility
   position: absolute;
   right: 20px;
+}
+.cmp-verticaltabs__tablist {
+  counter-reset: item; 
+}
+.cmp-verticaltabs__tablist>li::before{
+  @include tablist-counter();
+}
+.cmp-verticaltabs__tablist > li.cmp-verticaltabs__tab--active::before{
+  background-color: $dark-gray;
+  border-color: $dark-gray;
+  color: $white;
+  outline: 2px;
+}
+.cmp-verticaltabs__tablist > li.cmp-verticaltabs__tab--stepped::before {
+  content: "";
+  background: url(./resources/images/tick.svg) center center / .75rem .75rem no-repeat, $light-gray;
+  border-color: rgba(0, 0, 0, 0); 
+}
+.cmp-verticaltabs__tablist > li.cmp-verticaltabs__tab--active.cmp-verticaltabs__tab--stepped::before{
+  background-color: $dark-gray;
+  border-color: $dark-gray;
+}
+.cmp-verticaltabs__tablist > li.cmp-verticaltabs__tab--stepped{
+  display: flex;
+  gap: 10px;
+}
+.cmp-verticaltabs__tablist > li {
+  display: flex; 
+  align-items: flex-start; 
+  gap: 10px;
 }
 // below properties for backward compatibility
 .cmp-verticaltabs__label-container .cmp-verticaltabs__questionmark{
