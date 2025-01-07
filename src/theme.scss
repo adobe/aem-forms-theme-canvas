@@ -5,6 +5,9 @@
 //== fonts
 // @import 'site/fonts';
 
+//== Mixins
+@import 'site/mixin';
+
 //== base
 @import 'site/_grid.scss';
 @import 'site/_base';
