@@ -118,6 +118,17 @@ a:hover {
   z-index: 1;
 }
 
+@media (max-width: 767px) {
+  .cmp-adaptiveform-container[data-cmp-hamburger-menu-enabled="true"] {
+    .cmp-tabs__tablist,
+    .cmp-verticaltabs__tablist,
+    .cmp-adaptiveform-wizard__tabList,
+    .cmp-adaptiveform-wizard__containerNav {
+      display: none !important;
+    }
+  }
+}
+
 @media (min-width: 767px) {
   .cmp-adaptiveform-container__hamburger-menu-icon {
       display: none;
