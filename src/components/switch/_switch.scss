@@ -29,7 +29,7 @@
 }
 
 input:checked + .cmp-adaptiveform-switch__widget-slider {
-  background-color: #147af3;
+  background-color: $vivid-blue;
 }
 
 input:focus + .cmp-adaptiveform-switch__widget-slider {
