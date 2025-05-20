@@ -2,7 +2,7 @@
 
 This is the standard Canvas theme for Adobe Experience Manager (AEM) Forms.
 
-This theme can be modified to customize the visual appearance of Adaptive Form.
+This theme can be modified to customize the visual appearance of Core Component based Adaptive Form.
 
 ## Usage
 
