@@ -130,10 +130,10 @@
    background-position: center;
 }
 .cmp-adaptiveform-scribble__control-geo{
-  background-image:url('../resources/images/iEBox_geo.png');
+  background-image:url('./resources/images/iEBox_geo.png');
 }
 .cmp-adaptiveform-scribble__control-text{
-    background-image:url('../resources/icontext.svg');
+    background-image:url('./resources/images/icontext.svg');
 }
 .cmp-adaptiveform-scribble__keyboard-sign-box{
     border: 1px dashed#AAAAAA;
@@ -151,7 +151,7 @@
 }
 
 .cmp-adaptiveform-scribble__control-brush{
-   background-image:url('../resources/images/signIcon.png');
+   background-image:url('./resources/images/signIcon.png');
 }
 
 .cmp-adaptiveform-scribble__save-button {
@@ -166,7 +166,7 @@
 }
 
 .cmp-adaptiveform-scribble__control-clear {
-    background-image:url('../resources/iconeraser.svg');
+    background-image:url('./resources/images/iconeraser.svg');
 }
 
 .cmp-adaptiveform-scribble__close-button {
@@ -254,7 +254,7 @@ margin:0px;
     height:20px;
     background:no-repeat;
     background-size:20px 20px; 
-    background-image:url('../resources/images/clearSignButton.png');
+    background-image:url('./resources/images/clearSignButton.png');
     right: 5px;
     top: 5px;
 }
