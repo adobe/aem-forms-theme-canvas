@@ -58,7 +58,7 @@
   cursor:pointer;
   height:2.5rem;
   width:2.5rem;
-  border: 2px solid $light-gray;
+  border: 2px solid $gray;
   border-radius:1.5rem;
   margin-right:0.5rem;
   background:url(./resources/images/Chevron-Left.svg) center center / 1rem 1rem no-repeat;
@@ -76,7 +76,7 @@
   cursor:pointer;
   width:2.5rem;
   margin-right:1rem;
-  border: 2px solid $light-gray;
+  border: 2px solid $gray;
   border-radius:1.5rem;
   background:url(./resources/images/Chevron-Right.svg) center center / 1rem 1rem no-repeat;
 }
@@ -125,7 +125,7 @@
   height:2.5rem;
   width:2.5rem;
   margin-right:1rem;
-  border: 2px solid $light-gray;
+  border: 2px solid $gray;
   border-radius:1.5rem;
   &--previous{
     background:url(./resources/images/Chevron-Left.svg) center center / 1rem 1rem no-repeat;
