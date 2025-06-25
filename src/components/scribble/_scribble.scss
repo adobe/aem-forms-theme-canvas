@@ -40,9 +40,9 @@
  .cmp-adaptiveform-scribble__container {
     font-family: Arial, sans-serif;
     font-size: 12px;
-    min-width: 50px; /* Dialog will be no smaller than this */
-    width: 36%;
-   /* Dialog will wrap after this width */
+    width: 100%;
+    min-width: 300px;
+    max-width: 700px;
     background: #FFF;
     border: solid 2px #999;
     color: #000;
