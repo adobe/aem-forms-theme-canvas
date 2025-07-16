@@ -48,19 +48,19 @@
     -webkit-border-radius: 10px;
     border-radius: 10px;
     background-color: #F8F8F8;
-   
+
     /* display:none; */;
     /* the shadow */
     -moz-box-shadow: 10px 10px 5px #888888;
     -webkit-box-shadow: 10px 10px 5px #888888;
      box-shadow: 0px 0px 15px #888888;
-     
+
     /* make dialog a non-selectatable thing */
-    -moz-user-select: none; 
-    -khtml-user-select: none; 
-    -webkit-user-select: none; 
-    -o-user-select: none; 
-    
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+
      z-index: 99998;
      margin: 0;
 	 line-height:0;
@@ -184,33 +184,33 @@
 }
 
 /* @media (max-width: 780px) { */
-  
+
     /* .cmp-adaptiveform-scribble__controlpanel {
         flex-direction: column;
     } */
-    /* .cmp-adaptiveform-scribble__controlpanel__controls {
+    /* .cmp-adaptiveform-scribble__controlpanel-controls {
         margin-top: 10px;
         flex-direction: row;
     }
-    
+
   } */
 
   @media (max-width: 460px) {
-  
-    .cmp-adaptiveform-scribble__controlpanel__controls {
+
+    .cmp-adaptiveform-scribble__controlpanel-controls {
         margin-top: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    
+
   }
 
   @media (min-width: 460px) and (max-width: 1155px) {
-    .cmp-adaptiveform-scribble__controlpanel__controls {
+    .cmp-adaptiveform-scribble__controlpanel-controls {
         margin-top: 10px;
     }
-    
+
     .cmp-adaptiveform-scribble__controlpanel {
         margin-top: 40px;
         align-items: center;
@@ -228,7 +228,7 @@ margin:0px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    
+
     -moz-box-shadow: 10px 10px 5px #888888;
     -webkit-box-shadow: 10px 10px 5px #888888;
      box-shadow: 0px 0px 15px #888888;
@@ -249,7 +249,7 @@ margin:0px;
     width:20px;
     height:20px;
     background:no-repeat;
-    background-size:20px 20px; 
+    background-size:20px 20px;
     background-image:url('./resources/images/clearSignButton.png');
     right: 5px;
     top: 5px;
@@ -382,11 +382,11 @@ margin:0px;
       height: 200px
     }
   }
- 
+
 /* .cmp-adaptiveform-scribble__clearsign-yes:focus,.cmp-adaptiveform-scribble__clearsign-no:focus{
  outline:highlight;
  }
- 
+
  .cmp-adaptiveform-scribble__clearsign-yes:hover,.cmp-adaptiveform-scribble__clearsign-no:hover{
  outline:none;
  border: 2px outset buttonface;
