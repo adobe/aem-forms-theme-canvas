@@ -17,7 +17,7 @@
         "stylelint:fix": "stylelint --fix src/*/*{.css,scss}"
     },
     "devDependencies": {
-        "@adobe/aem-site-theme-builder": "5.3.0",
+        "@adobe/aem-site-theme-builder": "6.0.0",
         "@parcel/transformer-sass": "^2.0.1",
         "aem-clientlib-generator": "^1.8.0",
         "autoprefixer": "^10.3.7",
