@@ -30,6 +30,19 @@
   z-index: 100000;
 }
 
+.cmp-adaptiveform-container--submitting {
+  background: rgb(255, 255, 255) url(./resources/images/busy-state.gif) no-repeat fixed center;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  cursor: wait;
+  z-index: 100000;
+}
 .cmp-adaptiveform-container .cmp-adaptiveform-container__hamburger-menu [data-panel-visible="false"] {
   display: none !important;
 }
