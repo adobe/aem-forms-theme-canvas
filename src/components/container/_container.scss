@@ -7,7 +7,7 @@
   margin: 0 auto;
   margin-bottom: 20px;
   width: 100%;
-  label > p, span > p {
+  label > p:first-child, span > p:first-child {
     display: inline;
   }
 }
