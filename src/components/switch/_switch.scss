@@ -34,10 +34,10 @@ input:checked + .cmp-adaptiveform-switch__widget-slider {
 
 /* Show clear keyboard focus ring on the visible slider when the hidden input gets focus */
 .cmp-adaptiveform-switch__widget:focus-visible + .cmp-adaptiveform-switch__widget-slider {
-  outline: -webkit-focus-ring-color auto 1px !important;
-  outline-offset: 2px !important;
-  transition: none !important;
-  box-shadow: none !important;
+  outline: -webkit-focus-ring-color auto 1px;
+  outline-offset: 2px;
+  transition: none;
+  box-shadow: none;
 }
 
 .cmp-adaptiveform-switch__circle-indicator{
