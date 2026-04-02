@@ -32,8 +32,12 @@ input:checked + .cmp-adaptiveform-switch__widget-slider {
   background-color: $vivid-blue;
 }
 
-input:focus + .cmp-adaptiveform-switch__widget-slider {
-  box-shadow: 0 0 1px $dark-blue;
+/* Show clear keyboard focus ring on the visible slider when the hidden input gets focus */
+.cmp-adaptiveform-switch__widget:focus-visible + .cmp-adaptiveform-switch__widget-slider {
+  outline: 2px solid $focus-ring-color;
+  outline-offset: 2px;
+  transition: none;
+  box-shadow: none;
 }
 
 .cmp-adaptiveform-switch__circle-indicator{
