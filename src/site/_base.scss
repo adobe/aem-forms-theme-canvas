@@ -16,6 +16,14 @@ html, body {
   }
 }
 
+// Uncomment for tablet usecase.
+// @media (min-width: 769px) and (max-width: 1200px) {
+//   .aem-Grid {
+//     @include generate-grid(tablet, $max_col, left);
+//   }
+// }
+
+// If RTL support not needed then comment this block for better performance.
 [dir="rtl"] {
   .aem-Grid {
     @include generate-grid(default, $max_col, right);
@@ -26,4 +34,11 @@ html, body {
       @include generate-grid(phone, $max_col, right);
     }
   }
+
+  // Uncomment for tablet usecase.
+  // @media (min-width: 769px) and (max-width: 1200px) {
+  //   .aem-Grid {
+  //     @include generate-grid(tablet, $max_col, right);
+  //   }
+  // }
 }
