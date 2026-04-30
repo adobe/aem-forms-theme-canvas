@@ -63,5 +63,13 @@
                 ]
             }
         }
+    },
+    "overrides": {
+        "browser-sync": {
+            "immutable": "^3.8.3"
+        },
+        "sass": {
+            "immutable": "^5.1.5"
+        }
     }
 }
