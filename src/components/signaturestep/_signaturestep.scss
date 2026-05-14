@@ -1,0 +1,58 @@
+/* =============== Signature Step (Adobe Sign Block) ================== */
+/* Matches foundation .guideESignComponent + signing.less values        */
+
+.cmp-adaptiveform-signaturestep {
+    position: relative;
+    height: 540px;
+    border: 1px solid $very-light-gray;
+    overflow: auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Header — mirrors guideESignTitle: 2em, transparent bg, minimal padding */
+.cmp-adaptiveform-signaturestep__header {
+    font-size: 2em;
+    padding: 0.05em;
+    background-color: transparent;
+}
+
+.cmp-adaptiveform-signaturestep__title {
+    color: $dark-gray;
+    font-weight: 400;
+}
+
+/* Body — takes remaining height after the 2em header (~3.5em with padding) */
+.cmp-adaptiveform-signaturestep__body {
+    width: 100%;
+    height: calc(100% - 3.5em);
+    overflow: auto;
+}
+
+/* Loading message — mirrors guideESignTemplateMessage: inner border, centred text at 30% */
+.cmp-adaptiveform-signaturestep__template-message {
+    width: 100%;
+    height: 90%;
+    border: 1px solid $gray;
+    font-size: 1.2em;
+    color: $dark-gray;
+    text-align: center;
+    padding-top: 30%;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+/* Adobe Sign iframe fills the body when shown (JS toggles display) */
+.cmp-adaptiveform-signaturestep__iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.cmp-adaptiveform-signaturestep__error {
+    padding: 1em;
+    font-size: 1.2em;
+    color: $error;
+    background-color: $light-error;
+    text-align: center;
+    border-radius: 4px;
+}

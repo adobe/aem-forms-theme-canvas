@@ -1,0 +1,165 @@
+/* ======= Foundation Signing Components (esign / summary / adobeSignBlock) =======
+ * Matches canvas-3-0 theme.css + signing.less values for guideESignComponent,
+ * guideSummaryComponent, and adobeSignBlockText CSS classes rendered by the
+ * foundation fd/afaddon components in the current test form.
+ * ================================================================================ */
+
+/* --- Functional visibility classes (signing.less) --- */
+
+.signing_hidden {
+    display: none !important;
+}
+
+.signing_client_error {
+    text-align: center;
+    color: $error;
+}
+
+.maximized_view {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1100;
+}
+
+.hidePdfFrame {
+    height: 0 !important;
+}
+
+/* --- Signature Step (foundation esign) --- */
+
+.guideESignComponent {
+    text-align: center;
+    position: relative;
+    height: 540px;
+    border: 1px solid $very-light-gray;
+    overflow: auto;
+    max-width: 100%;
+}
+
+.guideESignTitle {
+    font-size: 2em;
+    padding: 0.05em;
+    background-color: transparent;
+    color: $dark-gray;
+}
+
+.guideESignTemplateMessage {
+    width: 100%;
+    height: 90%;
+    border: 1px solid $gray;
+    font-size: 1.2em;
+    overflow: auto;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 30%;
+    color: $dark-gray;
+}
+
+.guideESignSignablePdf {
+    width: 100%;
+    height: calc(100% - 3.5em);
+}
+
+.guideESignErrorMessage {
+    text-align: center;
+    color: $error;
+    padding: 1em;
+}
+
+.guideESignWarningMessage {
+    display: inline-block;
+    float: left;
+    margin: 10px 0 0 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.guideESignMaxResize,
+.guideESignMinResize {
+    float: left;
+    height: 30px;
+    width: 30px;
+    margin: 10px 0 0 10px;
+    cursor: pointer;
+}
+
+/* --- Summary Step (foundation summary) --- */
+
+.guideSummaryComponent {
+    text-align: center;
+    max-width: 100%;
+    position: relative;
+    height: 500px;
+    border: 1px solid $very-light-gray;
+    overflow: auto;
+}
+
+.guideSummaryTitle {
+    font-size: 2em;
+    padding: 0.05em;
+    background-color: transparent;
+    color: $dark-gray;
+    font-weight: 400;
+}
+
+.guideSummaryMessage,
+.guideSummaryErrorMessage {
+    width: 100%;
+    height: calc(100% - 3.5em);
+    overflow: auto;
+    color: $dark-gray;
+    font-size: $font-md;
+    line-height: 1.5;
+
+    a {
+        color: $vivid-blue;
+        text-decoration: underline;
+    }
+}
+
+/* --- Adobe Sign Block (inline signature field container) --- */
+
+.adobeSignBlockText {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.02);
+}
+
+/* Adobe Sign field placeholders rendered by signing JS */
+
+[data-adobesigntype]::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+[data-adobesigntype]::-moz-selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+[data-adobesigntype] {
+    width: 6rem;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+[data-adobesigntype='radio'],
+[data-adobesigntype='checkbox'] {
+    border-bottom-width: 0;
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 3rem;
+}
+
+[data-adobesigntype='dropdown'] {
+    background-repeat: no-repeat;
+    background-position: right center;
+}
