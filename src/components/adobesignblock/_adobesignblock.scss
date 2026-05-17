@@ -1,0 +1,45 @@
+/* =============== Adobe Sign Block ================== */
+
+.adobeSignBlockText,
+.cmp-adaptiveform-adobesignblock {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.02);
+}
+
+/* Adobe Sign field placeholders — rendered as inline elements by the signing JS */
+
+/* Prevent text selection from revealing the transparent placeholder text */
+[data-adobesigntype]::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+[data-adobesigntype]::-moz-selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+[data-adobesigntype] {
+    width: 6rem;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+[data-adobesigntype='radio'],
+[data-adobesigntype='checkbox'] {
+    border-bottom-width: 0;
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 3rem;
+}
+
+[data-adobesigntype='dropdown'] {
+    background-repeat: no-repeat;
+    background-position: right center;
+}

@@ -1,0 +1,35 @@
+/* =============== Summary Step ================== */
+
+.cmp-adaptiveform-summarystep {
+    position: relative;
+    height: 500px;
+    border: 1px solid $very-light-gray;
+    overflow: auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+.cmp-adaptiveform-summarystep__title {
+    font-size: 2em;
+    padding: 0.05em;
+    background-color: transparent;
+    color: $dark-gray;
+    font-weight: 400;
+}
+
+.cmp-adaptiveform-summarystep__content {
+    width: 100%;
+    height: calc(100% - 3.5em);
+    overflow: auto;
+}
+
+.cmp-adaptiveform-summarystep__message {
+    color: $dark-gray;
+    font-size: $font-md;
+    line-height: 1.5;
+
+    a {
+        color: $vivid-blue;
+        text-decoration: underline;
+    }
+}
