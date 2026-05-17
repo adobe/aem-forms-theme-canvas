@@ -1,5 +1,4 @@
 /* =============== Summary Step ================== */
-/* Matches foundation .guideSummaryComponent + signing.less values */
 
 .cmp-adaptiveform-summarystep {
     position: relative;
@@ -10,7 +9,6 @@
     text-align: center;
 }
 
-/* Title — mirrors guideESignTitle / guideSummaryTitle: 2em, transparent bg */
 .cmp-adaptiveform-summarystep__title {
     font-size: 2em;
     padding: 0.05em;
@@ -19,7 +17,6 @@
     font-weight: 400;
 }
 
-/* Content area — mirrors guideSummaryMessage: full width, remaining height */
 .cmp-adaptiveform-summarystep__content {
     width: 100%;
     height: calc(100% - 3.5em);

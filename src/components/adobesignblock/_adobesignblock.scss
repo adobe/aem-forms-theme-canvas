@@ -1,8 +1,7 @@
 /* =============== Adobe Sign Block ================== */
-/* Matches foundation .adobeSignBlockText + styles.css [data-adobesigntype] */
 
-/* Container wrapping inline Adobe Sign signature fields in the form body */
-.adobeSignBlockText {
+.adobeSignBlockText,
+.cmp-adaptiveform-adobesignblock {
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     padding: 0.5rem;
