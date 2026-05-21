@@ -1,0 +1,56 @@
+// ============================================================================
+// Adobe Sign Block — Core Adaptive Form Component
+// Renders rich text with data-adobesigntype placeholder spans.
+// Visibility is controlled globally by the form container:
+//   form:not(.cmp-adaptiveform-container--edit) [data-cmp-visible="false"] { display:none }
+// That rule already hides the block during form fill and shows it in edit mode.
+// ============================================================================
+
+.cmp-adaptiveform-adobesignblock {
+    display: block;
+    font-family: $font-family;
+    font-size: $font-md;
+    color: $dark-gray;
+    margin: $field-margin;
+}
+
+.cmp-adaptiveform-adobesignblock__label-container {
+    margin-bottom: 0.5rem;
+}
+
+.cmp-adaptiveform-adobesignblock__label {
+    font-family: $font-family;
+    font-size: $font-md;
+    font-weight: normal;
+    color: $dark-gray;
+}
+
+.cmp-adaptiveform-adobesignblock__value {
+    line-height: 1.5;
+    border: 1px solid $very-light-gray;
+    border-radius: 8px;
+    background-color: $panel-bg-color;
+    padding: 1.25rem 1.5rem;
+    min-height: 5rem;
+
+    p {
+        margin: 0 0 0.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // Adobe Sign field placeholder spans.
+    // font-size:0 hides the raw {{…}} token text; border-bottom + min-width
+    // produce the visible underline that marks the signing area.
+    [data-adobesigntype] {
+        display: inline-block;
+        min-width: 100px;
+        min-height: 1em;
+        border-bottom: 1px solid $light-gray;
+        font-size: 0;
+        vertical-align: bottom;
+        margin: 0 0.5rem;
+    }
+}
