@@ -1,9 +1,7 @@
 // ============================================================================
 // Adobe Sign Block — Core Adaptive Form Component
 // Renders rich text with data-adobesigntype placeholder spans.
-// Visibility is controlled globally by the form container:
-//   form:not(.cmp-adaptiveform-container--edit) [data-cmp-visible="false"] { display:none }
-// That rule already hides the block during form fill and shows it in edit mode.
+// Placeholder visuals match foundation forms (fd/afaddon/adobesign/common).
 // ============================================================================
 
 .cmp-adaptiveform-adobesignblock {
@@ -41,16 +39,53 @@
         }
     }
 
-    // Adobe Sign field placeholder spans.
-    // font-size:0 hides the raw {{…}} token text; border-bottom + min-width
-    // produce the visible underline that marks the signing area.
+    // Hide raw {{…}} token text in placeholders (authoring + runtime)
+    [data-adobesigntype]::selection {
+        color: rgba(0, 0, 0, 0);
+    }
+
+    [data-adobesigntype]::-moz-selection {
+        color: rgba(0, 0, 0, 0);
+    }
+
+    // Default field placeholder (signature, text, number, date, etc.)
     [data-adobesigntype] {
+        width: 6rem;
         display: inline-block;
-        min-width: 100px;
-        min-height: 1em;
-        border-bottom: 1px solid $light-gray;
-        font-size: 0;
+        color: rgba(0, 0, 0, 0);
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: rgba(0, 0, 0, 0.3);
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        cursor: pointer;
         vertical-align: bottom;
-        margin: 0 0.5rem;
+        min-height: 1em;
+    }
+
+    // Radio and checkbox: icon + label bar, no underline
+    [data-adobesigntype='radio'],
+    [data-adobesigntype='checkbox'] {
+        border-bottom-width: 0;
+        background-repeat: no-repeat;
+        background-position: left center;
+        width: 3rem;
+        min-width: 3rem;
+    }
+
+    [data-adobesigntype='radio'] {
+        background-image: url(./resources/images/radiobutton.svg);
+    }
+
+    [data-adobesigntype='checkbox'] {
+        background-image: url(./resources/images/checkbox.svg);
+    }
+
+    [data-adobesigntype='dropdown'] {
+        background-image: url(./resources/images/dropdown_chevron.svg);
+        background-repeat: no-repeat;
+        background-position: right center;
     }
 }
