@@ -175,17 +175,18 @@
 
 .cmp-adaptiveform-table__sort-button {
   flex-shrink: 0;
-  min-width: 2rem;
-  min-height: 2rem;
+  width: 2rem;
+  height: 2rem;
   padding: 0;
   margin: 0;
   border: 1px solid $silver;
   border-radius: 2px;
   background-color: $white;
+  background-image: url(../resources/images/sort-neutral.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 18px 18px;
   cursor: pointer;
-  position: relative;
-  font-size: 0;
-  line-height: 0;
 
   &:hover,
   &:focus-visible {
@@ -194,26 +195,12 @@
     outline-offset: 1px;
   }
 
-  &::before {
-    content: "\2191 \2193";
-    font-size: 0.65rem;
-    letter-spacing: -0.15em;
-    color: $dark-gray;
-    display: block;
-    line-height: 1;
-    padding: 0.15rem 0;
+  &.cmp-adaptiveform-table__sort-button--asc {
+    background-image: url(../resources/images/sort-asc.svg);
   }
 
-  &.cmp-adaptiveform-table__sort-button--asc::before {
-    content: "\2191";
-    font-size: 0.85rem;
-    color: #222;
-  }
-
-  &.cmp-adaptiveform-table__sort-button--desc::before {
-    content: "\2193";
-    font-size: 0.85rem;
-    color: #222;
+  &.cmp-adaptiveform-table__sort-button--desc {
+    background-image: url(../resources/images/sort-desc.svg);
   }
 }
 
