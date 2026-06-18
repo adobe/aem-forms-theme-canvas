@@ -182,7 +182,7 @@
   border: 1px solid $silver;
   border-radius: 2px;
   background-color: $white;
-  background-image: url(../resources/images/sort-neutral.svg);
+  background-image: url(./resources/images/sort-neutral.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 18px 18px;
@@ -196,11 +196,11 @@
   }
 
   &.cmp-adaptiveform-table__sort-button--asc {
-    background-image: url(../resources/images/sort-asc.svg);
+    background-image: url(./resources/images/sort-asc.svg);
   }
 
   &.cmp-adaptiveform-table__sort-button--desc {
-    background-image: url(../resources/images/sort-desc.svg);
+    background-image: url(./resources/images/sort-desc.svg);
   }
 }
 
