@@ -1,0 +1,90 @@
+// ============================================================================
+// Adobe Sign Block — Core Adaptive Form Component
+// Renders rich text with data-adobesigntype placeholder spans.
+// ============================================================================
+
+.cmp-adaptiveform-adobesignblock {
+  display: block;
+  font-family: $font-family;
+  font-size: $font-md;
+  color: $dark-gray;
+  margin: $field-margin;
+}
+
+.cmp-adaptiveform-adobesignblock__label-container {
+  margin-bottom: 0.5rem;
+}
+
+.cmp-adaptiveform-adobesignblock__label {
+  font-family: $font-family;
+  font-size: $font-md;
+  font-weight: normal;
+  color: $dark-gray;
+}
+
+.cmp-adaptiveform-adobesignblock__value {
+  line-height: 1.5;
+  border: 1px solid $very-light-gray;
+  border-radius: 8px;
+  background-color: $panel-bg-color;
+  padding: 1.25rem 1.5rem;
+  min-height: 5rem;
+
+  p {
+    margin: 0 0 0.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Hide raw {{…}} token text in placeholders (authoring + runtime)
+  [data-adobesigntype]::selection {
+    color: rgba(0, 0, 0, 0);
+  }
+
+  [data-adobesigntype]::-moz-selection {
+    color: rgba(0, 0, 0, 0);
+  }
+
+  // Default field placeholder (signature, text, number, date, etc.)
+  [data-adobesigntype] {
+    width: 6rem;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(0, 0, 0, 0.3);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    vertical-align: bottom;
+    min-height: 1em;
+  }
+
+  // Radio and checkbox: icon + label bar, no underline
+  [data-adobesigntype='radio'],
+  [data-adobesigntype='checkbox'] {
+    border-bottom-width: 0;
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 3rem;
+    min-width: 3rem;
+  }
+
+  [data-adobesigntype='radio'] {
+    background-image: url(./resources/images/radiobutton.svg);
+  }
+
+  [data-adobesigntype='checkbox'] {
+    background-image: url(./resources/images/checkbox.svg);
+  }
+
+  [data-adobesigntype='dropdown'] {
+    background-image: url(./resources/images/dropdown_chevron.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+}
