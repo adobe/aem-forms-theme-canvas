@@ -403,4 +403,16 @@
     height: 1.25rem;
     background: #e0e0e0;
   }
+
+  .cmp-adaptiveform-tablecell.cmp-adaptiveform-tablecell--with-row-controls {
+    display: block;
+    margin: 0;
+    border: none;
+  }
+
+  .cmp-adaptiveform-tablerow__runtime-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+  }
 }
