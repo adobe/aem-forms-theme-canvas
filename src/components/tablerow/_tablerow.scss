@@ -1,0 +1,14 @@
+/* ===============Table Row — Mobile Card Layout================== */
+@media (max-width: 768px) {
+  .cmp-adaptiveform-tablecell.cmp-adaptiveform-tablecell--with-row-controls {
+    display: block;
+    margin: 0;
+    border: none;
+  }
+
+  .cmp-adaptiveform-tablerow__runtime-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+  }
+}
