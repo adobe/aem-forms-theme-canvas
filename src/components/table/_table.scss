@@ -110,6 +110,11 @@
   background-color: $very-light-gray;
 }
 
+/* ===============Table Variants================== */
+.cmp-adaptiveform-table--striped .cmp-adaptiveform-table__body .cmp-adaptiveform-tablerow:nth-child(even) > .cmp-adaptiveform-tablecell {
+  background-color: $very-light-gray;
+}
+
 /* ===============Table Row Controls (repeatable)================== */
 .cmp-adaptiveform-tablecell.cmp-adaptiveform-tablecell--with-row-controls {
   display: flex;
