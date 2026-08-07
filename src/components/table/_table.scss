@@ -115,6 +115,15 @@
   background-color: $very-light-gray;
 }
 
+.cmp-adaptiveform-table--bordered .cmp-adaptiveform-table__widget {
+  border: 2px solid $dark-gray;
+}
+
+.cmp-adaptiveform-table--bordered .cmp-adaptiveform-tablecell,
+.cmp-adaptiveform-table--bordered .cmp-adaptiveform-tablehead {
+  border: 1px solid $dark-gray;
+}
+
 /* ===============Table Row Controls (repeatable)================== */
 .cmp-adaptiveform-tablecell.cmp-adaptiveform-tablecell--with-row-controls {
   display: flex;
