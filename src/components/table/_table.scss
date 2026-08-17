@@ -112,11 +112,15 @@
 
 /* ===============Table Variants================== */
 .cmp-adaptiveform-table--striped .cmp-adaptiveform-table__body .cmp-adaptiveform-tablerow:nth-child(even) > .cmp-adaptiveform-tablecell {
-  background-color: $very-light-gray;
+  background: $Palette-gray-100;
+}
+
+.cmp-adaptiveform-table--striped .cmp-adaptiveform-tablehead{
+	background-color: $medium-gray; 
 }
 
 .cmp-adaptiveform-table--bordered .cmp-adaptiveform-table__widget {
-  border: 2px solid $dark-gray;
+  border: 2px solid $Palette-gray-600;
 }
 
 .cmp-adaptiveform-table--bordered .cmp-adaptiveform-tablecell,
