@@ -218,7 +218,7 @@
   font-weight: 600;
 }
 
-.cmp-adaptiveform-table__sort-overlay {
+.cmp-adaptiveform-table__sort-scrim {
   display: none;
   position: fixed;
   inset: 0;
@@ -227,7 +227,7 @@
   align-items: flex-end;
 }
 
-.cmp-adaptiveform-table__sort-overlay.is-open {
+.cmp-adaptiveform-table__sort-scrim.is-open {
   display: flex;
 }
 
@@ -242,7 +242,7 @@
   transition: transform 0.25s ease-out;
 }
 
-.cmp-adaptiveform-table__sort-overlay.is-open .cmp-adaptiveform-table__sort-sheet {
+.cmp-adaptiveform-table__sort-scrim.is-open .cmp-adaptiveform-table__sort-sheet {
   transform: translateY(0);
 }
 
