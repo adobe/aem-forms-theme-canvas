@@ -110,6 +110,24 @@
   background-color: $very-light-gray;
 }
 
+/* ===============Table Variants================== */
+.cmp-adaptiveform-table--striped .cmp-adaptiveform-table__body .cmp-adaptiveform-tablerow:nth-child(even) > .cmp-adaptiveform-tablecell {
+  background: $Palette-gray-100;
+}
+
+.cmp-adaptiveform-table--striped .cmp-adaptiveform-tablehead{
+	background-color: $medium-gray; 
+}
+
+.cmp-adaptiveform-table--bordered .cmp-adaptiveform-table__widget {
+  border: 2px solid $Palette-gray-600;
+}
+
+.cmp-adaptiveform-table--bordered .cmp-adaptiveform-tablecell,
+.cmp-adaptiveform-table--bordered .cmp-adaptiveform-tablehead {
+  border: 1px solid $dark-gray;
+}
+
 /* ===============Table Row Controls (repeatable)================== */
 .cmp-adaptiveform-tablecell.cmp-adaptiveform-tablecell--with-row-controls {
   display: flex;
