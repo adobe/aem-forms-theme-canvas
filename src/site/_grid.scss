@@ -19,6 +19,9 @@
 .aem-Grid {
   display: block;
   inline-size: 100%;
+  /* negative margin offsets the column gutter padding below so the
+     row's outer edge lines up with its container as before */
+  margin-inline: calc(#{$grid-gutter} / -2);
 }
 
 .aem-Grid::before,
@@ -41,6 +44,8 @@
 .aem-GridColumn {
   clear: both;
   box-sizing: border-box;
+  /* half gutter on each side: adjacent columns get a full gutter between them */
+  padding-inline: calc(#{$grid-gutter} / 2);
 }
 
 /* force showing hidden */
