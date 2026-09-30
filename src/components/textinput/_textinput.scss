@@ -52,6 +52,12 @@
   position: unset;
   right: unset;
 }
+.cmp-adaptiveform-textinput__charcount{
+  font-size: $font-sm;
+  color: $light-gray;
+  text-align: right;
+  margin-top: $error-top-margin;
+}
 .cmp-adaptiveform-textinput__errormessage{
   color: $error;
   font-size: $font-sm;
