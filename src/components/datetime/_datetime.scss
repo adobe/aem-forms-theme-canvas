@@ -53,7 +53,7 @@
   width: 1rem;
   height: 1rem;
   border-radius: 9px;
-  background: url(./resources/images/question.svg) center center / cover no-repeat, #969696;
+  background: url(./resources/images/question.svg) center center / cover no-repeat, $light-gray;
   cursor: pointer;
   // below properties for backward compatibility
   position: absolute;
@@ -71,14 +71,14 @@
 .cmp-adaptiveform-datetime[data-cmp-valid=false]{
   background: rgb(235 60 54 / 5%);
   border: 0 solid #eb3c36;
-  border-inline-start-width: 4px;
-  padding-inline-start: 5px;
+  border-inline-start-width: $validation-border-width;
+  padding-inline-start: $validation-inset-padding;
 }
 
 
 .cmp-adaptiveform-datetime[data-cmp-valid=true]{
   border: 0 solid #23b482;
-  border-inline-start-width: 4px;
-  padding-inline-start: 5px;
+  border-inline-start-width: $validation-border-width;
+  padding-inline-start: $validation-inset-padding;
 }
 

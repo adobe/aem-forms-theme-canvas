@@ -90,7 +90,7 @@
 
 .cmp-adaptiveform-termsandcondition__link .cmp-adaptiveform-checkboxgroup[data-cmp-valid=true] {
   border: none;
-  padding-inline-start: 5px;
+  padding-inline-start: $validation-inset-padding;
 }
 
 
@@ -107,7 +107,7 @@
   width: 1rem;
   height: 1rem;
   cursor: pointer;
-  background: url(resources/images/question.svg) 50%/cover no-repeat, #969696;
+  background: url(resources/images/question.svg) 50%/cover no-repeat, $light-gray;
   border-radius: 9px;
   display: inline-block;
 }
