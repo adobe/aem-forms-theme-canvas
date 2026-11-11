@@ -1,0 +1,106 @@
+/* ===============Slider================== */
+.cmp-adaptiveform-slider {
+  color: $dark-gray;
+  font-size: $font-md;
+  margin: $field-margin;
+  display: flex;
+  flex-direction: column;
+}
+
+.cmp-adaptiveform-slider__label-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cmp-adaptiveform-slider__widget-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: $label-top-margin;
+}
+
+.cmp-adaptiveform-slider__widget {
+  flex: 1 1 auto;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-height: 44px;
+  accent-color: $vivid-blue;
+}
+
+.cmp-adaptiveform-slider__widget:focus {
+  outline: 2px solid $focus-ring-color;
+  outline-offset: 2px;
+}
+
+.cmp-adaptiveform-slider__widget[aria-invalid="true"] {
+  outline: 2px solid $error;
+  outline-offset: 2px;
+}
+
+.cmp-adaptiveform-slider__widget:disabled {
+  cursor: not-allowed;
+}
+
+.cmp-adaptiveform-slider__value {
+  flex: 0 0 auto;
+  min-width: 3ch;
+  text-align: end;
+  font-size: $font-md;
+  font-variant-numeric: tabular-nums;
+}
+
+.cmp-adaptiveform-slider__longdescription {
+  color: $dark-gray;
+  background-color: $very-light-gray;
+  font-size: $font-sm;
+  margin-top: $error-top-margin;
+  margin-bottom: 5px;
+  padding: 10px;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.cmp-adaptiveform-slider__shortdescription {
+  font-size: $font-sm;
+  margin-top: $error-top-margin;
+}
+
+.cmp-adaptiveform-slider__questionmark {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9px;
+  background: url("./resources/images/question.svg") center center / cover no-repeat, $light-gray;
+  cursor: pointer;
+}
+
+.cmp-adaptiveform-slider__errormessage {
+  color: $error;
+  font-size: $font-sm;
+  margin-top: $error-top-margin;
+}
+
+.cmp-adaptiveform-slider[data-cmp-valid="false"] {
+  background: $light-error;
+  border: 0 solid $error;
+  border-inline-start-width: 4px;
+  padding-inline-start: 5px;
+}
+
+.cmp-adaptiveform-slider[data-cmp-valid="true"] {
+  border: 0 solid $success;
+  border-inline-start-width: 4px;
+  padding-inline-start: 5px;
+}
+
+@media (width <= 480px) {
+  .cmp-adaptiveform-slider__widget-container {
+    gap: 8px;
+  }
+}
