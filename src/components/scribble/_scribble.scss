@@ -70,6 +70,14 @@
      transform: translate(-50%, -50%);
 }
 
+/* dims the page behind the open signature dialog; the dialog itself sits at z-index 99998 */
+.cmp-adaptiveform-scribble__backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99997;
+}
+
 .cmp-adaptiveform-scribble__controls {
     display: flex;
     align-items: center;
